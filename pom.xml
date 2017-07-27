@@ -7,6 +7,11 @@
 	<name>Hybris Test Project</name>
 	<description>UI and API test for Hybris platform (PoC)</description>
 
+	<scm>
+		<url>https://bitbucket.org/bbmag/hybris-test-poc.git</url>
+		<connection>scm:git:https://bitbucket.org/bbmag/hybris-test-poc.git</connection>
+		<developerConnection>scm:git:https://bitbucket.org/bbmag/hybris-test-poc.git</developerConnection>
+	</scm>
 
 	<dependencies>
 		<dependency>
@@ -30,5 +35,92 @@
 			</plugin>
 		</plugins>
 	</build>
+	
+	<profiles>
+		<profile>
+			<id>bbraun-ci</id>
+
+			<activation>
+				<activeByDefault>false</activeByDefault>
+			</activation>
+
+			<distributionManagement>
+				<repository>
+					<id>releases</id>
+					<name>Internal Releases</name>
+					<url>${distribution.url.releases}</url>
+				</repository>
+				<snapshotRepository>
+					<id>snapshots</id>
+					<name>Internal Snapshots</name>
+					<url>${distribution.url.snapshots}</url>
+				</snapshotRepository>
+			</distributionManagement>
+
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+     					<artifactId>maven-surefire-plugin</artifactId>
+     					<version>2.13</version>
+     					<configuration>
+      						<!-- same configuration as in the regular test execution goal -->
+     						<!-- plus argLine parameter configured by JaCoCo prepare-agent -->
+      						<argLine>${jacoco.agent.ut.arg}</argLine>
+     					</configuration>
+    				</plugin>				
+				
+					<!-- <plugin>
+						<groupId>org.jacoco</groupId>
+						<artifactId>jacoco-maven-plugin</artifactId>
+						<version>${jacoco.version}</version>
+						<configuration>
+							<destFile>${project.basedir}\target\jacoco.exec</destFile>
+							<append>true</append>
+							<propertyName>jacoco.agent.ut.arg</propertyName>
+						</configuration>
+						<executions>
+							Prepares the property pointing to the JaCoCo runtime agent which 
+								is passed as VM argument when Maven the Surefire plugin is executed.
+							<execution>
+								<id>prepare-unit-test-agent</id>
+								<goals>
+									<goal>prepare-agent</goal>
+								</goals>
+							</execution>
+							Ensures that the code coverage report for unit tests is created 
+								after unit tests have been run.
+							<execution>
+								<id>generate-unit-test-report</id>
+								<phase>package</phase>
+								<goals>
+									<goal>report</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin> -->
+					
+					<plugin>
+						<groupId>org.codehaus.mojo</groupId>
+						<artifactId>buildnumber-maven-plugin</artifactId>
+						<version>1.1</version>
+						<configuration>
+							<shortRevisionLength>3</shortRevisionLength>
+							<doCheck>false</doCheck>
+							<doUpdate>false</doUpdate>
+						</configuration>
+						<executions>
+							<execution>
+								<phase>validate</phase>
+								<goals>
+									<goal>create</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
 
 </project>
