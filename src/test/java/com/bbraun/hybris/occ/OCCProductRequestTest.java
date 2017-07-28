@@ -32,8 +32,9 @@ public class OCCProductRequestTest {
 				.doGet("https://qas-ws.hybris.bbraun.com/bbraunocc/v2/bbraun/products/PRID00001270") //
 
 				.assertResponseContentType(ContentType.JSON) //
-				.assertResponseByPathEquals("url", "/p/PRID00001270") //
-				.assertResponseByPathEquals("code", "PRID00001270") //
+				.assertResponseBodyByPathEquals("url", "/p/PRID00001270") //
+				.assertResponseBodyByPathEquals("code", "PRID00001270") //
+				.assertResponseBodyEqualsReference("OCC_PRID1270_Expected.json") //
 		;
 	}
 }

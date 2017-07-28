@@ -1,0 +1,239 @@
+{
+    "baseUom": "ST",
+    "baseUomIso": "PCE",
+    "classifications": [
+        {
+            "code": "BKC_PRODUCTS",
+            "features": [
+                {
+                    "code": "BKC_PR_COUNTRY_RELEASE",
+                    "comparable": true,
+                    "featureValues": [
+                        {
+                            "code": "01",
+                            "value": "01"
+                        }
+                    ],
+                    "name": "Marketing release",
+                    "range": false
+                },
+                {
+                    "code": "BKC_PR_PRODRESPONSIBILITY",
+                    "comparable": true,
+                    "featureValues": [
+                        {
+                            "code": "HC",
+                            "value": "HC"
+                        }
+                    ],
+                    "name": "Global Product Responsibility",
+                    "range": false
+                }
+            ],
+            "name": "Products for BKC"
+        }
+    ],
+    "code": "PRID00001270",
+    "description": "",
+    "division": "MM",
+    "hasClassifications": false,
+    "localizedBkcTexts": [
+        {
+            "key": "en",
+            "value": {
+                "bkcTexts": [
+                    {
+                        "bkcCountry": "01",
+                        "language": "E",
+                        "languageIso": "EN",
+                        "text": "01/EN - XADIN",
+                        "textType": "XADIN",
+                        "uid": "XADIN01EN/PRID00001270"
+                    },
+                    {
+                        "bkcCountry": "01",
+                        "language": "E",
+                        "languageIso": "EN",
+                        "text": "01/EN - XADIP",
+                        "textType": "XADIP",
+                        "uid": "XADIP01EN/PRID00001270"
+                    },
+                    {
+                        "bkcCountry": "01",
+                        "language": "E",
+                        "languageIso": "EN",
+                        "text": "01/EN - XADVN",
+                        "textType": "XADVN",
+                        "uid": "XADVN01EN/PRID00001270"
+                    },
+                    {
+                        "bkcCountry": "01",
+                        "language": "E",
+                        "languageIso": "EN",
+                        "text": "01/EN - XAITH  ",
+                        "textType": "XAITH",
+                        "uid": "XAITH01EN/PRID00001270"
+                    },
+                    {
+                        "bkcCountry": "01",
+                        "language": "E",
+                        "languageIso": "EN",
+                        "text": "01/EN - XAOAP",
+                        "textType": "XAOAP",
+                        "uid": "XAOAP01EN/PRID00001270"
+                    },
+                    {
+                        "bkcCountry": "01",
+                        "language": "E",
+                        "languageIso": "EN",
+                        "text": "01/EN - XAUTH",
+                        "textType": "XAUTH",
+                        "uid": "XAUTH01EN/PRID00001270"
+                    },
+                    {
+                        "bkcCountry": "01",
+                        "language": "E",
+                        "languageIso": "EN",
+                        "text": "<p>Nur für den Eigengebrauch</p>",
+                        "textType": "XBESC",
+                        "uid": "XBESC01EN/PRID00001270"
+                    },
+                    {
+                        "bkcCountry": "01",
+                        "language": "E",
+                        "languageIso": "EN",
+                        "text": "01/EN - XCONI ",
+                        "textType": "XCONI",
+                        "uid": "XCONI01EN/PRID00001270"
+                    },
+                    {
+                        "bkcCountry": "01",
+                        "language": "E",
+                        "languageIso": "EN",
+                        "text": "01/EN - XCONT",
+                        "textType": "XCONT",
+                        "uid": "XCONT01EN/PRID00001270"
+                    },
+                    {
+                        "bkcCountry": "01",
+                        "language": "E",
+                        "languageIso": "EN",
+                        "text": "01/EN - XFEAT  ",
+                        "textType": "XFEAT",
+                        "uid": "XFEAT01EN/PRID00001270"
+                    },
+                    {
+                        "bkcCountry": "01",
+                        "language": "E",
+                        "languageIso": "EN",
+                        "text": "01/EN - XHINT",
+                        "textType": "XHINT",
+                        "uid": "XHINT01EN/PRID00001270"
+                    },
+                    {
+                        "bkcCountry": "01",
+                        "language": "E",
+                        "languageIso": "EN",
+                        "text": "01/EN - XINDI  ",
+                        "textType": "XINDI",
+                        "uid": "XINDI01EN/PRID00001270"
+                    },
+                    {
+                        "bkcCountry": "01",
+                        "language": "E",
+                        "languageIso": "EN",
+                        "text": "01/EN - XMATE",
+                        "textType": "XMATE",
+                        "uid": "XMATE01EN/PRID00001270"
+                    },
+                    {
+                        "bkcCountry": "01",
+                        "language": "E",
+                        "languageIso": "EN",
+                        "text": "01/EN - XMEAS ",
+                        "textType": "XMEAS",
+                        "uid": "XMEAS01EN/PRID00001270"
+                    },
+                    {
+                        "bkcCountry": "01",
+                        "language": "E",
+                        "languageIso": "EN",
+                        "text": "Mein Produkt",
+                        "textType": "XNAME",
+                        "uid": "XNAME01EN/PRID00001270"
+                    },
+                    {
+                        "bkcCountry": "01",
+                        "language": "E",
+                        "languageIso": "EN",
+                        "text": "01/EN - XUSE",
+                        "textType": "XUSE",
+                        "uid": "XUSE01EN/PRID00001270"
+                    }
+                ]
+            }
+        }
+    ],
+    "marketingReleaseFeatureValue": [
+        "01"
+    ],
+    "materialShortText": "TEST_PRODUCT CENTER 1270",
+    "materialType": "PRID",
+    "name": "TEST_PRODUCT CENTER 1270",
+    "productReferences": [
+        {
+            "posNr": 0,
+            "preselected": false,
+            "referenceType": "DOCUMENT",
+            "target": {
+                "code": "BPR000000000000000100007757500000",
+                "mimeDetails": "application/pdf",
+                "name": "Poster Dispensing Pins",
+                "url": "/doc/BPR000000000000000100007757500000"
+            }
+        },
+        {
+            "posNr": 1,
+            "preselected": false,
+            "referenceType": "DOCUMENT",
+            "target": {
+                "code": "BPR000000000000000100012036201000",
+                "mimeDetails": "application/pdf",
+                "name": "Document for Test APP",
+                "url": "/doc/BPR000000000000000100012036201000"
+            }
+        }
+    ],
+    "productType": "PRID",
+    "purStatus": "M1",
+    "resourceStatus": "UPDATED",
+    "salStatus": "V4",
+    "sapModifiedTime": "2017-07-24T07:48:48+0000",
+    "stock": {
+        "stockLevel": 0,
+        "stockLevelStatus": "inStock"
+    },
+    "summary": "",
+    "transportGroup": "0001",
+    "uom": [
+        {
+            "alternativeUnit": "ST",
+            "alternativeUnitIso": "PCE",
+            "code": "ST/PRID00001270",
+            "denominator": 1,
+            "grossWeight": 0E-8,
+            "height": 0E-8,
+            "internationalCharacteristics": "0000000000",
+            "length": 0E-8,
+            "netWeight": 0E-8,
+            "numberOfSubUom": 0,
+            "numerator": 1,
+            "uomSortNumber": 0,
+            "volume": 0E-8,
+            "weightUnit": "KG",
+            "weightUnitIso": "KGM",
+            "width": 0E-8
+        }
+    ],
+    "url": "/p/PRID00001270"
+}

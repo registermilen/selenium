@@ -33,9 +33,9 @@ public class OCCAuthenticationTest {
 
 				.assertResponseContentType(ContentType.JSON) //
 				.assertResponseHttpStatusCode(HttpStatus.SC_OK) //
-				.assertResponseByPathNotNull("access_token") //
-				.assertResponseByPathNotNull("expires_in") //
-				.assertResponseByPathEquals("token_type", "bearer") //
+				.assertResponseBodyByPathNotNull("access_token") //
+				.assertResponseBodyByPathNotNull("expires_in") //
+				.assertResponseBodyByPathEquals("token_type", "bearer") //
 		;
 	}
 
@@ -57,9 +57,9 @@ public class OCCAuthenticationTest {
 
 				.assertResponseContentType(ContentType.JSON) //
 				.assertResponseHttpStatusCode(HttpStatus.SC_OK) //
-				.assertResponseByPathNotNull("access_token") //
-				.assertResponseByPathNotNull("expires_in") //
-				.assertResponseByPathEquals("token_type", "bearer") //
+				.assertResponseBodyByPathNotNull("access_token") //
+				.assertResponseBodyByPathNotNull("expires_in") //
+				.assertResponseBodyByPathEquals("token_type", "bearer") //
 		;
 	}
 
@@ -81,8 +81,8 @@ public class OCCAuthenticationTest {
 
 				.assertResponseContentType(ContentType.XML) //
 				.assertResponseHttpStatusCode(HttpStatus.SC_OK) //
-				.assertResponseByPathNotNull("access_token") //
-				.assertResponseByPathNotNull("expires_in") //
+				.assertResponseBodyByPathNotNull("access_token") //
+				.assertResponseBodyByPathNotNull("expires_in") //
 		;
 	}
 
@@ -104,8 +104,8 @@ public class OCCAuthenticationTest {
 
 				.assertResponseContentType(ContentType.XML) //
 				.assertResponseHttpStatusCode(HttpStatus.SC_OK) //
-				.assertResponseByPathNotNull("access_token") //
-				.assertResponseByPathNotNull("expires_in") //
+				.assertResponseBodyByPathNotNull("access_token") //
+				.assertResponseBodyByPathNotNull("expires_in") //
 		;
 	}
 
@@ -127,8 +127,8 @@ public class OCCAuthenticationTest {
 
 				.assertResponseContentType(ContentType.JSON) //
 				.assertResponseHttpStatusCode(HttpStatus.SC_UNAUTHORIZED) //
-				.assertResponseByPathEquals("error", "unauthorized")
-				.assertResponseByPathEquals("error_description", "Bad credentials");
+				.assertResponseBodyByPathEquals("error", "unauthorized")
+				.assertResponseBodyByPathEquals("error_description", "Bad credentials");
 	}
 
 	/**
@@ -149,7 +149,7 @@ public class OCCAuthenticationTest {
 
 				.assertResponseContentType(ContentType.JSON) //
 				.assertResponseHttpStatusCode(HttpStatus.SC_BAD_REQUEST) //
-				.assertResponseByPathEquals("error", "invalid_grant")
-				.assertResponseByPathEquals("error_description", "Bad credentials");
+				.assertResponseBodyByPathEquals("error", "invalid_grant")
+				.assertResponseBodyByPathEquals("error_description", "Bad credentials");
 	}
 }
