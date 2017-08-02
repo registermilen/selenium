@@ -16,6 +16,8 @@ public class ProductCenterLoginTest {
 						"Melden Sie sich bitte an und erleben Sie die digitale Produktwelt der B. Braun Gruppe") // ;
 				.assertPageSectionScreenshotEquals(By.className("headerContent"), "PageHeader.PNG", 1) //
 				.assertPageSectionScreenshotEquals(By.className("userLogin"), "UserLoginBox.PNG", 1) //
+				
+				.doCloseBrowser();
 		;
 	}
 
@@ -30,6 +32,8 @@ public class ProductCenterLoginTest {
 
 				.assertUrl("https://qas-products.bbraun.com/login?error=true")
 				.assertTextDisplayedOnPage("Ihr Benutzername oder Kennwort ist falsch.") //
+				
+				.doCloseBrowser();
 		;
 	}
 
@@ -43,6 +47,8 @@ public class ProductCenterLoginTest {
 		.doClick(By.className("positive")) //
 		
 		.assertUrl("https://qas-products.bbraun.com/")
+		
+		.doCloseBrowser();
 		;
 	}
 
