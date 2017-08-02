@@ -1,6 +1,7 @@
 **/.settings
 **/.project
 **/.classpath
+**/TMP_*.PNG
 **/target
 /target
 /logs
