@@ -12,7 +12,7 @@ public class ArticleComparisonLandingPageTest {
 	public void testCallLandingPage() {
 		new BBMUiTestBuilder<>() //
 		.doStartBrowser() //
-		.doOpenUrl("http://bbmag112:8080/articlecomparison?codes=BH111R,BH121R,BH110R,BC324R") //
+		.doOpenUrl("http://172.30.11.161:8080/articlecomparison?codes=BH111R,BH121R,BH110R,BC324R") //
 		.assertTextDisplayedOnPage("Arterienklemme") //
 		.doCloseBrowser() //
 		;
