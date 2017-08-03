@@ -16,8 +16,8 @@ public class ProductCenterLoginTest {
 						"Melden Sie sich bitte an und erleben Sie die digitale Produktwelt der B. Braun Gruppe") // ;
 				.assertPageSectionScreenshotEquals(By.className("headerContent"), "PageHeader.PNG", 1) //
 				.assertPageSectionScreenshotEquals(By.className("userLogin"), "UserLoginBox.PNG", 1) //
-				
-				.doCloseBrowser();
+
+				.doCloseBrowser() //
 		;
 	}
 
@@ -28,27 +28,25 @@ public class ProductCenterLoginTest {
 				.doOpenUrl("https://qas-products.bbraun.com/hybrislogin") //
 				.doType(By.id("j_username"), "peter.schnitzel@hackers.com") //
 				.doType(By.id("j_password"), "wrongPassword") //
-				.doClick(By.className("positive")) //
+				.doSubmitForm(By.id("loginForm")) //
 
 				.assertUrl("https://qas-products.bbraun.com/login?error=true")
 				.assertTextDisplayedOnPage("Ihr Benutzername oder Kennwort ist falsch.") //
-				
-				.doCloseBrowser();
+
+				.doCloseBrowser() //
 		;
 	}
 
 	@Test
-	public void testLoginPagePerformLoginXLUserSuccess() {
-		new BBMUiTestBuilder<>() //
-		.doStartBrowser() //
-		.doOpenUrl("https://qas-products.bbraun.com/hybrislogin") //
-		.doType(By.id("j_username"), "stuestxl") //
-		.doType(By.id("j_password"), "stuestxl") //
-		.doClick(By.className("positive")) //
-		
-		.assertUrl("https://qas-products.bbraun.com/")
-		
-		.doCloseBrowser();
+	public void testLoginPagePerformLoginXLUserSuccess() throws InterruptedException {
+		BBMUiTestBuilder<?> builder = new BBMUiTestBuilder<>() //
+				.doStartBrowser() //
+				.doOpenUrl("https://qas-products.bbraun.com/hybrislogin") //
+				.doType(By.id("j_username"), "stuestxl") //
+				.doType(By.id("j_password"), "stuestxl") //
+				.doSubmitForm(By.id("loginForm")) //
+				.assertUrl("https://qas-products.bbraun.com/") //
+				.doCloseBrowser() //
 		;
 	}
 
