@@ -11,6 +11,7 @@ public class ProductCenterLoginTest {
 	public void testRenderLoginPageSuccess() {
 		new BBMUiTestBuilder<>() //
 				.doStartBrowser() //
+				.doMaximizeWindow() //
 				.doOpenUrl("https://qas-products.bbraun.com/hybrislogin") //
 				.assertTextDisplayedOnPage(
 						"Melden Sie sich bitte an und erleben Sie die digitale Produktwelt der B. Braun Gruppe") // ;
