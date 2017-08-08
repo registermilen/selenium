@@ -22,8 +22,7 @@ public class OCCProductRequestTest {
 				.doAuthenticateOAuth2("https://qas-ws.hybris.bbraun.com/authorizationserver/oauth/token", //
 						GrantType.PASSWORD, //
 						"bbraunoccs", //
-						"bbraunoccs", //
-						"accessToken")
+						"bbraunoccs") //
 				.withNewRequest() //
 				.withQueryParam("applicationKey", "AEM2015")//
 				.withQueryParam("viewId", "en_01") //
