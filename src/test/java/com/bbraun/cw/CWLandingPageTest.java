@@ -1,10 +1,12 @@
 package com.bbraun.cw;
 
+import org.junit.Ignore;
 import org.junit.Test;
 import org.openqa.selenium.By;
 
 import com.bbraun.bbmtest.ui.BBMUiTestBuilder;
 
+@Ignore
 public class CWLandingPageTest {
 
 	@Test
