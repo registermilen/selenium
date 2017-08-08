@@ -19,16 +19,16 @@ public class OCCProductRequestTest {
 		new BBMWebServiceTestBuilder<>() //
 				.withNewRequest() //
 				.withBasicAuth("trusted_client", "secret") //
-				.doAuthenticateOAuth2("https://qas-ws.hybris.bbraun.com/authorizationserver/oauth/token", //
+				.doAuthenticateOAuth2("${hybris.oauth.url}", //
 						GrantType.PASSWORD, //
-						"bbraunoccs", //
-						"bbraunoccs") //
+						"${hybris.oauth.username}", //
+						"${hybris.oauth.password}") //
 				.withNewRequest() //
 				.withQueryParam("applicationKey", "AEM2015")//
 				.withQueryParam("viewId", "en_01") //
 				.withQueryParam("access_token", "${accessToken}") //
 
-				.doGet("https://qas-ws.hybris.bbraun.com/bbraunocc/v2/bbraun/products/PRID00001270") //
+				.doGet("${hybris.prid1270.url}") //
 
 				.assertResponseContentType(ContentType.JSON) //
 				.assertResponseBodyByPathEquals("url", "/p/PRID00001270") //

@@ -26,10 +26,10 @@ public class OCCAuthenticationTest {
 				.withBasicAuth("trusted_client", "secret") //
 				.withHeader("Accept", "application/json")//
 				.withQueryParam("grant_type", "password") //
-				.withQueryParam("username", "bbraunoccs") //
-				.withQueryParam("password", "bbraunoccs") //
+				.withQueryParam("username", "${hybris.oauth.username}") //
+				.withQueryParam("password", "${hybris.oauth.password}") //
 
-				.doGet("https://qas-ws.hybris.bbraun.com/authorizationserver/oauth/token") //
+				.doGet("${hybris.oauth.url}") //
 
 				.assertResponseContentType(ContentType.JSON) //
 				.assertResponseHttpStatusCode(HttpStatus.SC_OK) //
@@ -50,11 +50,11 @@ public class OCCAuthenticationTest {
 				.withBasicAuth("trusted_client", "secret") //
 				.withHeader("Accept", "application/json")//
 				.withPostParam("grant_type", "password") //
-				.withPostParam("username", "bbraunoccs") //
-				.withPostParam("password", "bbraunoccs") //
+				.withQueryParam("username", "${hybris.oauth.username}") //
+				.withQueryParam("password", "${hybris.oauth.password}") //
 
-				.doPost("https://qas-ws.hybris.bbraun.com/authorizationserver/oauth/token") //
-
+				.doGet("${hybris.oauth.url}") //
+				
 				.assertResponseContentType(ContentType.JSON) //
 				.assertResponseHttpStatusCode(HttpStatus.SC_OK) //
 				.assertResponseBodyByPathNotNull("access_token") //
@@ -74,10 +74,10 @@ public class OCCAuthenticationTest {
 				.withBasicAuth("trusted_client", "secret") //
 				.withHeader("Accept", "application/xml")//
 				.withQueryParam("grant_type", "password") //
-				.withQueryParam("username", "bbraunoccs") //
-				.withQueryParam("password", "bbraunoccs") //
+				.withQueryParam("username", "${hybris.oauth.username}") //
+				.withQueryParam("password", "${hybris.oauth.password}") //
 
-				.doGet("https://qas-ws.hybris.bbraun.com/authorizationserver/oauth/token") //
+				.doGet("${hybris.oauth.url}") //
 
 				.assertResponseContentType(ContentType.XML) //
 				.assertResponseHttpStatusCode(HttpStatus.SC_OK) //
@@ -97,10 +97,10 @@ public class OCCAuthenticationTest {
 				.withBasicAuth("trusted_client", "secret") //
 				.withHeader("Accept", "application/xml")//
 				.withPostParam("grant_type", "password") //
-				.withPostParam("username", "bbraunoccs") //
-				.withPostParam("password", "bbraunoccs") //
+				.withQueryParam("username", "${hybris.oauth.username}") //
+				.withQueryParam("password", "${hybris.oauth.password}") //
 
-				.doPost("https://qas-ws.hybris.bbraun.com/authorizationserver/oauth/token") //
+				.doGet("${hybris.oauth.url}") //
 
 				.assertResponseContentType(ContentType.XML) //
 				.assertResponseHttpStatusCode(HttpStatus.SC_OK) //
@@ -120,10 +120,10 @@ public class OCCAuthenticationTest {
 				.withBasicAuth("trusted_client", "wrong_password") //
 				.withHeader("Accept", "application/json")//
 				.withPostParam("grant_type", "password") //
-				.withPostParam("username", "bbraunoccs") //
-				.withPostParam("password", "bbraunoccs") //
+				.withQueryParam("username", "${hybris.oauth.username}") //
+				.withQueryParam("password", "${hybris.oauth.password}") //
 
-				.doPost("https://qas-ws.hybris.bbraun.com/authorizationserver/oauth/token") //
+				.doGet("${hybris.oauth.url}") //
 
 				.assertResponseContentType(ContentType.JSON) //
 				.assertResponseHttpStatusCode(HttpStatus.SC_UNAUTHORIZED) //
@@ -142,10 +142,10 @@ public class OCCAuthenticationTest {
 				.withBasicAuth("trusted_client", "secret") //
 				.withHeader("Accept", "application/json")//
 				.withPostParam("grant_type", "password") //
-				.withPostParam("username", "bbraunoccs") //
-				.withPostParam("password", "WRONGPASSWORD") //
+				.withQueryParam("username", "WRONGUSERNAME") //
+				.withQueryParam("password", "WRONGPASSWORD") //
 
-				.doPost("https://qas-ws.hybris.bbraun.com/authorizationserver/oauth/token") //
+				.doGet("${hybris.oauth.url}") //
 
 				.assertResponseContentType(ContentType.JSON) //
 				.assertResponseHttpStatusCode(HttpStatus.SC_BAD_REQUEST) //
