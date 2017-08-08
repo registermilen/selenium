@@ -16,7 +16,7 @@ public class ProductCenterLoginTest {
 				.assertTextDisplayedOnPage(
 						"Melden Sie sich bitte an und erleben Sie die digitale Produktwelt der B. Braun Gruppe") // ;
 				.assertPageSectionScreenshotEquals(By.className("headerContent"), "PageHeader.PNG", 1) //
-				.assertPageSectionScreenshotEquals(By.className("userLogin"), "UserLoginBox.PNG", 1) //
+				.assertPageSectionScreenshotEquals(By.className("userLogin"), "UserLoginBox.PNG", 10) //
 
 				.doCloseBrowser() //
 		;
@@ -39,8 +39,8 @@ public class ProductCenterLoginTest {
 	}
 
 	@Test
-	public void testLoginPagePerformLoginXLUserSuccess() throws InterruptedException {
-		BBMUiTestBuilder<?> builder = new BBMUiTestBuilder<>() //
+	public void testLoginPagePerformLoginXLUserSuccess() {
+		new BBMUiTestBuilder<>() //
 				.doStartBrowser() //
 				.doOpenUrl("https://qas-products.bbraun.com/hybrislogin") //
 				.doType(By.id("j_username"), "stuestxl") //
