@@ -10,6 +10,8 @@ import io.restassured.http.ContentType;
 /**
  * Tests of Hybris OCC {@code /products} webservice operation.
  * 
+ * @see https://collaboration.bbraun.com/display/HYBRIS/OCC+Webservice+Documentation#OCCWebserviceDocumentation-RequestProductData
+ * 
  * @author stuestde
  */
 public class OCCProductRequestTest {
