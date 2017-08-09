@@ -15,7 +15,7 @@ import io.restassured.http.ContentType;
 public class OCCProductRequestTest {
 
 	@Test
-	public void testOCCProductOperationWithAEMUserEn01() {
+	public void testOCCProductRequestPRIDWithAEMUserEn01() {
 		new BBMWebServiceTestBuilder<>() //
 				.withNewRequest() //
 				.withBasicAuth("trusted_client", "secret") //
@@ -34,6 +34,27 @@ public class OCCProductRequestTest {
 				.assertResponseBodyByPathEquals("url", "/p/PRID00001270") //
 				.assertResponseBodyByPathEquals("code", "PRID00001270") //
 				.assertResponseBodyEqualsReference("OCC_PRID1270_Expected.json", "sapModifiedTime") //
+		;
+	}
+
+	@Test
+	public void testOCCProductRequestProductRelatedBPRWithAEMUserEn01() {
+		new BBMWebServiceTestBuilder<>() //
+		.withNewRequest() //
+		.withBasicAuth("trusted_client", "secret") //
+		.doAuthenticateOAuth2("${hybris.oauth.url}", //
+				GrantType.PASSWORD, //
+				"${hybris.oauth.username}", //
+				"${hybris.oauth.password}") //
+		.withNewRequest() //
+		.withQueryParam("applicationKey", "AEM2015")//
+		.withQueryParam("viewId", "en_01") //
+		.withQueryParam("access_token", "${accessToken}") //
+		
+		.doGet("${hybris.BPR000000000000000100007757500000.url}") //
+		
+		.assertResponseContentType(ContentType.JSON) //
+		.assertResponseBodyEqualsReference("OCC_BPR000000000000000100007757500000_Expected.json") //
 		;
 	}
 }
