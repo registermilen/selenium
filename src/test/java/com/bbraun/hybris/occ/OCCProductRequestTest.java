@@ -30,7 +30,7 @@ public class OCCProductRequestTest {
 				.withQueryParam("viewId", "en_01") //
 				.withQueryParam("access_token", "${accessToken}") //
 
-				.doGet("${hybris.prid1270.url}") //
+				.doGet("${hybris.occ.product.prid1270.url}") //
 
 				.assertResponseContentType(ContentType.JSON) //
 				.assertResponseBodyByPathEquals("url", "/p/PRID00001270") //
@@ -57,7 +57,7 @@ public class OCCProductRequestTest {
 				.withQueryParam("access_token", "${accessToken}") //
 				.withQueryParam("modifiedSince", unixTimestamp5MinutesAgo) //
 
-				.doGet("${hybris.prid1270.url}") //
+				.doGet("${hybris.occ.product.prid1270.url}") //
 
 				.assertResponseContentType(ContentType.JSON) //
 				.assertResponseBodyByPathEquals("resourceStatus", "NOT_MODIFIED") //
@@ -79,7 +79,7 @@ public class OCCProductRequestTest {
 				.withQueryParam("viewId", "en_01") //
 				.withQueryParam("access_token", "${accessToken}") //
 
-				.doGet("${hybris.BPR000000000000000100007757500000.url}") //
+				.doGet("${hybris.occ.product.BPR000000000000000100007757500000.url}") //
 
 				.assertResponseContentType(ContentType.JSON) //
 				.assertResponseBodyEqualsReference("OCC_BPR000000000000000100007757500000_Expected.json") //
@@ -100,7 +100,7 @@ public class OCCProductRequestTest {
 				.withQueryParam("viewId", "en_01") //
 				.withQueryParam("access_token", "${accessToken}") //
 
-				.doGet("${hybris.BPG000000000000000100006550700000.url}") //
+				.doGet("${hybris.occ.product.BPG000000000000000100006550700000.url}") //
 
 				.assertResponseContentType(ContentType.JSON) //
 				.assertResponseBodyEqualsReference("OCC_BPG000000000000000100006550700000_Expected.json") //
