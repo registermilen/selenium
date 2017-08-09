@@ -1,0 +1,210 @@
+{
+    "applicationType": "WIN",
+    "classifications": [
+        {
+            "code": "BKC_CL_BPG",
+            "features": [
+                {
+                    "code": "BKC_DVS_CATEGORY_BBM",
+                    "comparable": true,
+                    "featureValues": [
+                        {
+                            "code": "00602",
+                            "value": "Product photographs"
+                        }
+                    ],
+                    "name": "Document category",
+                    "range": false
+                },
+                {
+                    "code": "BKC_DVS_DOCUMENT_LANGUAGE_BBM",
+                    "comparable": true,
+                    "featureValues": [
+                        {
+                            "code": "DE",
+                            "value": "DE"
+                        },
+                        {
+                            "code": "EN",
+                            "value": "EN"
+                        }
+                    ],
+                    "name": "Document language",
+                    "range": false
+                },
+                {
+                    "code": "BKC_DVS_RESPONSIBLE_PERSON_BBM",
+                    "comparable": true,
+                    "featureValues": [
+                        {
+                            "code": "WACKKADE",
+                            "value": "WACKKADE"
+                        }
+                    ],
+                    "name": "Responsible person for content",
+                    "range": false
+                },
+                {
+                    "code": "BKC_DVS_USAGE_BBM",
+                    "comparable": true,
+                    "featureValues": [
+                        {
+                            "code": "INTERN UND EXTERN",
+                            "value": "Internal and external"
+                        }
+                    ],
+                    "name": "Usage",
+                    "range": false
+                },
+                {
+                    "code": "BKC_DVS_PUBLICATIONCHANNEL_BBM",
+                    "comparable": true,
+                    "featureValues": [
+                        {
+                            "code": "CORPORATE WEBSITE",
+                            "value": "Corporate Website"
+                        }
+                    ],
+                    "name": "Publication channel",
+                    "range": false
+                },
+                {
+                    "code": "BKC_DVS_COUNTRY_RELEASE_BBM",
+                    "comparable": true,
+                    "featureValues": [
+                        {
+                            "code": "AT",
+                            "value": "AT"
+                        },
+                        {
+                            "code": "DE",
+                            "value": "DE"
+                        },
+                        {
+                            "code": "01",
+                            "value": "01"
+                        }
+                    ],
+                    "name": "Country release",
+                    "range": false
+                },
+                {
+                    "code": "BKC_DVS_RESOLUTION_BBM",
+                    "comparable": true,
+                    "featureValues": [
+                        {
+                            "code": "B",
+                            "value": "96"
+                        }
+                    ],
+                    "name": "Resolution dpi",
+                    "range": false
+                },
+                {
+                    "code": "BKC_DVS_PICTURE_TYPE_BBM",
+                    "comparable": true,
+                    "featureValues": [
+                        {
+                            "code": "PRODUKTBILD VERGROESSERUNG WEB",
+                            "value": "Product Picture Web Enlargemen"
+                        }
+                    ],
+                    "name": "Picture type",
+                    "range": false
+                },
+                {
+                    "code": "BKC_DVS_MASTER",
+                    "comparable": true,
+                    "featureValues": [
+                        {
+                            "code": "01",
+                            "value": "Yes"
+                        }
+                    ],
+                    "name": "Master Document/Image",
+                    "range": false
+                }
+            ],
+            "name": "Picture/Drawing"
+        }
+    ],
+    "code": "BPG000000000000000100006550700000",
+    "description": "Testdokument Schulung 04.03.11",
+    "documentMediaType": {
+        "code": "PICTURE"
+    },
+    "fileSize": "23787",
+    "languages": [
+        "DE",
+        "EN"
+    ],
+    "lastModifiedTime": "04.03.2011",
+    "marketingReleaseFeatureValue": [
+        "AT",
+        "DE",
+        "01"
+    ],
+    "mediaUrl": "/medias/Test-Paint.JPG?context=bWFzdGVyfHJvb3R8MjM3ODd8aW1hZ2UvanBlZ3xoNDkvaDIwLzkxODgyMjI0MzUzNTguanBnfDRkYzQxZTI3MGQwNmQ4YmRmMDFkNWNmMGRmZDZmNzllNmY4YTk2YzA4ZGM0M2FhMDkzY2NjOGZiNWZmNDA5Nzg",
+    "mime": "image/jpeg",
+    "name": "Testdokument",
+    "picture": true,
+    "pictureSortOrder": 1000010,
+    "pictureType": "PRODUKTBILD VERGROESSERUNG WEB",
+    "preview": "/medias/Test-Paint.JPG?context=bWFzdGVyfHJvb3R8MjM3ODd8aW1hZ2UvanBlZ3xoNDkvaDIwLzkxODgyMjI0MzUzNTguanBnfDRkYzQxZTI3MGQwNmQ4YmRmMDFkNWNmMGRmZDZmNzllNmY4YTk2YzA4ZGM0M2FhMDkzY2NjOGZiNWZmNDA5Nzg",
+    "productReferences": [
+        {
+            "posNr": 0,
+            "preselected": false,
+            "referenceType": "DOCUMENT",
+            "target": {
+                "code": "PRID00001252",
+                "name": "TEST_PRODUCT CENTER 1252",
+                "url": "/p/PRID00001252"
+            }
+        }
+    ],
+    "productType": "DOCUMENT",
+    "realFileName": "Test_Paint.JPG",
+    "relatedProductLinks": [
+        {
+            "code": "PRID00001252",
+            "materialShortText": "TEST_PRODUCT CENTER 1252",
+            "name": "TEST_PRODUCT CENTER 1252",
+            "url": "/p/PRID00001252"
+        }
+    ],
+    "resourceStatus": "UPDATED",
+    "responsiblePersonForContent": [
+        "WACKKADE"
+    ],
+    "sapDocumentGalleryImages": [
+        {
+            "url": "/medias/Test-Paint.JPG?context=bWFzdGVyfHJvb3R8MjM3ODd8aW1hZ2UvanBlZ3xoNDkvaDIwLzkxODgyMjI0MzUzNTguanBnfDRkYzQxZTI3MGQwNmQ4YmRmMDFkNWNmMGRmZDZmNzllNmY4YTk2YzA4ZGM0M2FhMDkzY2NjOGZiNWZmNDA5Nzg"
+        },
+        {
+            "format": "bbraun-80W",
+            "url": "/medias/BPG000000000000000100006550700000-bbraun-80W?context=bWFzdGVyfHJvb3R8ODIzOHxpbWFnZS9qcGVnfGg3NS9oYzMvOTE4ODIzMzAxOTQyMi5qcGd8N2IxN2ExYTk3Y2IyY2Q0YjZmOTczZDk3ZTI4N2Q0MmQwMjk5ZGMyMGE3MmQzZjg1ZTBkNjdiYmE0NjU0YjNiNw"
+        },
+        {
+            "format": "bbraun-100W",
+            "url": "/medias/BPG000000000000000100006550700000-bbraun-100W?context=bWFzdGVyfHJvb3R8ODQxOXxpbWFnZS9qcGVnfGg0Yy9oZWMvOTE4ODIzMzA4NDk1OC5qcGd8OTE5ZTI0YTRkZTUzYTZmZDZhYjAzNGUxNTU2MzRiZWFjODA5Y2NmYWFhOWVjMTQyMjdkZDdhMzk4Nzg3Y2UzYg"
+        },
+        {
+            "format": "bbraun-180W",
+            "url": "/medias/BPG000000000000000100006550700000-bbraun-180W?context=bWFzdGVyfHJvb3R8OTU4MnxpbWFnZS9qcGVnfGg3My9oMTgvOTE4ODIzMzE1MDQ5NC5qcGd8ZjZiODQ0ZjczNTE2MTA0MWU5ZDY2ODVmZDU2YTQxMTlhYjAzZTYyMTkyZjk5MmM1ZDA0NmZjMDk4MWU1MDU4MQ"
+        },
+        {
+            "format": "bbraun-380W",
+            "url": "/medias/BPG000000000000000100006550700000-bbraun-380W?context=bWFzdGVyfHJvb3R8MTQ1MjR8aW1hZ2UvanBlZ3xoNTQvaDgxLzkxODgyMzMyMTYwMzAuanBnfDVmZjkwMjQ4ZGQ3MGVjNjQ3NDA0MWNiOTNiYjRmNTIzZTFiZDQzY2Q5NTIxNmY0OGIzZWZiYTc4ZGUwY2E3NjU"
+        }
+    ],
+    "status": "FR",
+    "stock": {
+        "stockLevel": 0,
+        "stockLevelStatus": "inStock"
+    },
+    "summary": "",
+    "type": "BPG",
+    "url": "/doc/BPG000000000000000100006550700000",
+    "version": "00"
+}
