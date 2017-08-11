@@ -159,17 +159,6 @@
                     "uid": "PRID00001011/B/4251890-02"
                 },
                 {
-                    "bomComponent": "4251607-02",
-                    "bomComponentQuantity": "1.000",
-                    "bomUsage": "B",
-                    "posNumber": "0040",
-                    "product": {
-                        "aemProductType": "BBM",
-                        "code": "4251607-02"
-                    },
-                    "uid": "PRID00001011/B/4251607-02"
-                },
-                {
                     "bomComponent": "4251611-02",
                     "bomComponentQuantity": "1.000",
                     "bomUsage": "B",
@@ -179,6 +168,17 @@
                         "code": "4251611-02"
                     },
                     "uid": "PRID00001011/B/4251611-02"
+                },
+                {
+                    "bomComponent": "4251607-02",
+                    "bomComponentQuantity": "1.000",
+                    "bomUsage": "B",
+                    "posNumber": "0040",
+                    "product": {
+                        "aemProductType": "BBM",
+                        "code": "4251607-02"
+                    },
+                    "uid": "PRID00001011/B/4251607-02"
                 },
                 {
                     "bomComponent": "4251612-02",
@@ -788,7 +788,7 @@
     "purStatus": "M1",
     "resourceStatus": "UPDATED",
     "salStatus": "V1",
-    "sapModifiedTime": "2017-07-31T18:32:26+0000",
+    "sapModifiedTime": "2017-08-11T12:40:44+0000",
     "stock": {
         "stockLevel": 0,
         "stockLevelStatus": "inStock"
