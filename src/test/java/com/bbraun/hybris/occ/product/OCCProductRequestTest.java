@@ -1,4 +1,4 @@
-package com.bbraun.hybris.occ;
+package com.bbraun.hybris.occ.product;
 
 import org.junit.Test;
 

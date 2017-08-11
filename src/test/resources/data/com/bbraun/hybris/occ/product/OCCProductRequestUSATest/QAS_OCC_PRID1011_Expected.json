@@ -1,0 +1,838 @@
+{
+    "baseUom": "ST",
+    "baseUomIso": "PCE",
+    "billOfMaterials": [
+        {
+            "billOfMaterialItem": [
+                {
+                    "bomComponent": "4252561-02",
+                    "bomComponentQuantity": "1.000",
+                    "bomUsage": "B",
+                    "posNumber": "0465",
+                    "product": {
+                        "aemProductType": "BBM",
+                        "code": "4252561-02"
+                    },
+                    "uid": "PRID00001011/B/4252561-02"
+                },
+                {
+                    "bomComponent": "4252551-02",
+                    "bomComponentQuantity": "1.000",
+                    "bomUsage": "B",
+                    "posNumber": "0520",
+                    "product": {
+                        "aemProductType": "BBM",
+                        "code": "4252551-02"
+                    },
+                    "uid": "PRID00001011/B/4252551-02"
+                },
+                {
+                    "bomComponent": "4251687-02",
+                    "bomComponentQuantity": "1.000",
+                    "bomUsage": "B",
+                    "posNumber": "0570",
+                    "product": {
+                        "aemProductType": "BBM",
+                        "code": "4251687-02"
+                    },
+                    "uid": "PRID00001011/B/4251687-02"
+                },
+                {
+                    "bomComponent": "4251652-02",
+                    "bomComponentQuantity": "1.000",
+                    "bomUsage": "B",
+                    "posNumber": "0360",
+                    "product": {
+                        "aemProductType": "BBM",
+                        "code": "4251652-02"
+                    },
+                    "uid": "PRID00001011/B/4251652-02"
+                },
+                {
+                    "bomComponent": "4251679-02",
+                    "bomComponentQuantity": "1.000",
+                    "bomUsage": "B",
+                    "posNumber": "0480",
+                    "product": {
+                        "aemProductType": "BBM",
+                        "code": "4251679-02"
+                    },
+                    "uid": "PRID00001011/B/4251679-02"
+                },
+                {
+                    "bomComponent": "4252543-02",
+                    "bomComponentQuantity": "1.000",
+                    "bomUsage": "B",
+                    "posNumber": "0410",
+                    "product": {
+                        "aemProductType": "BBM",
+                        "code": "4252543-02"
+                    },
+                    "uid": "PRID00001011/B/4252543-02"
+                },
+                {
+                    "bomComponent": "4252560-02",
+                    "bomComponentQuantity": "1.000",
+                    "bomUsage": "B",
+                    "posNumber": "0620",
+                    "product": {
+                        "aemProductType": "BBM",
+                        "code": "4252560-02"
+                    },
+                    "uid": "PRID00001011/B/4252560-02"
+                },
+                {
+                    "bomComponent": "4251695-02",
+                    "bomComponentQuantity": "1.000",
+                    "bomUsage": "B",
+                    "posNumber": "0670",
+                    "product": {
+                        "aemProductType": "BBM",
+                        "code": "4251695-02"
+                    },
+                    "uid": "PRID00001011/B/4251695-02"
+                },
+                {
+                    "bomComponent": "4252578-02",
+                    "bomComponentQuantity": "1.000",
+                    "bomUsage": "B",
+                    "posNumber": "0720",
+                    "product": {
+                        "aemProductType": "BBM",
+                        "code": "4252578-02"
+                    },
+                    "uid": "PRID00001011/B/4252578-02"
+                },
+                {
+                    "bomComponent": "4252586-02",
+                    "bomComponentQuantity": "1.000",
+                    "bomUsage": "B",
+                    "posNumber": "0820",
+                    "product": {
+                        "aemProductType": "BBM",
+                        "code": "4252586-02"
+                    },
+                    "uid": "PRID00001011/B/4252586-02"
+                },
+                {
+                    "bomComponent": "4251709-02",
+                    "bomComponentQuantity": "1.000",
+                    "bomUsage": "B",
+                    "posNumber": "0770",
+                    "product": {
+                        "aemProductType": "BBM",
+                        "code": "4251709-02"
+                    },
+                    "uid": "PRID00001011/B/4251709-02"
+                },
+                {
+                    "bomComponent": "4251717-02",
+                    "bomComponentQuantity": "1.000",
+                    "bomUsage": "B",
+                    "posNumber": "0870",
+                    "product": {
+                        "aemProductType": "BBM",
+                        "code": "4251717-02"
+                    },
+                    "uid": "PRID00001011/B/4251717-02"
+                },
+                {
+                    "bomComponent": "4252594-02",
+                    "bomComponentQuantity": "1.000",
+                    "bomUsage": "B",
+                    "posNumber": "0910",
+                    "product": {
+                        "aemProductType": "BBM",
+                        "code": "4252594-02"
+                    },
+                    "uid": "PRID00001011/B/4252594-02"
+                },
+                {
+                    "bomComponent": "4251890-02",
+                    "bomComponentQuantity": "1.000",
+                    "bomUsage": "B",
+                    "posNumber": "0960",
+                    "product": {
+                        "aemProductType": "BBM",
+                        "code": "4251890-02"
+                    },
+                    "uid": "PRID00001011/B/4251890-02"
+                },
+                {
+                    "bomComponent": "4251611-02",
+                    "bomComponentQuantity": "1.000",
+                    "bomUsage": "B",
+                    "posNumber": "0010",
+                    "product": {
+                        "aemProductType": "BBM",
+                        "code": "4251611-02"
+                    },
+                    "uid": "PRID00001011/B/4251611-02"
+                },
+                {
+                    "bomComponent": "4251607-02",
+                    "bomComponentQuantity": "1.000",
+                    "bomUsage": "B",
+                    "posNumber": "0040",
+                    "product": {
+                        "aemProductType": "BBM",
+                        "code": "4251607-02"
+                    },
+                    "uid": "PRID00001011/B/4251607-02"
+                },
+                {
+                    "bomComponent": "4251612-02",
+                    "bomComponentQuantity": "1.000",
+                    "bomUsage": "B",
+                    "posNumber": "0080",
+                    "product": {
+                        "aemProductType": "BBM",
+                        "code": "4251612-02"
+                    },
+                    "uid": "PRID00001011/B/4251612-02"
+                },
+                {
+                    "bomComponent": "4251601-02",
+                    "bomComponentQuantity": "1.000",
+                    "bomUsage": "B",
+                    "posNumber": "0130",
+                    "product": {
+                        "aemProductType": "BBM",
+                        "code": "4251601-02"
+                    },
+                    "uid": "PRID00001011/B/4251601-02"
+                },
+                {
+                    "bomComponent": "4252500-02",
+                    "bomComponentQuantity": "1.000",
+                    "bomUsage": "B",
+                    "posNumber": "0180",
+                    "product": {
+                        "aemProductType": "BBM",
+                        "code": "4252500-02"
+                    },
+                    "uid": "PRID00001011/B/4252500-02"
+                },
+                {
+                    "bomComponent": "4252520-02",
+                    "bomComponentQuantity": "1.000",
+                    "bomUsage": "B",
+                    "posNumber": "0220",
+                    "product": {
+                        "aemProductType": "BBM",
+                        "code": "4252520-02"
+                    },
+                    "uid": "PRID00001011/B/4252520-02"
+                },
+                {
+                    "bomComponent": "4251628-02",
+                    "bomComponentQuantity": "1.000",
+                    "bomUsage": "B",
+                    "posNumber": "0250",
+                    "product": {
+                        "aemProductType": "BBM",
+                        "code": "4251628-02"
+                    },
+                    "uid": "PRID00001011/B/4251628-02"
+                },
+                {
+                    "bomComponent": "4252519-02",
+                    "bomComponentQuantity": "1.000",
+                    "bomUsage": "B",
+                    "posNumber": "0300",
+                    "product": {
+                        "aemProductType": "BBM",
+                        "code": "4252519-02"
+                    },
+                    "uid": "PRID00001011/B/4252519-02"
+                },
+                {
+                    "bomComponent": "4252511-02",
+                    "bomComponentQuantity": "1.000",
+                    "bomUsage": "B",
+                    "posNumber": "0065",
+                    "product": {
+                        "aemProductType": "BBM",
+                        "code": "4252511-02"
+                    },
+                    "uid": "PRID00001011/B/4252511-02"
+                },
+                {
+                    "bomComponent": "4252527-02",
+                    "bomComponentQuantity": "1.000",
+                    "bomUsage": "B",
+                    "posNumber": "0340",
+                    "product": {
+                        "aemProductType": "BBM",
+                        "code": "4252527-02"
+                    },
+                    "uid": "PRID00001011/B/4252527-02"
+                },
+                {
+                    "bomComponent": "4251644-02",
+                    "bomComponentQuantity": "1.000",
+                    "bomUsage": "B",
+                    "posNumber": "0382",
+                    "product": {
+                        "aemProductType": "BBM",
+                        "code": "4251644-02"
+                    },
+                    "uid": "PRID00001011/B/4251644-02"
+                },
+                {
+                    "bomComponent": "4252535-02",
+                    "bomComponentQuantity": "1.000",
+                    "bomUsage": "B",
+                    "posNumber": "0440",
+                    "product": {
+                        "aemProductType": "BBM",
+                        "code": "4252535-02"
+                    },
+                    "uid": "PRID00001011/B/4252535-02"
+                }
+            ],
+            "bomAlternative": "01",
+            "bomUsage": "B",
+            "uid": "PRID00001011/B//01"
+        }
+    ],
+    "classifications": [
+        {
+            "code": "BKC_PRODUCTS",
+            "features": [
+                {
+                    "code": "BKC_PR_DOC_CHECK",
+                    "comparable": true,
+                    "featureValues": [
+                        {
+                            "code": "KR",
+                            "value": "Korea"
+                        },
+                        {
+                            "code": "PT",
+                            "value": "Portugal"
+                        }
+                    ],
+                    "name": "Doc-Check",
+                    "range": false
+                },
+                {
+                    "code": "BKC_PR_COUNTRY_RELEASE",
+                    "comparable": true,
+                    "featureValues": [
+                        {
+                            "code": "PK",
+                            "value": "PK"
+                        },
+                        {
+                            "code": "LV",
+                            "value": "LV"
+                        },
+                        {
+                            "code": "CO",
+                            "value": "CO"
+                        },
+                        {
+                            "code": "PE",
+                            "value": "PE"
+                        },
+                        {
+                            "code": "03",
+                            "value": "03"
+                        },
+                        {
+                            "code": "BR",
+                            "value": "BR"
+                        },
+                        {
+                            "code": "HK",
+                            "value": "HK"
+                        },
+                        {
+                            "code": "04",
+                            "value": "04"
+                        },
+                        {
+                            "code": "AR",
+                            "value": "AR"
+                        },
+                        {
+                            "code": "US",
+                            "value": "US"
+                        },
+                        {
+                            "code": "BW",
+                            "value": "BW"
+                        },
+                        {
+                            "code": "DK",
+                            "value": "DK"
+                        },
+                        {
+                            "code": "SE",
+                            "value": "SE"
+                        },
+                        {
+                            "code": "BG",
+                            "value": "BG"
+                        },
+                        {
+                            "code": "PL",
+                            "value": "PL"
+                        },
+                        {
+                            "code": "01",
+                            "value": "01"
+                        },
+                        {
+                            "code": "DE",
+                            "value": "DE"
+                        },
+                        {
+                            "code": "MY",
+                            "value": "MY"
+                        },
+                        {
+                            "code": "ID",
+                            "value": "ID"
+                        },
+                        {
+                            "code": "PH",
+                            "value": "PH"
+                        },
+                        {
+                            "code": "IN",
+                            "value": "IN"
+                        },
+                        {
+                            "code": "CN",
+                            "value": "CN"
+                        },
+                        {
+                            "code": "CH",
+                            "value": "CH"
+                        },
+                        {
+                            "code": "CZ",
+                            "value": "CZ"
+                        },
+                        {
+                            "code": "FR",
+                            "value": "FR"
+                        },
+                        {
+                            "code": "ES",
+                            "value": "ES"
+                        },
+                        {
+                            "code": "SK",
+                            "value": "SK"
+                        },
+                        {
+                            "code": "GB",
+                            "value": "GB"
+                        },
+                        {
+                            "code": "NL",
+                            "value": "NL"
+                        },
+                        {
+                            "code": "BE",
+                            "value": "BE"
+                        },
+                        {
+                            "code": "PT",
+                            "value": "PT"
+                        },
+                        {
+                            "code": "NO",
+                            "value": "NO"
+                        },
+                        {
+                            "code": "JP",
+                            "value": "JP"
+                        },
+                        {
+                            "code": "TH",
+                            "value": "TH"
+                        },
+                        {
+                            "code": "SG",
+                            "value": "SG"
+                        },
+                        {
+                            "code": "TW",
+                            "value": "TW"
+                        },
+                        {
+                            "code": "KR",
+                            "value": "KR"
+                        },
+                        {
+                            "code": "MX",
+                            "value": "MX"
+                        },
+                        {
+                            "code": "AT",
+                            "value": "AT"
+                        },
+                        {
+                            "code": "HU",
+                            "value": "HU"
+                        },
+                        {
+                            "code": "AU",
+                            "value": "AU"
+                        },
+                        {
+                            "code": "IT",
+                            "value": "IT"
+                        },
+                        {
+                            "code": "IE",
+                            "value": "IE"
+                        },
+                        {
+                            "code": "NZ",
+                            "value": "NZ"
+                        }
+                    ],
+                    "name": "Marketing release",
+                    "range": false
+                },
+                {
+                    "code": "BKC_PR_PRODRESPONSIBILITY",
+                    "comparable": true,
+                    "featureValues": [
+                        {
+                            "code": "HC",
+                            "value": "HC"
+                        }
+                    ],
+                    "name": "Global Product Responsibility",
+                    "range": false
+                }
+            ],
+            "name": "Products for BKC"
+        }
+    ],
+    "code": "PRID00001011",
+    "description": "<p>Preferred passive safety design</p>",
+    "division": "MM",
+    "hasClassifications": false,
+    "localizedBkcTexts": [
+        {
+            "key": "en",
+            "value": {
+                "bkcTexts": [
+                    {
+                        "bkcCountry": "US",
+                        "language": "E",
+                        "languageIso": "EN",
+                        "text": "<p>Although safety devices were introduced over a decade ago, preventing needlestick injuries continues to be a major concern. With the B. Braun Introcan Safety<sup>®</sup> IV Catheter, you are protected by a truly passive safety device that is activated automatically and cannot be by-passed. No extra steps are required to ensure healthcare worker and patient safety.</p><p><br />This easy-to-use safety IV catheter incorporates separate needle and catheter flashback - Double Flashback technology - that gives you the added confidence of successful placement every time. The sharp needle features a Universal Bevel geometry that allows a wider choice of insertion angles, which is designed tomake the catheter easy to adapt to and venipuncture more comfortable for patients. And withless plastic contentthan other safety IV catheters, you can potentially reduce storage space and medical waste.<br /></p><p>Raise your facility’s standard of care and choose the B. Braun Introcan Safety<sup>®</sup> IV Catheter to:<br /></p><ol><li><strong>Reduce Needlestick Injuries:</strong> recent studies<sup>1,2</sup> confirm that passive safety designs offer 2-3 times better protection against accidental needlesticks than active designs. INS Standards also recommend the use of passive safety devices.</li><li><strong>Promote First Stick Success:</strong> the innovative Double Flashback technology allows separate confirmation of both needle and catheter placement, which can result in better first stick success and greater clinician confidence. New Thinwall technology in our 24 Ga. catheters is designed to speed flashback of blood to help confirm placement in patients. Research also shows Introcan Safety<sup>®</sup> is easier to introduce into the vein compared to the leading IV catheter.<sup>3</sup></li><li><strong>Improve Patient Comfort:</strong> the sharp needle features a Universal Bevel thatis designedfor a wider choice of insertion angles and produces less tearing.</li><li><strong>Ensure Best Practices:</strong> the passive safety design ensures that the safety mechanism is always activated and prevents re-insertion of the stylet.Additionally, a recent study shows Introcan Safety<sup>®</sup> results in less blood exposure to staff than catheters featuring spring-retraction of the needle.<sup>3</sup></li><li><strong>Help the Environment:</strong> lighter, more compact design can potentialy lower shipping, storage and waste disposal costs.<br /></li></ol>",
+                        "textType": "XBESC",
+                        "uid": "XBESCUSEN/PRID00001011"
+                    },
+                    {
+                        "bkcCountry": "US",
+                        "language": "E",
+                        "languageIso": "EN",
+                        "text": "<p><sup>1</sup>Tosini W, et al. “ Needlestick Injury Rates According to Different Types of Safety Engineered Devices: Results of a French Multicenter Study”, Infection Control and Hospital Epidemiology, April 2010. Vol 31, Number 4<br /><sup>2</sup>Shimatani M, et al. “Comparison of the Needlestick Injuries Due to Active and Passive Design Safety Intravenous Catheters”, Poster Presentation APIC 2011. Submitted for publication 2011<br /><sup>3</sup>Prunet B, et al. \"A Prospective Randomized Trial of Two Safety Peripheral Intravenous Catheters\", Anesthesia and Analgesia, July 2008. Vol 107, Number 1 </p>",
+                        "textType": "XCITA",
+                        "uid": "XCITAUSEN/PRID00001011"
+                    },
+                    {
+                        "bkcCountry": "US",
+                        "language": "E",
+                        "languageIso": "EN",
+                        "text": "",
+                        "textType": "XFEAT",
+                        "uid": "XFEATUSEN/PRID00001011"
+                    },
+                    {
+                        "bkcCountry": "US",
+                        "language": "E",
+                        "languageIso": "EN",
+                        "text": "",
+                        "textType": "XHINT",
+                        "uid": "XHINTUSEN/PRID00001011"
+                    },
+                    {
+                        "bkcCountry": "US",
+                        "language": "E",
+                        "languageIso": "EN",
+                        "text": "<p>Introcan Safety<sup>®</sup> IV Catheter Straight</p>",
+                        "textType": "XNAME",
+                        "uid": "XNAMEUSEN/PRID00001011"
+                    },
+                    {
+                        "bkcCountry": "US",
+                        "language": "E",
+                        "languageIso": "EN",
+                        "text": "<p>Preferred passive safety design</p>",
+                        "textType": "XSUBL",
+                        "uid": "XSUBLUSEN/PRID00001011"
+                    }
+                ]
+            }
+        }
+    ],
+    "marketingReleaseFeatureValue": [
+        "US",
+        "TW",
+        "TH",
+        "SK",
+        "01",
+        "03",
+        "04",
+        "AR",
+        "AT",
+        "AU",
+        "BE",
+        "BG",
+        "BR",
+        "BW",
+        "CH",
+        "CN",
+        "CO",
+        "CZ",
+        "DE",
+        "ES",
+        "FR",
+        "GB",
+        "HK",
+        "HU",
+        "ID",
+        "IE",
+        "IN",
+        "IT",
+        "JP",
+        "KR",
+        "LV",
+        "MX",
+        "MY",
+        "NL",
+        "NO",
+        "PE",
+        "PH",
+        "PK",
+        "PT",
+        "SG",
+        "NZ",
+        "PL",
+        "DK",
+        "SE"
+    ],
+    "materialShortText": "INTROCAN SAFETY",
+    "materialType": "PRID",
+    "name": "INTROCAN SAFETY",
+    "productReferences": [
+        {
+            "posNr": 0,
+            "preselected": false,
+            "referenceType": "DOCUMENT",
+            "target": {
+                "code": "BPG000000000000000100009731400000",
+                "name": "Introcan Safety See How It Works Jul2010",
+                "url": "/doc/BPG000000000000000100009731400000"
+            }
+        },
+        {
+            "posNr": 1,
+            "preselected": false,
+            "referenceType": "DOCUMENT",
+            "target": {
+                "code": "BPG000000000000000100011478900000",
+                "mimeDetails": "image/jpeg",
+                "name": "Introcan Safety IV Catheter",
+                "pictureSortOrder": 1000000,
+                "url": "/doc/BPG000000000000000100011478900000"
+            }
+        },
+        {
+            "posNr": 2,
+            "preselected": false,
+            "referenceType": "DOCUMENT",
+            "target": {
+                "code": "BPG000000000000000100011366900000",
+                "mimeDetails": "image/jpeg",
+                "name": "Introcan Safety® IV Catheter",
+                "pictureSortOrder": 1000000,
+                "url": "/doc/BPG000000000000000100011366900000"
+            }
+        },
+        {
+            "posNr": 3,
+            "preselected": false,
+            "referenceType": "DOCUMENT",
+            "target": {
+                "code": "BPG000000000000000100008997600000",
+                "mimeDetails": "image/jpeg",
+                "name": "Introcan Safety® IV Catheter",
+                "pictureSortOrder": 1000000,
+                "url": "/doc/BPG000000000000000100008997600000"
+            }
+        },
+        {
+            "posNr": 4,
+            "preselected": false,
+            "referenceType": "DOCUMENT",
+            "target": {
+                "code": "BPB000000000000000100011724000000",
+                "name": "Request study: \"Needlestick Injury Rates...\" Tosini 2010",
+                "url": "/doc/BPB000000000000000100011724000000"
+            }
+        },
+        {
+            "posNr": 5,
+            "preselected": false,
+            "referenceType": "DOCUMENT",
+            "target": {
+                "code": "BPB000000000000000100011724100000",
+                "name": "Request study: \"Trial of Two Safety PIVC",
+                "url": "/doc/BPB000000000000000100011724100000"
+            }
+        },
+        {
+            "posNr": 6,
+            "preselected": false,
+            "referenceType": "DOCUMENT",
+            "target": {
+                "code": "BPR000000000000000100011582200000",
+                "name": "Learn More",
+                "url": "/doc/BPR000000000000000100011582200000"
+            }
+        },
+        {
+            "posNr": 7,
+            "preselected": false,
+            "referenceType": "DOCUMENT",
+            "target": {
+                "code": "BPR000000000000000100011584900000",
+                "name": "View Video",
+                "url": "/doc/BPR000000000000000100011584900000"
+            }
+        },
+        {
+            "posNr": 8,
+            "preselected": false,
+            "referenceType": "DOCUMENT",
+            "target": {
+                "code": "BPR000000000000000100011586200000",
+                "name": "View Video",
+                "url": "/doc/BPR000000000000000100011586200000"
+            }
+        },
+        {
+            "posNr": 9,
+            "preselected": false,
+            "referenceType": "DOCUMENT",
+            "target": {
+                "code": "BPR000000000000000100011695900000",
+                "name": "Experts speak on the issues: Recent Safety Engineered Device Study",
+                "url": "/doc/BPR000000000000000100011695900000"
+            }
+        },
+        {
+            "posNr": 10,
+            "preselected": false,
+            "referenceType": "DOCUMENT",
+            "target": {
+                "code": "BPR000000000000000100011677000000",
+                "mimeDetails": "application/pdf",
+                "name": "Introcan Safety brochure",
+                "url": "/doc/BPR000000000000000100011677000000"
+            }
+        },
+        {
+            "posNr": 11,
+            "preselected": false,
+            "referenceType": "DOCUMENT",
+            "target": {
+                "code": "BPR000000000000000100011722800000",
+                "mimeDetails": "application/pdf",
+                "name": "Introcan Safety Sharps Box brochure VAD67 Oct09",
+                "url": "/doc/BPR000000000000000100011722800000"
+            }
+        },
+        {
+            "posNr": 12,
+            "preselected": false,
+            "referenceType": "DOCUMENT",
+            "target": {
+                "code": "BPR000000000000000100011722900000",
+                "mimeDetails": "application/pdf",
+                "name": "Introcan Safety Practice Suggestions VAD27 Jun11",
+                "url": "/doc/BPR000000000000000100011722900000"
+            }
+        },
+        {
+            "posNr": 13,
+            "preselected": false,
+            "referenceType": "DOCUMENT",
+            "target": {
+                "code": "BPG000000000000000100012648000000",
+                "mimeDetails": "image/jpeg",
+                "name": "Introcan Safety® IV Catheter",
+                "pictureSortOrder": 1000000,
+                "url": "/doc/BPG000000000000000100012648000000"
+            }
+        },
+        {
+            "posNr": 14,
+            "preselected": false,
+            "referenceType": "DOCUMENT",
+            "target": {
+                "code": "BPG000000000000000100012653200000",
+                "mimeDetails": "image/jpeg",
+                "name": "Introcan Safety IV Catheter 20G",
+                "pictureSortOrder": 1000000,
+                "url": "/doc/BPG000000000000000100012653200000"
+            }
+        },
+        {
+            "posNr": 15,
+            "preselected": false,
+            "referenceType": "DOCUMENT",
+            "target": {
+                "code": "BPG000000000000000100018620300000",
+                "mimeDetails": "image/jpeg",
+                "name": "Introcan Safety IV Catheter 24G",
+                "pictureSortOrder": 1000000,
+                "url": "/doc/BPG000000000000000100018620300000"
+            }
+        }
+    ],
+    "productType": "PRID",
+    "purStatus": "M1",
+    "resourceStatus": "UPDATED",
+    "salStatus": "V1",
+    "sapModifiedTime": "2017-08-11T06:52:26+0000",
+    "stock": {
+        "stockLevel": 0,
+        "stockLevelStatus": "inStock"
+    },
+    "summary": "",
+    "transportGroup": "0001",
+    "uom": [
+        {
+            "alternativeUnit": "ST",
+            "alternativeUnitIso": "PCE",
+            "code": "ST/PRID00001011",
+            "denominator": 1,
+            "grossWeight": 0,
+            "height": 0,
+            "internationalCharacteristics": "0000000000",
+            "length": 0,
+            "netWeight": 0,
+            "numberOfSubUom": 0,
+            "numerator": 1,
+            "uomSortNumber": 0,
+            "volume": 0,
+            "weightUnit": "KG",
+            "weightUnitIso": "KGM",
+            "width": 0
+        }
+    ],
+    "url": "/p/PRID00001011"
+}
