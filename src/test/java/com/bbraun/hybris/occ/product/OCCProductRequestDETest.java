@@ -8,17 +8,17 @@ import com.bbraun.bbmtest.ws.BBMWebServiceTestBuilder.GrantType;
 import io.restassured.http.ContentType;
 
 /**
- * Tests the /products endpoint with AEM user and "en_us" view configuration.
+ * Tests the /products endpoint with AEM user and "de_DE" view configuration.
  * 
  * Test Product: Introcan Safety PRID00001011
- * Test Article: 4251611-02
+ * Test Article: Softasept  3887138
  * 
  * @author stuestde
  */
-public class OCCProductRequestUSATest {
+public class OCCProductRequestDETest {
 
 	@Test
-	public void testGetPRIDIntrocanSafetyUSWithAEMUser() {
+	public void testGetPRIDIntrocanSafetyDEWithAEMUser() {
 		new BBMWebServiceTestBuilder<>() //
 				.withNewRequest() //
 				.withBasicAuth("trusted_client", "secret") //
@@ -28,7 +28,7 @@ public class OCCProductRequestUSATest {
 						"${hybris.oauth.password}") //
 				.withNewRequest() //
 				.withQueryParam("applicationKey", "AEM2015")//
-				.withQueryParam("viewId", "en_us") //
+				.withQueryParam("viewId", "de_DE") //
 				.withQueryParam("access_token", "${accessToken}") //
 
 				.doGet("${hybris.occ.product.prid1011.url}") //
@@ -40,7 +40,7 @@ public class OCCProductRequestUSATest {
 	}
 
 	@Test
-	public void testGetArticleIntrocanSafetyUSWithAEMUser() {
+	public void testGetArticleSoftaseptDEWithAEMUser() {
 		new BBMWebServiceTestBuilder<>() //
 				.withNewRequest() //
 				.withBasicAuth("trusted_client", "secret") //
@@ -50,19 +50,19 @@ public class OCCProductRequestUSATest {
 						"${hybris.oauth.password}") //
 				.withNewRequest() //
 				.withQueryParam("applicationKey", "AEM2015")//
-				.withQueryParam("viewId", "en_us") //
+				.withQueryParam("viewId", "de_DE") //
 				.withQueryParam("access_token", "${accessToken}") //
 
-				.doGet("${hybris.occ.product.article425161102.url}") //
+				.doGet("${hybris.occ.product.article3887138.url}") //
 
 				.assertResponseContentType(ContentType.JSON) //
-				.assertResponseBodyEqualsReference("${hybris.occ.product.article425161102.expectedFile}",
+				.assertResponseBodyEqualsReference("${hybris.occ.product.article3887138.expectedFile}",
 						"sapModifiedTime") //
 		;
 	}
 
 	@Test
-	public void testGetBPGImageClassificationIntrocanSafetyUSWithAEMUser() {
+	public void testGetBPGImageClassificationSoftaseptDEWithAEMUser() {
 		new BBMWebServiceTestBuilder<>() //
 				.withNewRequest() //
 				.withBasicAuth("trusted_client", "secret") //
@@ -72,14 +72,14 @@ public class OCCProductRequestUSATest {
 						"${hybris.oauth.password}") //
 				.withNewRequest() //
 				.withQueryParam("applicationKey", "AEM2015")//
-				.withQueryParam("viewId", "en_us") //
+				.withQueryParam("viewId", "de_DE") //
 				.withQueryParam("access_token", "${accessToken}") //
 
-				.doGet("${hybris.occ.product.introcan.bpg.url}") //
+				.doGet("${hybris.occ.product.sofasept.bpg.url}") //
 
 				.assertResponseContentType(ContentType.JSON) //
 				.assertResponseBodyPartEqualsReference("classifications",
-						"${hybris.occ.product.introcan.bpg.expectedFile}") //
+						"${hybris.occ.product.sofasept.bpg.expectedFile}") //
 		;
 	}
 }
