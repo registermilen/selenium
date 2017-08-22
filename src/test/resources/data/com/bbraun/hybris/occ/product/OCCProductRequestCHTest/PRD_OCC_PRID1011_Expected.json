@@ -1,0 +1,710 @@
+{
+    "baseUom": "ST",
+    "baseUomIso": "PCE",
+    "billOfMaterials": [
+        {
+            "billOfMaterialItem": [
+                {
+                    "bomComponent": "4251679-01",
+                    "bomComponentQuantity": "1.000",
+                    "bomUsage": "B",
+                    "posNumber": "0470",
+                    "product": {
+                        "aemProductType": "BBM",
+                        "code": "4251679-01"
+                    },
+                    "uid": "PRID00001011/B/4251679-01"
+                },
+                {
+                    "bomComponent": "4251687-01",
+                    "bomComponentQuantity": "1.000",
+                    "bomUsage": "B",
+                    "posNumber": "0560",
+                    "product": {
+                        "aemProductType": "BBM",
+                        "code": "4251687-01"
+                    },
+                    "uid": "PRID00001011/B/4251687-01"
+                },
+                {
+                    "bomComponent": "4251652-01",
+                    "bomComponentQuantity": "1.000",
+                    "bomUsage": "B",
+                    "posNumber": "0350",
+                    "product": {
+                        "aemProductType": "BBM",
+                        "code": "4251652-01"
+                    },
+                    "uid": "PRID00001011/B/4251652-01"
+                },
+                {
+                    "bomComponent": "4251695-01",
+                    "bomComponentQuantity": "1.000",
+                    "bomUsage": "B",
+                    "posNumber": "0660",
+                    "product": {
+                        "aemProductType": "BBM",
+                        "code": "4251695-01"
+                    },
+                    "uid": "PRID00001011/B/4251695-01"
+                },
+                {
+                    "bomComponent": "4251709-01",
+                    "bomComponentQuantity": "1.000",
+                    "bomUsage": "B",
+                    "posNumber": "0760",
+                    "product": {
+                        "aemProductType": "BBM",
+                        "code": "4251709-01"
+                    },
+                    "uid": "PRID00001011/B/4251709-01"
+                },
+                {
+                    "bomComponent": "4251717-01",
+                    "bomComponentQuantity": "1.000",
+                    "bomUsage": "B",
+                    "posNumber": "0860",
+                    "product": {
+                        "aemProductType": "BBM",
+                        "code": "4251717-01"
+                    },
+                    "uid": "PRID00001011/B/4251717-01"
+                },
+                {
+                    "bomComponent": "4251607-01",
+                    "bomComponentQuantity": "1.000",
+                    "bomUsage": "B",
+                    "posNumber": "0030",
+                    "product": {
+                        "aemProductType": "BBM",
+                        "code": "4251607-01"
+                    },
+                    "uid": "PRID00001011/B/4251607-01"
+                },
+                {
+                    "bomComponent": "4251601-01",
+                    "bomComponentQuantity": "1.000",
+                    "bomUsage": "B",
+                    "posNumber": "0120",
+                    "product": {
+                        "aemProductType": "BBM",
+                        "code": "4251601-01"
+                    },
+                    "uid": "PRID00001011/B/4251601-01"
+                },
+                {
+                    "bomComponent": "4251628-01",
+                    "bomComponentQuantity": "1.000",
+                    "bomUsage": "B",
+                    "posNumber": "0240",
+                    "product": {
+                        "aemProductType": "BBM",
+                        "code": "4251628-01"
+                    },
+                    "uid": "PRID00001011/B/4251628-01"
+                },
+                {
+                    "bomComponent": "4251644-01",
+                    "bomComponentQuantity": "1.000",
+                    "bomUsage": "B",
+                    "posNumber": "0380",
+                    "product": {
+                        "aemProductType": "BBM",
+                        "code": "4251644-01"
+                    },
+                    "uid": "PRID00001011/B/4251644-01"
+                }
+            ],
+            "bomAlternative": "01",
+            "bomUsage": "B",
+            "uid": "PRID00001011/B//01"
+        }
+    ],
+    "classifications": [
+        {
+            "code": "BKC_PRODUCTS",
+            "features": [
+                {
+                    "code": "BKC_PR_DOC_CHECK",
+                    "comparable": true,
+                    "featureValues": [
+                        {
+                            "code": "KR",
+                            "value": "Korea"
+                        },
+                        {
+                            "code": "PT",
+                            "value": "Portugal"
+                        }
+                    ],
+                    "name": "Doc-Check",
+                    "range": false
+                },
+                {
+                    "code": "BKC_PR_COUNTRY_RELEASE",
+                    "comparable": true,
+                    "featureValues": [
+                        {
+                            "code": "PK",
+                            "value": "PK"
+                        },
+                        {
+                            "code": "LV",
+                            "value": "LV"
+                        },
+                        {
+                            "code": "CO",
+                            "value": "CO"
+                        },
+                        {
+                            "code": "PE",
+                            "value": "PE"
+                        },
+                        {
+                            "code": "03",
+                            "value": "03"
+                        },
+                        {
+                            "code": "BR",
+                            "value": "BR"
+                        },
+                        {
+                            "code": "HK",
+                            "value": "HK"
+                        },
+                        {
+                            "code": "04",
+                            "value": "04"
+                        },
+                        {
+                            "code": "AR",
+                            "value": "AR"
+                        },
+                        {
+                            "code": "US",
+                            "value": "US"
+                        },
+                        {
+                            "code": "BW",
+                            "value": "BW"
+                        },
+                        {
+                            "code": "DK",
+                            "value": "DK"
+                        },
+                        {
+                            "code": "SE",
+                            "value": "SE"
+                        },
+                        {
+                            "code": "TR",
+                            "value": "TR"
+                        },
+                        {
+                            "code": "PL",
+                            "value": "PL"
+                        },
+                        {
+                            "code": "01",
+                            "value": "01"
+                        },
+                        {
+                            "code": "DE",
+                            "value": "DE"
+                        },
+                        {
+                            "code": "MY",
+                            "value": "MY"
+                        },
+                        {
+                            "code": "ID",
+                            "value": "ID"
+                        },
+                        {
+                            "code": "PH",
+                            "value": "PH"
+                        },
+                        {
+                            "code": "IN",
+                            "value": "IN"
+                        },
+                        {
+                            "code": "CN",
+                            "value": "CN"
+                        },
+                        {
+                            "code": "CH",
+                            "value": "CH"
+                        },
+                        {
+                            "code": "CZ",
+                            "value": "CZ"
+                        },
+                        {
+                            "code": "FR",
+                            "value": "FR"
+                        },
+                        {
+                            "code": "ES",
+                            "value": "ES"
+                        },
+                        {
+                            "code": "SK",
+                            "value": "SK"
+                        },
+                        {
+                            "code": "GB",
+                            "value": "GB"
+                        },
+                        {
+                            "code": "NL",
+                            "value": "NL"
+                        },
+                        {
+                            "code": "BE",
+                            "value": "BE"
+                        },
+                        {
+                            "code": "PT",
+                            "value": "PT"
+                        },
+                        {
+                            "code": "NO",
+                            "value": "NO"
+                        },
+                        {
+                            "code": "JP",
+                            "value": "JP"
+                        },
+                        {
+                            "code": "TH",
+                            "value": "TH"
+                        },
+                        {
+                            "code": "SG",
+                            "value": "SG"
+                        },
+                        {
+                            "code": "TW",
+                            "value": "TW"
+                        },
+                        {
+                            "code": "KR",
+                            "value": "KR"
+                        },
+                        {
+                            "code": "MX",
+                            "value": "MX"
+                        },
+                        {
+                            "code": "AT",
+                            "value": "AT"
+                        },
+                        {
+                            "code": "HU",
+                            "value": "HU"
+                        },
+                        {
+                            "code": "AU",
+                            "value": "AU"
+                        },
+                        {
+                            "code": "IT",
+                            "value": "IT"
+                        },
+                        {
+                            "code": "IE",
+                            "value": "IE"
+                        },
+                        {
+                            "code": "NZ",
+                            "value": "NZ"
+                        },
+                        {
+                            "code": "BG",
+                            "value": "BG"
+                        }
+                    ],
+                    "name": "Marketingfreigabe",
+                    "range": false
+                },
+                {
+                    "code": "BKC_PR_PRODRESPONSIBILITY",
+                    "comparable": true,
+                    "featureValues": [
+                        {
+                            "code": "HC",
+                            "value": "HC"
+                        }
+                    ],
+                    "name": "Product Responsibilty",
+                    "range": false
+                }
+            ],
+            "name": "Produktrelevante Merkmale"
+        }
+    ],
+    "code": "PRID00001011",
+    "description": "<p>Sicherheits-Venenverweilkanülen ohne Fixierflügel; <br />zur Reduzierung von Nadelstichverletzungen und den damit verbundenen Infektionsrisiken</p>",
+    "division": "MM",
+    "hasClassifications": false,
+    "localizedBkcTexts": [
+        {
+            "key": "de",
+            "value": {
+                "bkcTexts": [
+                    {
+                        "bkcCountry": "CH",
+                        "language": "D",
+                        "languageIso": "DE",
+                        "text": "<ul><li>Kunststoffkatheter aus <strong>Polyurethan PUR</strong> <ul><li>Dünnwandig, hohe Durchflussrate</li><li>Exzellente Biokompatibilität</li><li>> 50%ige Flexibiltätszunahme im körperwarmen Blutstrom</li><li>Extrem glatte Oberfläche</li><li>Knickstabil / rückstellfähig</li><li>Vier vollständig eingebettete Röntgenkontraststreifen</li></ul></li><li>Spezielle Katheteranformung und Hinterschliff für minimales Punktionstrauma</li><li>Griff-Design für Einhand Punktionstechnik</li><li>Hochtransparente Blutkammer</li><li>Hydrophobierter Blutfängerstopfen</li><li>Lock-Ansatz</li><li>Farbliche Grössenkennzeichnung</li></ul><p> </p><p><strong>Sicherheitseigenschaften</strong></p><ul><li>Selbstaktivierende Clip-Technik</li><li>Safety-Clip sichert die Nadelspitze sofort nach dem Herausziehen</li><li>Clip verhindert weitere Nutzbarkeit</li><li>Safety-Mechanismus kann nicht umgangen werden</li><li>Keine Veränderung der Anwendergewohnheiten</li></ul>",
+                        "textType": "XBESC",
+                        "uid": "XBESCCHDE/PRID00001011"
+                    },
+                    {
+                        "bkcCountry": "CH",
+                        "language": "D",
+                        "languageIso": "DE",
+                        "text": "Introcan Safety®",
+                        "textType": "XNAME",
+                        "uid": "XNAMECHDE/PRID00001011"
+                    },
+                    {
+                        "bkcCountry": "CH",
+                        "language": "D",
+                        "languageIso": "DE",
+                        "text": "<p>Sicherheits-Venenverweilkanülen ohne Fixierflügel; <br />zur Reduzierung von Nadelstichverletzungen und den damit verbundenen Infektionsrisiken</p>",
+                        "textType": "XSUBL",
+                        "uid": "XSUBLCHDE/PRID00001011"
+                    }
+                ]
+            }
+        }
+    ],
+    "marketingReleaseFeatureValue": [
+        "CH",
+        "US",
+        "TW",
+        "TH",
+        "SK",
+        "01",
+        "03",
+        "04",
+        "AR",
+        "AT",
+        "AU",
+        "BE",
+        "BG",
+        "BR",
+        "BW",
+        "CN",
+        "CO",
+        "CZ",
+        "DE",
+        "ES",
+        "FR",
+        "GB",
+        "HK",
+        "HU",
+        "ID",
+        "IE",
+        "IN",
+        "IT",
+        "JP",
+        "KR",
+        "LV",
+        "MX",
+        "MY",
+        "NL",
+        "NO",
+        "PE",
+        "PH",
+        "PK",
+        "PT",
+        "SG",
+        "NZ",
+        "PL",
+        "DK",
+        "SE",
+        "TR"
+    ],
+    "materialShortText": "INTROCAN SAFETY",
+    "materialType": "PRID",
+    "name": "INTROCAN SAFETY",
+    "productReferences": [
+        {
+            "posNr": 0,
+            "preselected": false,
+            "referenceType": "DOCUMENT",
+            "target": {
+                "code": "BPG000000000000000100002033401000",
+                "mimeDetails": "image/jpeg",
+                "name": "Introcan® Safety",
+                "pictureSortOrder": 1000000,
+                "url": "/doc/BPG000000000000000100002033401000"
+            }
+        },
+        {
+            "posNr": 1,
+            "preselected": false,
+            "referenceType": "DOCUMENT",
+            "target": {
+                "code": "BPR000000000000000100001314000000",
+                "mimeDetails": "application/pdf",
+                "name": "Safety-Venenverweilkanülen",
+                "url": "/doc/BPR000000000000000100001314000000"
+            }
+        },
+        {
+            "posNr": 2,
+            "preselected": false,
+            "referenceType": "DOCUMENT",
+            "target": {
+                "code": "BPR000000000000000100001314100000",
+                "mimeDetails": "application/pdf",
+                "name": "Safety-Venenverweilkanülen",
+                "url": "/doc/BPR000000000000000100001314100000"
+            }
+        },
+        {
+            "posNr": 3,
+            "preselected": false,
+            "referenceType": "DOCUMENT",
+            "target": {
+                "code": "BPR000000000000000100013364901000",
+                "mimeDetails": "application/pdf",
+                "name": "Memo Card",
+                "url": "/doc/BPR000000000000000100013364901000"
+            }
+        },
+        {
+            "posNr": 4,
+            "preselected": false,
+            "referenceType": "DOCUMENT",
+            "target": {
+                "code": "BPR000000000000000100007740200000",
+                "name": "www.infusionsecurity.ch",
+                "url": "/doc/BPR000000000000000100007740200000"
+            }
+        },
+        {
+            "posNr": 5,
+            "preselected": false,
+            "referenceType": "DOCUMENT",
+            "target": {
+                "code": "BPR000000000000000100011527200000",
+                "mimeDetails": "application/pdf",
+                "name": "Stich- und Schnittverletzungen",
+                "url": "/doc/BPR000000000000000100011527200000"
+            }
+        },
+        {
+            "posNr": 6,
+            "preselected": false,
+            "referenceType": "DOCUMENT",
+            "target": {
+                "code": "BPR000000000000000100012737901000",
+                "mimeDetails": "application/pdf",
+                "name": "Mehr als nur ein Autsch - Stich- und Schnittverletzungen",
+                "url": "/doc/BPR000000000000000100012737901000"
+            }
+        },
+        {
+            "posNr": 7,
+            "preselected": false,
+            "referenceType": "DOCUMENT",
+            "target": {
+                "code": "BPR000000000000000100014835000000",
+                "mimeDetails": "application/pdf",
+                "name": "Auf einen Blick - TRBA 250",
+                "url": "/doc/BPR000000000000000100014835000000"
+            }
+        },
+        {
+            "posNr": 8,
+            "preselected": false,
+            "referenceType": "DOCUMENT",
+            "target": {
+                "code": "BPR000000000000000100005915400000",
+                "mimeDetails": "application/pdf",
+                "name": "Introcan Safety®",
+                "url": "/doc/BPR000000000000000100005915400000"
+            }
+        },
+        {
+            "posNr": 9,
+            "preselected": false,
+            "referenceType": "DOCUMENT",
+            "target": {
+                "code": "BPR000000000000000100007749400000",
+                "mimeDetails": "application/pdf",
+                "name": "Safety-Venenverweilkanülen",
+                "url": "/doc/BPR000000000000000100007749400000"
+            }
+        },
+        {
+            "posNr": 10,
+            "preselected": false,
+            "referenceType": "DOCUMENT",
+            "target": {
+                "code": "BPR000000000000000100007869000000",
+                "mimeDetails": "application/pdf",
+                "name": "Komplikationen bei einem peripheren intravenösen Zugang",
+                "url": "/doc/BPR000000000000000100007869000000"
+            }
+        },
+        {
+            "posNr": 11,
+            "preselected": false,
+            "referenceType": "DOCUMENT",
+            "target": {
+                "code": "BPR000000000000000100007869100000",
+                "mimeDetails": "application/pdf",
+                "name": "Komplikationen bei einem peripheren intravenösen Zugang",
+                "url": "/doc/BPR000000000000000100007869100000"
+            }
+        },
+        {
+            "posNr": 12,
+            "preselected": false,
+            "referenceType": "DOCUMENT",
+            "target": {
+                "code": "BPR000000000000000100007869300000",
+                "mimeDetails": "application/pdf",
+                "name": "Introcan Safety®",
+                "url": "/doc/BPR000000000000000100007869300000"
+            }
+        },
+        {
+            "posNr": 13,
+            "preselected": false,
+            "referenceType": "DOCUMENT",
+            "target": {
+                "code": "BPR000000000000000100009165901000",
+                "mimeDetails": "application/pdf",
+                "name": "Introcan Safety®",
+                "url": "/doc/BPR000000000000000100009165901000"
+            }
+        },
+        {
+            "posNr": 14,
+            "preselected": false,
+            "referenceType": "DOCUMENT",
+            "target": {
+                "code": "BPR000000000000000100015289900000",
+                "mimeDetails": "application/pdf",
+                "name": "Infoblatt",
+                "url": "/doc/BPR000000000000000100015289900000"
+            }
+        },
+        {
+            "posNr": 15,
+            "preselected": false,
+            "referenceType": "DOCUMENT",
+            "target": {
+                "code": "BPR000000000000000100000024811000",
+                "mimeDetails": "application/pdf",
+                "name": "Medizinprodukte B. Braun - Produktkatalog",
+                "url": "/doc/BPR000000000000000100000024811000"
+            }
+        },
+        {
+            "posNr": 16,
+            "preselected": false,
+            "referenceType": "DOCUMENT",
+            "target": {
+                "code": "BPR000000000000000100007964900000",
+                "mimeDetails": "application/pdf",
+                "name": "Medizinprodukte-Katalog",
+                "url": "/doc/BPR000000000000000100007964900000"
+            }
+        },
+        {
+            "posNr": 17,
+            "preselected": false,
+            "referenceType": "DOCUMENT",
+            "target": {
+                "code": "BPR000000000000000100007965400000",
+                "mimeDetails": "application/pdf",
+                "name": "Medizinprodukte-Katalog",
+                "url": "/doc/BPR000000000000000100007965400000"
+            }
+        },
+        {
+            "posNr": 18,
+            "preselected": false,
+            "referenceType": "DOCUMENT",
+            "target": {
+                "code": "BPR000000000000000100007965500000",
+                "mimeDetails": "application/pdf",
+                "name": "Medizinprodukte-Katalog",
+                "url": "/doc/BPR000000000000000100007965500000"
+            }
+        },
+        {
+            "posNr": 19,
+            "preselected": false,
+            "referenceType": "DOCUMENT",
+            "target": {
+                "code": "BPR000000000000000100008039600000",
+                "mimeDetails": "application/pdf",
+                "name": "Produktübersicht (ohne Arzneimittel)",
+                "url": "/doc/BPR000000000000000100008039600000"
+            }
+        },
+        {
+            "posNr": 20,
+            "preselected": false,
+            "referenceType": "DOCUMENT",
+            "target": {
+                "code": "BPR000000000000000100018021400000",
+                "mimeDetails": "application/pdf",
+                "name": "Produktübersicht (ohne Arzneimittel)",
+                "url": "/doc/BPR000000000000000100018021400000"
+            }
+        },
+        {
+            "posNr": 21,
+            "preselected": false,
+            "referenceType": "DOCUMENT",
+            "target": {
+                "code": "BPR000000000000000100016605800000",
+                "mimeDetails": "application/pdf",
+                "name": "Produktübersicht (ohne Arzneimittel)",
+                "url": "/doc/BPR000000000000000100016605800000"
+            }
+        }
+    ],
+    "productType": "PRID",
+    "purStatus": "M1",
+    "resourceStatus": "UPDATED",
+    "salStatus": "V1",
+    "sapModifiedTime": "2017-08-16T13:25:22+0000",
+    "stock": {
+        "stockLevel": 0,
+        "stockLevelStatus": "inStock"
+    },
+    "summary": "",
+    "transportGroup": "0001",
+    "uom": [
+        {
+            "alternativeUnit": "ST",
+            "alternativeUnitIso": "PCE",
+            "code": "ST/PRID00001011",
+            "denominator": 1,
+            "grossWeight": 0,
+            "height": 0,
+            "internationalCharacteristics": "0000000000",
+            "length": 0,
+            "netWeight": 0,
+            "numberOfSubUom": 0,
+            "numerator": 1,
+            "uomSortNumber": 0,
+            "volume": 0,
+            "weightUnit": "KG",
+            "weightUnitIso": "KGM",
+            "width": 0
+        }
+    ],
+    "url": "/p/PRID00001011"
+}
