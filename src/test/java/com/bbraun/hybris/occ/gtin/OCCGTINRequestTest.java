@@ -38,6 +38,27 @@ public class OCCGTINRequestTest {
 	}
 	
 	@Test
+	public void testGetUnknownArticleByGtinDeAEMUser() {
+		new BBMWebServiceTestBuilder<>() //
+		.withNewRequest() //
+		.withBasicAuth("trusted_client", "secret") //
+		.doAuthenticateOAuth2("${hybris.oauth.url}", //
+				GrantType.PASSWORD, //
+				"${hybris.oauth.username}", //
+				"${hybris.oauth.password}") //
+		.withNewRequest() //
+		.withQueryParam("applicationKey", "AEM2015")//
+		.withQueryParam("viewId", "de_DE") //
+		.withQueryParam("access_token", "${accessToken}") //
+		
+		.doGet("${hybris.occ.gtin.unknown.url}") //
+		
+		.assertResponseContentType(ContentType.JSON) //
+		.assertResponseBodyEqualsReference("OCC_GTIN_Unknown_Expected.json")
+		;
+	}
+	
+	@Test
 	public void testGetArticleSoftaSeptByGtinDeAnonymousBarcodeAppUser() {
 		new BBMWebServiceTestBuilder<>() //
 				.withNewRequest() //
