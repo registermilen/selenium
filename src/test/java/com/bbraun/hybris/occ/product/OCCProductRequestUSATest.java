@@ -33,7 +33,8 @@ public class OCCProductRequestUSATest {
 				.doGet("${hybris.occ.product.prid1011.url}") //
 
 				.assertResponseContentType(ContentType.JSON) //
-				.assertResponseBodyEqualsReference("${hybris.occ.product.prid1011.expectedFile}") //
+				.assertResponseBodyEqualsReference("${hybris.occ.product.prid1011.expectedFile}",
+						"sapModifiedTime") //
 		;
 	}
 
@@ -54,7 +55,8 @@ public class OCCProductRequestUSATest {
 				.doGet("${hybris.occ.product.article425161102.url}") //
 
 				.assertResponseContentType(ContentType.JSON) //
-				.assertResponseBodyEqualsReference("${hybris.occ.product.article425161102.expectedFile}") //
+				.assertResponseBodyEqualsReference("${hybris.occ.product.article425161102.expectedFile}",
+						"sapModifiedTime") //
 		;
 	}
 
