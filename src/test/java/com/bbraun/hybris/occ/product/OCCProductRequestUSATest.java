@@ -11,7 +11,7 @@ import io.restassured.http.ContentType;
  * Tests the /products endpoint with AEM user and "en_us" view configuration.
  * 
  * Test Product: Introcan Safety PRID00001011
- * Test Article: 4251611-02
+ * Test Article: Introcan Safety 4251611-02
  * 
  * @author stuestde
  */
