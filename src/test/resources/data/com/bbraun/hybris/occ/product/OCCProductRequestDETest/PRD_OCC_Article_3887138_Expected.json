@@ -156,18 +156,6 @@
                     "range": false
                 },
                 {
-                    "code": "BBM_05032",
-                    "comparable": true,
-                    "featureValues": [
-                        {
-                            "code": "Michel Mathys",
-                            "value": "Michel Mathys"
-                        }
-                    ],
-                    "name": "Produktmanager",
-                    "range": false
-                },
-                {
                     "code": "BBM_90073",
                     "comparable": true,
                     "featureValues": [
