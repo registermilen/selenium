@@ -224,14 +224,6 @@
     "division": "OM",
     "eanNumber": [
         {
-            "eanCategory": "PZN",
-            "eanUpc": "08505018",
-            "mainEan": false,
-            "uid": "PZ/ST/000000000003887138",
-            "unit": "ST",
-            "unitIso": "PCE"
-        },
-        {
             "eanCategory": "GTIN",
             "eanUpc": "7612449012204",
             "mainEan": true,
@@ -244,6 +236,14 @@
             "eanUpc": "1065102",
             "mainEan": false,
             "uid": "AT/ST/000000000003887138",
+            "unit": "ST",
+            "unitIso": "PCE"
+        },
+        {
+            "eanCategory": "PZN",
+            "eanUpc": "08505018",
+            "mainEan": false,
+            "uid": "PZ/ST/000000000003887138",
             "unit": "ST",
             "unitIso": "PCE"
         },
@@ -313,7 +313,7 @@
             "attributeType": "CURR00011",
             "field": "STPRS",
             "fieldName": "MBEW_STPRS",
-            "organisationKey": "MY06VALUATION",
+            "organisationKey": "MY07VALUATION",
             "organisationType": "VALUATION"
         },
         {
@@ -321,18 +321,8 @@
             "attributeType": "CURR00011",
             "field": "STPRS",
             "fieldName": "MBEW_STPRS",
-            "organisationKey": "MY07VALUATION",
+            "organisationKey": "MY06VALUATION",
             "organisationType": "VALUATION"
-        },
-        {
-            "attributeDescription": "Mindestauftragsmenge",
-            "attributeType": "NUM00013",
-            "attributeValue": "1",
-            "field": "AUMNG",
-            "fieldName": "MVKE_AUMNG",
-            "organisationKey": "101001DCHAIN",
-            "organisationType": "DCHAIN",
-            "valueLow": "1"
         },
         {
             "attributeDescription": "Mindestauftragsmenge",
@@ -343,6 +333,16 @@
             "organisationKey": "101000DCHAIN",
             "organisationType": "DCHAIN",
             "valueLow": "20"
+        },
+        {
+            "attributeDescription": "Mindestauftragsmenge",
+            "attributeType": "NUM00013",
+            "attributeValue": "1",
+            "field": "AUMNG",
+            "fieldName": "MVKE_AUMNG",
+            "organisationKey": "101001DCHAIN",
+            "organisationType": "DCHAIN",
+            "valueLow": "1"
         },
         {
             "attributeDescription": "Mindestauftragsmenge",
@@ -363,6 +363,16 @@
             "organisationKey": "177000DCHAIN",
             "organisationType": "DCHAIN",
             "valueLow": "0"
+        },
+        {
+            "attributeDescription": "Mindestauftragsmenge",
+            "attributeType": "NUM00013",
+            "attributeValue": "20",
+            "field": "AUMNG",
+            "fieldName": "MVKE_AUMNG",
+            "organisationKey": "189000DCHAIN",
+            "organisationType": "DCHAIN",
+            "valueLow": "20"
         },
         {
             "attributeDescription": "Bonusgruppe",
@@ -386,7 +396,7 @@
             "attributeType": "CHAR00002",
             "field": "BONUS",
             "fieldName": "MVKE_BONUS",
-            "organisationKey": "1010E7DCHAIN",
+            "organisationKey": "177000DCHAIN",
             "organisationType": "DCHAIN"
         },
         {
@@ -394,18 +404,8 @@
             "attributeType": "CHAR00002",
             "field": "BONUS",
             "fieldName": "MVKE_BONUS",
-            "organisationKey": "177000DCHAIN",
+            "organisationKey": "1010E7DCHAIN",
             "organisationType": "DCHAIN"
-        },
-        {
-            "attributeDescription": "Mindestauftragsmenge",
-            "attributeType": "NUM00013",
-            "attributeValue": "20",
-            "field": "AUMNG",
-            "fieldName": "MVKE_AUMNG",
-            "organisationKey": "189000DCHAIN",
-            "organisationType": "DCHAIN",
-            "valueLow": "20"
         },
         {
             "attributeDescription": "Bonusgruppe",
@@ -430,7 +430,7 @@
             "attributeValue": "DE10",
             "field": "DWERK",
             "fieldName": "MVKE_DWERK",
-            "organisationKey": "1010E7DCHAIN",
+            "organisationKey": "101001DCHAIN",
             "organisationType": "DCHAIN"
         },
         {
@@ -439,7 +439,7 @@
             "attributeValue": "DE10",
             "field": "DWERK",
             "fieldName": "MVKE_DWERK",
-            "organisationKey": "101001DCHAIN",
+            "organisationKey": "1010E7DCHAIN",
             "organisationType": "DCHAIN"
         },
         {
@@ -476,7 +476,7 @@
             "attributeValue": "1",
             "field": "LFMNG",
             "fieldName": "MVKE_LFMNG",
-            "organisationKey": "101001DCHAIN",
+            "organisationKey": "1010E7DCHAIN",
             "organisationType": "DCHAIN",
             "valueLow": "1"
         },
@@ -486,7 +486,7 @@
             "attributeValue": "1",
             "field": "LFMNG",
             "fieldName": "MVKE_LFMNG",
-            "organisationKey": "1010E7DCHAIN",
+            "organisationKey": "101001DCHAIN",
             "organisationType": "DCHAIN",
             "valueLow": "1"
         },
@@ -538,27 +538,18 @@
         {
             "attributeDescription": "Materialgruppe 1",
             "attributeType": "CHAR00003",
-            "attributeValue": "960",
-            "field": "MVGR1",
-            "fieldName": "MVKE_MVGR1",
-            "organisationKey": "189000DCHAIN",
-            "organisationType": "DCHAIN"
-        },
-        {
-            "attributeDescription": "Materialgruppe 1",
-            "attributeType": "CHAR00003",
             "field": "MVGR1",
             "fieldName": "MVKE_MVGR1",
             "organisationKey": "177000DCHAIN",
             "organisationType": "DCHAIN"
         },
         {
-            "attributeDescription": "Materialgruppe 2",
+            "attributeDescription": "Materialgruppe 1",
             "attributeType": "CHAR00003",
-            "attributeValue": "200",
-            "field": "MVGR2",
-            "fieldName": "MVKE_MVGR2",
-            "organisationKey": "101000DCHAIN",
+            "attributeValue": "960",
+            "field": "MVGR1",
+            "fieldName": "MVKE_MVGR1",
+            "organisationKey": "189000DCHAIN",
             "organisationType": "DCHAIN"
         },
         {
@@ -575,6 +566,15 @@
             "field": "MVGR2",
             "fieldName": "MVKE_MVGR2",
             "organisationKey": "1010E7DCHAIN",
+            "organisationType": "DCHAIN"
+        },
+        {
+            "attributeDescription": "Materialgruppe 2",
+            "attributeType": "CHAR00003",
+            "attributeValue": "200",
+            "field": "MVGR2",
+            "fieldName": "MVKE_MVGR2",
+            "organisationKey": "101000DCHAIN",
             "organisationType": "DCHAIN"
         },
         {
@@ -639,18 +639,18 @@
         {
             "attributeDescription": "Materialgruppe 4",
             "attributeType": "CHAR00003",
+            "attributeValue": "D12",
             "field": "MVGR4",
             "fieldName": "MVKE_MVGR4",
-            "organisationKey": "101001DCHAIN",
+            "organisationKey": "101000DCHAIN",
             "organisationType": "DCHAIN"
         },
         {
             "attributeDescription": "Materialgruppe 4",
             "attributeType": "CHAR00003",
-            "attributeValue": "D12",
             "field": "MVGR4",
             "fieldName": "MVKE_MVGR4",
-            "organisationKey": "101000DCHAIN",
+            "organisationKey": "101001DCHAIN",
             "organisationType": "DCHAIN"
         },
         {
@@ -730,15 +730,6 @@
         {
             "attributeDescription": "VTL-spez. Status",
             "attributeType": "CHAR00002",
-            "attributeValue": "V2",
-            "field": "VMSTA",
-            "fieldName": "MVKE_VMSTA",
-            "organisationKey": "101000DCHAIN",
-            "organisationType": "DCHAIN"
-        },
-        {
-            "attributeDescription": "VTL-spez. Status",
-            "attributeType": "CHAR00002",
             "field": "VMSTA",
             "fieldName": "MVKE_VMSTA",
             "organisationKey": "276000DCHAIN",
@@ -750,7 +741,24 @@
             "attributeValue": "V2",
             "field": "VMSTA",
             "fieldName": "MVKE_VMSTA",
+            "organisationKey": "101000DCHAIN",
+            "organisationType": "DCHAIN"
+        },
+        {
+            "attributeDescription": "VTL-spez. Status",
+            "attributeType": "CHAR00002",
+            "attributeValue": "V2",
+            "field": "VMSTA",
+            "fieldName": "MVKE_VMSTA",
             "organisationKey": "101001DCHAIN",
+            "organisationType": "DCHAIN"
+        },
+        {
+            "attributeDescription": "VTL-spez. Status",
+            "attributeType": "CHAR00002",
+            "field": "VMSTA",
+            "fieldName": "MVKE_VMSTA",
+            "organisationKey": "177000DCHAIN",
             "organisationType": "DCHAIN"
         },
         {
@@ -762,11 +770,11 @@
             "organisationType": "DCHAIN"
         },
         {
-            "attributeDescription": "VTL-spez. Status",
-            "attributeType": "CHAR00002",
-            "field": "VMSTA",
-            "fieldName": "MVKE_VMSTA",
-            "organisationKey": "177000DCHAIN",
+            "attributeDescription": "Verkaufsmengeneinh.",
+            "attributeType": "CHAR00003",
+            "field": "VRKME",
+            "fieldName": "MVKE_VRKME",
+            "organisationKey": "101000DCHAIN",
             "organisationType": "DCHAIN"
         },
         {
@@ -791,14 +799,6 @@
             "attributeType": "CHAR00003",
             "field": "VRKME",
             "fieldName": "MVKE_VRKME",
-            "organisationKey": "101000DCHAIN",
-            "organisationType": "DCHAIN"
-        },
-        {
-            "attributeDescription": "Verkaufsmengeneinh.",
-            "attributeType": "CHAR00003",
-            "field": "VRKME",
-            "fieldName": "MVKE_VRKME",
             "organisationKey": "1010E7DCHAIN",
             "organisationType": "DCHAIN"
         },
@@ -902,15 +902,6 @@
             "field": "ZZPRSGR",
             "fieldName": "MVKE_ZZPRSGR",
             "organisationKey": "189000DCHAIN",
-            "organisationType": "DCHAIN"
-        },
-        {
-            "attributeDescription": "Preishauptgruppe",
-            "attributeType": "CHAR00002",
-            "attributeValue": "75",
-            "field": "ZZPRSHG",
-            "fieldName": "MVKE_ZZPRSHG",
-            "organisationKey": "101000DCHAIN",
             "organisationType": "DCHAIN"
         },
         {
@@ -920,6 +911,15 @@
             "field": "ZZPRSHG",
             "fieldName": "MVKE_ZZPRSHG",
             "organisationKey": "101001DCHAIN",
+            "organisationType": "DCHAIN"
+        },
+        {
+            "attributeDescription": "Preishauptgruppe",
+            "attributeType": "CHAR00002",
+            "attributeValue": "75",
+            "field": "ZZPRSHG",
+            "fieldName": "MVKE_ZZPRSHG",
+            "organisationKey": "101000DCHAIN",
             "organisationType": "DCHAIN"
         },
         {
@@ -980,7 +980,7 @@
     "purStatus": "M2",
     "resourceStatus": "UPDATED",
     "salStatus": "V2",
-    "sapModifiedTime": "2017-07-28T08:41:54+0000",
+    "sapModifiedTime": "2017-09-06T10:48:01+0000",
     "stock": {
         "stockLevel": 0,
         "stockLevelStatus": "inStock"
@@ -999,7 +999,7 @@
             "height": 19,
             "internationalCharacteristics": "0000000000",
             "length": 5,
-            "netWeight": 0,
+            "netWeight": 211,
             "numberOfSubUom": 0,
             "numerator": 1,
             "unitDimension": "CM",
@@ -1015,12 +1015,12 @@
         {
             "alternativeUnit": "ST",
             "denominator": 1,
-            "eanCategory": "PZN",
-            "eanUpc": "08505018",
+            "eanCategory": "AT PC",
+            "eanUpc": "1065102",
             "grossWeight": 256,
             "height": 19,
             "length": 5,
-            "netWeight": 0,
+            "netWeight": 211,
             "numerator": 1,
             "unitDimension": "CM",
             "uomSortNumber": 0,
@@ -1032,12 +1032,12 @@
         {
             "alternativeUnit": "ST",
             "denominator": 1,
-            "eanCategory": "AT PC",
-            "eanUpc": "1065102",
+            "eanCategory": "PZN",
+            "eanUpc": "08505018",
             "grossWeight": 256,
             "height": 19,
             "length": 5,
-            "netWeight": 0,
+            "netWeight": 211,
             "numerator": 1,
             "unitDimension": "CM",
             "uomSortNumber": 0,
