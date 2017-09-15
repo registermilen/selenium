@@ -641,8 +641,19 @@
                 "url": "/doc/BPR000000000000000100007965500000"
             }
         },
-        {
+       {
             "posNr": 19,
+            "preselected": false,
+            "referenceType": "DOCUMENT",
+            "target": {
+                "code": "BPR000000000000000100016605800000",
+                "mimeDetails": "application/pdf",
+                "name": "Produktübersicht (ohne Arzneimittel)",
+                "url": "/doc/BPR000000000000000100016605800000"
+            }
+        },
+        {
+            "posNr": 20,
             "preselected": false,
             "referenceType": "DOCUMENT",
             "target": {
@@ -653,7 +664,7 @@
             }
         },
         {
-            "posNr": 20,
+            "posNr": 21,
             "preselected": false,
             "referenceType": "DOCUMENT",
             "target": {
@@ -661,17 +672,6 @@
                 "mimeDetails": "application/pdf",
                 "name": "Produktübersicht (ohne Arzneimittel)",
                 "url": "/doc/BPR000000000000000100018021400000"
-            }
-        },
-        {
-            "posNr": 21,
-            "preselected": false,
-            "referenceType": "DOCUMENT",
-            "target": {
-                "code": "BPR000000000000000100016605800000",
-                "mimeDetails": "application/pdf",
-                "name": "Produktübersicht (ohne Arzneimittel)",
-                "url": "/doc/BPR000000000000000100016605800000"
             }
         }
     ],
