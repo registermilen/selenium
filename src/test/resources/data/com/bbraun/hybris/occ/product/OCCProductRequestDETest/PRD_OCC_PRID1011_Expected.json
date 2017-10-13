@@ -646,17 +646,6 @@
             "preselected": false,
             "referenceType": "DOCUMENT",
             "target": {
-                "code": "BPR000000000000000100013364901000",
-                "mimeDetails": "application/pdf",
-                "name": "Memo Card",
-                "url": "/doc/BPR000000000000000100013364901000"
-            }
-        },
-        {
-            "posNr": 6,
-            "preselected": false,
-            "referenceType": "DOCUMENT",
-            "target": {
                 "code": "BPR000000000000000100011527200000",
                 "mimeDetails": "application/pdf",
                 "name": "Stich- und Schnittverletzungen",
@@ -664,29 +653,7 @@
             }
         },
         {
-            "posNr": 7,
-            "preselected": false,
-            "referenceType": "DOCUMENT",
-            "target": {
-                "code": "BPR000000000000000100012737901000",
-                "mimeDetails": "application/pdf",
-                "name": "Mehr als nur ein Autsch - Stich- und Schnittverletzungen",
-                "url": "/doc/BPR000000000000000100012737901000"
-            }
-        },
-        {
-            "posNr": 8,
-            "preselected": false,
-            "referenceType": "DOCUMENT",
-            "target": {
-                "code": "BPR000000000000000100014835000000",
-                "mimeDetails": "application/pdf",
-                "name": "Auf einen Blick - TRBA 250",
-                "url": "/doc/BPR000000000000000100014835000000"
-            }
-        },
-        {
-            "posNr": 9,
+            "posNr": 6,
             "preselected": false,
             "referenceType": "DOCUMENT",
             "target": {
@@ -696,7 +663,7 @@
             }
         },
         {
-            "posNr": 10,
+            "posNr": 7,
             "preselected": false,
             "referenceType": "DOCUMENT",
             "target": {
@@ -707,7 +674,7 @@
             }
         },
         {
-            "posNr": 11,
+            "posNr": 8,
             "preselected": false,
             "referenceType": "DOCUMENT",
             "target": {
@@ -718,18 +685,29 @@
             }
         },
         {
-            "posNr": 12,
+            "posNr": 9,
             "preselected": false,
             "referenceType": "DOCUMENT",
             "target": {
-                "code": "BPR000000000000000100015289900000",
+                "code": "BPR000000000000000100014835000000",
                 "mimeDetails": "application/pdf",
-                "name": "Infoblatt",
-                "url": "/doc/BPR000000000000000100015289900000"
+                "name": "Auf einen Blick - TRBA 250",
+                "url": "/doc/BPR000000000000000100014835000000"
             }
         },
         {
-            "posNr": 13,
+            "posNr": 10,
+            "preselected": false,
+            "referenceType": "DOCUMENT",
+            "target": {
+                "code": "BPR000000000000000100013364901000",
+                "mimeDetails": "application/pdf",
+                "name": "Memo Card",
+                "url": "/doc/BPR000000000000000100013364901000"
+            }
+        },
+        {
+            "posNr": 11,
             "preselected": false,
             "referenceType": "DOCUMENT",
             "target": {
@@ -737,6 +715,28 @@
                 "mimeDetails": "application/pdf",
                 "name": "Medizinprodukte B. Braun - Produktkatalog",
                 "url": "/doc/BPR000000000000000100000024811000"
+            }
+        },
+        {
+            "posNr": 12,
+            "preselected": false,
+            "referenceType": "DOCUMENT",
+            "target": {
+                "code": "BPR000000000000000100012737901000",
+                "mimeDetails": "application/pdf",
+                "name": "Mehr als nur ein Autsch - Stich- und Schnittverletzungen",
+                "url": "/doc/BPR000000000000000100012737901000"
+            }
+        },
+        {
+            "posNr": 13,
+            "preselected": false,
+            "referenceType": "DOCUMENT",
+            "target": {
+                "code": "BPR000000000000000100015289900000",
+                "mimeDetails": "application/pdf",
+                "name": "Infoblatt",
+                "url": "/doc/BPR000000000000000100015289900000"
             }
         }
     ],

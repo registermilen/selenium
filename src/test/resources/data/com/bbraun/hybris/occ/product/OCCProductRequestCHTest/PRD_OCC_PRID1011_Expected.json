@@ -471,24 +471,13 @@
             "preselected": false,
             "referenceType": "DOCUMENT",
             "target": {
-                "code": "BPR000000000000000100013364901000",
-                "mimeDetails": "application/pdf",
-                "name": "Memo Card",
-                "url": "/doc/BPR000000000000000100013364901000"
-            }
-        },
-        {
-            "posNr": 4,
-            "preselected": false,
-            "referenceType": "DOCUMENT",
-            "target": {
                 "code": "BPR000000000000000100007740200000",
                 "name": "www.infusionsecurity.ch",
                 "url": "/doc/BPR000000000000000100007740200000"
             }
         },
         {
-            "posNr": 5,
+            "posNr": 4,
             "preselected": false,
             "referenceType": "DOCUMENT",
             "target": {
@@ -499,29 +488,7 @@
             }
         },
         {
-            "posNr": 6,
-            "preselected": false,
-            "referenceType": "DOCUMENT",
-            "target": {
-                "code": "BPR000000000000000100012737901000",
-                "mimeDetails": "application/pdf",
-                "name": "Mehr als nur ein Autsch - Stich- und Schnittverletzungen",
-                "url": "/doc/BPR000000000000000100012737901000"
-            }
-        },
-        {
-            "posNr": 7,
-            "preselected": false,
-            "referenceType": "DOCUMENT",
-            "target": {
-                "code": "BPR000000000000000100014835000000",
-                "mimeDetails": "application/pdf",
-                "name": "Auf einen Blick - TRBA 250",
-                "url": "/doc/BPR000000000000000100014835000000"
-            }
-        },
-        {
-            "posNr": 8,
+            "posNr": 5,
             "preselected": false,
             "referenceType": "DOCUMENT",
             "target": {
@@ -532,7 +499,7 @@
             }
         },
         {
-            "posNr": 9,
+            "posNr": 6,
             "preselected": false,
             "referenceType": "DOCUMENT",
             "target": {
@@ -543,7 +510,7 @@
             }
         },
         {
-            "posNr": 10,
+            "posNr": 7,
             "preselected": false,
             "referenceType": "DOCUMENT",
             "target": {
@@ -554,7 +521,7 @@
             }
         },
         {
-            "posNr": 11,
+            "posNr": 8,
             "preselected": false,
             "referenceType": "DOCUMENT",
             "target": {
@@ -565,7 +532,7 @@
             }
         },
         {
-            "posNr": 12,
+            "posNr": 9,
             "preselected": false,
             "referenceType": "DOCUMENT",
             "target": {
@@ -576,7 +543,7 @@
             }
         },
         {
-            "posNr": 13,
+            "posNr": 10,
             "preselected": false,
             "referenceType": "DOCUMENT",
             "target": {
@@ -587,29 +554,7 @@
             }
         },
         {
-            "posNr": 14,
-            "preselected": false,
-            "referenceType": "DOCUMENT",
-            "target": {
-                "code": "BPR000000000000000100015289900000",
-                "mimeDetails": "application/pdf",
-                "name": "Infoblatt",
-                "url": "/doc/BPR000000000000000100015289900000"
-            }
-        },
-        {
-            "posNr": 15,
-            "preselected": false,
-            "referenceType": "DOCUMENT",
-            "target": {
-                "code": "BPR000000000000000100000024811000",
-                "mimeDetails": "application/pdf",
-                "name": "Medizinprodukte B. Braun - Produktkatalog",
-                "url": "/doc/BPR000000000000000100000024811000"
-            }
-        },
-        {
-            "posNr": 16,
+            "posNr": 11,
             "preselected": false,
             "referenceType": "DOCUMENT",
             "target": {
@@ -620,7 +565,7 @@
             }
         },
         {
-            "posNr": 17,
+            "posNr": 12,
             "preselected": false,
             "referenceType": "DOCUMENT",
             "target": {
@@ -631,7 +576,7 @@
             }
         },
         {
-            "posNr": 18,
+            "posNr": 13,
             "preselected": false,
             "referenceType": "DOCUMENT",
             "target": {
@@ -642,7 +587,7 @@
             }
         },
         {
-            "posNr": 19,
+            "posNr": 14,
             "preselected": false,
             "referenceType": "DOCUMENT",
             "target": {
@@ -653,7 +598,7 @@
             }
         },
         {
-            "posNr": 20,
+            "posNr": 15,
             "preselected": false,
             "referenceType": "DOCUMENT",
             "target": {
@@ -664,7 +609,7 @@
             }
         },
         {
-            "posNr": 21,
+            "posNr": 16,
             "preselected": false,
             "referenceType": "DOCUMENT",
             "target": {
@@ -672,6 +617,61 @@
                 "mimeDetails": "application/pdf",
                 "name": "Medizinprodukte-Katalog",
                 "url": "/doc/BPR000000000000000100007964900000"
+            }
+        },
+        {
+            "posNr": 17,
+            "preselected": false,
+            "referenceType": "DOCUMENT",
+            "target": {
+                "code": "BPR000000000000000100014835000000",
+                "mimeDetails": "application/pdf",
+                "name": "Auf einen Blick - TRBA 250",
+                "url": "/doc/BPR000000000000000100014835000000"
+            }
+        },
+        {
+            "posNr": 18,
+            "preselected": false,
+            "referenceType": "DOCUMENT",
+            "target": {
+                "code": "BPR000000000000000100013364901000",
+                "mimeDetails": "application/pdf",
+                "name": "Memo Card",
+                "url": "/doc/BPR000000000000000100013364901000"
+            }
+        },
+        {
+            "posNr": 19,
+            "preselected": false,
+            "referenceType": "DOCUMENT",
+            "target": {
+                "code": "BPR000000000000000100000024811000",
+                "mimeDetails": "application/pdf",
+                "name": "Medizinprodukte B. Braun - Produktkatalog",
+                "url": "/doc/BPR000000000000000100000024811000"
+            }
+        },
+        {
+            "posNr": 20,
+            "preselected": false,
+            "referenceType": "DOCUMENT",
+            "target": {
+                "code": "BPR000000000000000100012737901000",
+                "mimeDetails": "application/pdf",
+                "name": "Mehr als nur ein Autsch - Stich- und Schnittverletzungen",
+                "url": "/doc/BPR000000000000000100012737901000"
+            }
+        },
+        {
+            "posNr": 21,
+            "preselected": false,
+            "referenceType": "DOCUMENT",
+            "target": {
+                "code": "BPR000000000000000100015289900000",
+                "mimeDetails": "application/pdf",
+                "name": "Infoblatt",
+                "url": "/doc/BPR000000000000000100015289900000"
             }
         }
     ],
