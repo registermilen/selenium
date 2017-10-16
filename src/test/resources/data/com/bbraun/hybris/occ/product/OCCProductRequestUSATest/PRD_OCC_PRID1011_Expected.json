@@ -377,6 +377,10 @@
                             "value": "TR"
                         },
                         {
+                            "code": "ZA",
+                            "value": "ZA"
+                        },
+                        {
                             "code": "PL",
                             "value": "PL"
                         },
@@ -626,7 +630,8 @@
         "PL",
         "DK",
         "SE",
-        "TR"
+        "TR",
+        "ZA"
     ],
     "materialShortText": "INTROCAN SAFETY",
     "materialType": "PRID",
