@@ -478,6 +478,14 @@
                         "bkcCountry": "US",
                         "language": "E",
                         "languageIso": "EN",
+                        "text": "<p>Available sterile packaged. Contact your B. Braun representative for information on bulk, non-sterile options.</p>",
+                        "textType": "XOEMD",
+                        "uid": "XOEMDUSEN/4251611-02"
+                    },
+                    {
+                        "bkcCountry": "US",
+                        "language": "E",
+                        "languageIso": "EN",
                         "text": "<p>Polyurethane catheter material, straight hub, notched needle</p>",
                         "textType": "XSUBL",
                         "uid": "XSUBLUSEN/4251611-02"

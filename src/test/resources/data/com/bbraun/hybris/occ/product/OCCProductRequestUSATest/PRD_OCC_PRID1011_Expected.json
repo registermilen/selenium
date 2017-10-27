@@ -60,17 +60,6 @@
                     "uid": "PRID00001011/B/4251652-02"
                 },
                 {
-                    "bomComponent": "4252560-02",
-                    "bomComponentQuantity": "1.000",
-                    "bomUsage": "B",
-                    "posNumber": "0620",
-                    "product": {
-                        "aemProductType": "BBM",
-                        "code": "4252560-02"
-                    },
-                    "uid": "PRID00001011/B/4252560-02"
-                },
-                {
                     "bomComponent": "4252543-02",
                     "bomComponentQuantity": "1.000",
                     "bomUsage": "B",
@@ -80,6 +69,17 @@
                         "code": "4252543-02"
                     },
                     "uid": "PRID00001011/B/4252543-02"
+                },
+                {
+                    "bomComponent": "4252560-02",
+                    "bomComponentQuantity": "1.000",
+                    "bomUsage": "B",
+                    "posNumber": "0620",
+                    "product": {
+                        "aemProductType": "BBM",
+                        "code": "4252560-02"
+                    },
+                    "uid": "PRID00001011/B/4252560-02"
                 },
                 {
                     "bomComponent": "4251695-02",
@@ -377,16 +377,12 @@
                             "value": "TR"
                         },
                         {
-                            "code": "BG",
-                            "value": "BG"
+                            "code": "ZA",
+                            "value": "ZA"
                         },
                         {
                             "code": "PL",
                             "value": "PL"
-                        },
-                        {
-                            "code": "ZA",
-                            "value": "ZA"
                         },
                         {
                             "code": "01",
@@ -503,6 +499,10 @@
                         {
                             "code": "NZ",
                             "value": "NZ"
+                        },
+                        {
+                            "code": "BG",
+                            "value": "BG"
                         }
                     ],
                     "name": "Marketing release",
@@ -572,6 +572,14 @@
                         "text": "<p>Introcan Safety<sup>®</sup> IV Catheter Straight</p>",
                         "textType": "XNAME",
                         "uid": "XNAMEUSEN/PRID00001011"
+                    },
+                    {
+                        "bkcCountry": "US",
+                        "language": "E",
+                        "languageIso": "EN",
+                        "text": "<p>Although safety devices were introduced over a decade ago, preventing needlestick injuries continues to be a major concern. With the B. Braun Introcan Safety® IV Catheter, you are protected by a truly passive safety device that is activated automatically and cannot be by-passed. No extra steps are required to ensure healthcare worker and patient safety.</p><p>This easy-to-use safety IV catheter incorporates separate needle and catheter flashback - Double Flashback technology - that gives you the added confidence of successful placement every time. The sharp needle features a Universal Bevel geometry that allows a wider choice of insertion angles, which is designed to make the catheter easy to adapt to and venipuncture more comfortable for patients. And with less plastic content than other safety IV catheters, you can potentially reduce storage space and medical waste.</p><p>Raise your facility’s standard of care and choose the B. Braun Introcan Safety® IV Catheter to:</p><ol><li><strong>Reduce Needlestick Injuries:</strong> recent studies¹<sup>,</sup>² confirm that passive safety designs offer 2-3 times better protection against accidental needlesticks than active designs. INS Standards also recommend the use of passive safety devices.</li><li><strong>Promote First Stick Success:</strong> the innovative Double Flashback technology allows separate confirmation of both needle and catheter placement, which can result in better first stick success and greater clinician confidence. New Thinwall technology in our 24G catheters is designed to speed flashback of blood to help confirm placement in patients. Research also shows Introcan Safety® is easier to introduce into the vein compared to the leading IV catheter.³</li><li><strong>Improve Patient Comfort:</strong> the sharp needle features a Universal Bevel that is designed for a wider choice of insertion angles and produces less tearing.</li><li><strong>Ensure Best Practices:</strong> the passive safety design ensures that the safety mechanism is always activated and prevents re-insertion of the stylet. Additionally, a recent study shows Introcan Safety® results in less blood exposure to staff than catheters featuring spring-retraction of the needle.³</li><li><strong>Help the Environment:</strong> lighter, more compact design can potentialy lower shipping, storage and waste disposal costs.</li></ol><p> </p><p>¹Tosini W, et al. “ Needlestick Injury Rates According to Different Types of Safety Engineered Devices: Results of a French Multicenter Study”, Infection Control and Hospital Epidemiology, April 2010. Vol 31, Number 4<br />²Shimatani M, et al. “Comparison of the Needlestick Injuries Due to Active and Passive Design Safety Intravenous Catheters”, Poster Presentation APIC 2011. Submitted for publication 2011<br />³Prunet B, et al. \"A Prospective Randomized Trial of Two Safety Peripheral Intravenous Catheters\", Anesthesia and Analgesia, July 2008. Vol 107, Number 1</p>",
+                        "textType": "XOEMD",
+                        "uid": "XOEMDUSEN/PRID00001011"
                     },
                     {
                         "bkcCountry": "US",
@@ -688,13 +696,25 @@
             "preselected": false,
             "referenceType": "DOCUMENT",
             "target": {
+                "code": "BPG000000000000000100008997600000",
+                "mimeDetails": "image/jpeg",
+                "name": "Introcan Safety® IV Catheter",
+                "pictureSortOrder": 1000000,
+                "url": "/doc/BPG000000000000000100008997600000"
+            }
+        },
+        {
+            "posNr": 5,
+            "preselected": false,
+            "referenceType": "DOCUMENT",
+            "target": {
                 "code": "BPB000000000000000100011724000000",
                 "name": "Request study: \"Needlestick Injury Rates...\" Tosini 2010",
                 "url": "/doc/BPB000000000000000100011724000000"
             }
         },
         {
-            "posNr": 5,
+            "posNr": 6,
             "preselected": false,
             "referenceType": "DOCUMENT",
             "target": {
@@ -704,7 +724,7 @@
             }
         },
         {
-            "posNr": 6,
+            "posNr": 7,
             "preselected": false,
             "referenceType": "DOCUMENT",
             "target": {
@@ -714,7 +734,7 @@
             }
         },
         {
-            "posNr": 7,
+            "posNr": 8,
             "preselected": false,
             "referenceType": "DOCUMENT",
             "target": {
@@ -724,7 +744,7 @@
             }
         },
         {
-            "posNr": 8,
+            "posNr": 9,
             "preselected": false,
             "referenceType": "DOCUMENT",
             "target": {
@@ -734,7 +754,7 @@
             }
         },
         {
-            "posNr": 9,
+            "posNr": 10,
             "preselected": false,
             "referenceType": "DOCUMENT",
             "target": {
@@ -744,7 +764,7 @@
             }
         },
         {
-            "posNr": 10,
+            "posNr": 11,
             "preselected": false,
             "referenceType": "DOCUMENT",
             "target": {
@@ -755,7 +775,7 @@
             }
         },
         {
-            "posNr": 11,
+            "posNr": 12,
             "preselected": false,
             "referenceType": "DOCUMENT",
             "target": {
@@ -766,7 +786,7 @@
             }
         },
         {
-            "posNr": 12,
+            "posNr": 13,
             "preselected": false,
             "referenceType": "DOCUMENT",
             "target": {
@@ -775,25 +795,13 @@
                 "name": "Introcan Safety Practice Suggestions VAD27 Jun11",
                 "url": "/doc/BPR000000000000000100011722900000"
             }
-        },
-        {
-            "posNr": 13,
-            "preselected": false,
-            "referenceType": "DOCUMENT",
-            "target": {
-                "code": "BPG000000000000000100008997600000",
-                "mimeDetails": "image/jpeg",
-                "name": "Introcan Safety® IV Catheter",
-                "pictureSortOrder": 1000000,
-                "url": "/doc/BPG000000000000000100008997600000"
-            }
         }
     ],
     "productType": "PRID",
     "purStatus": "M1",
     "resourceStatus": "UPDATED",
     "salStatus": "V1",
-    "sapModifiedTime": "2017-10-26T08:30:03+0000",
+    "sapModifiedTime": "2017-08-11T12:40:44+0000",
     "stock": {
         "stockLevel": 0,
         "stockLevelStatus": "inStock"
@@ -806,18 +814,18 @@
             "alternativeUnitIso": "PCE",
             "code": "ST/PRID00001011",
             "denominator": 1,
-            "grossWeight": 0E-8,
-            "height": 0E-8,
+            "grossWeight": 0,
+            "height": 0,
             "internationalCharacteristics": "0000000000",
-            "length": 0E-8,
-            "netWeight": 0E-8,
+            "length": 0,
+            "netWeight": 0,
             "numberOfSubUom": 0,
             "numerator": 1,
             "uomSortNumber": 0,
-            "volume": 0E-8,
+            "volume": 0,
             "weightUnit": "KG",
             "weightUnitIso": "KGM",
-            "width": 0E-8
+            "width": 0
         }
     ],
     "url": "/p/PRID00001011"

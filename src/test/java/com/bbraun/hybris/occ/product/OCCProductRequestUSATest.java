@@ -35,7 +35,8 @@ public class OCCProductRequestUSATest {
 
 				.assertResponseContentType(ContentType.JSON) //
 				.assertResponseBodyEqualsReference("${hybris.occ.product.prid1011.expectedFile}",
-						"sapModifiedTime") //
+						"sapModifiedTime", "productReferences") //
+				.assertResponseBodyByPathEquals("productReferences.size()", 14)
 		;
 	}
 
