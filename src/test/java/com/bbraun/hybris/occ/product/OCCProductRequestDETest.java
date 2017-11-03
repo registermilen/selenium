@@ -36,7 +36,6 @@ public class OCCProductRequestDETest {
 				.assertResponseContentType(ContentType.JSON) //
 				.assertResponseBodyEqualsReference("${hybris.occ.product.prid1011.expectedFile}",
 						"sapModifiedTime", "productReferences") //
-				.assertResponseBodyByPathEquals("productReferences.size()", 14)
 				.assertResponseBodyByPathEquals("productReferences.findAll {p -> p.target.mimeDetails=='image/jpeg'}.size() > 0", Boolean.TRUE) // min. one picture
 				.assertResponseBodyByPathEquals("productReferences.findAll {p -> p.target.mimeDetails=='application/pdf'}.size() > 0", Boolean.TRUE) // min. one document
 
@@ -61,7 +60,8 @@ public class OCCProductRequestDETest {
 
 				.assertResponseContentType(ContentType.JSON) //
 				.assertResponseBodyEqualsReference("${hybris.occ.product.article3887138.expectedFile}",
-						"sapModifiedTime") //
+						"sapModifiedTime", "productReferences") //
+				.assertResponseBodyByPathEquals("productReferences.findAll {p -> p.target.mimeDetails=='image/jpeg'}.size() > 0", Boolean.TRUE) // min. one picture
 		;
 	}
 
