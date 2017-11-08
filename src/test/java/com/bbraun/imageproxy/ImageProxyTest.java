@@ -1,5 +1,6 @@
 package com.bbraun.imageproxy;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import com.bbraun.bbmtest.ws.BBMWebServiceTestBuilder;
@@ -9,6 +10,7 @@ import com.bbraun.bbmtest.ws.BBMWebServiceTestBuilder;
  * 
  * @author stefans
  */
+@Ignore
 public class ImageProxyTest {
 
 	@Test
@@ -26,7 +28,8 @@ public class ImageProxyTest {
 		.withNewRequest() //
 		.doGet("http://images.bbraun.com/01/article/PRID00000772") //
 		.assertResponseHeaderEquals("Content-Type", "image/jpeg;charset=UTF-8") //
-		.assertResponseHeaderEquals("Content-Length", "17067");
+		.assertResponseHeaderEquals("Content-Length", "17067")
+		;
 	}
 	
 	@Test
