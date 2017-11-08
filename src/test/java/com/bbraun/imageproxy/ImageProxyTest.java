@@ -10,7 +10,6 @@ import com.bbraun.bbmtest.ws.BBMWebServiceTestBuilder;
  * 
  * @author stefans
  */
-@Ignore
 public class ImageProxyTest {
 
 	@Test
