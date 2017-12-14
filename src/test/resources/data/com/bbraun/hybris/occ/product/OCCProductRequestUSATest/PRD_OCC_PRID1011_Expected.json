@@ -5,72 +5,6 @@
         {
             "billOfMaterialItem": [
                 {
-                    "bomComponent": "4251679-02",
-                    "bomComponentQuantity": "1.000",
-                    "bomUsage": "B",
-                    "posNumber": "0480",
-                    "product": {
-                        "aemProductType": "BBM",
-                        "code": "4251679-02"
-                    },
-                    "uid": "PRID00001011/B/4251679-02"
-                },
-                {
-                    "bomComponent": "4252561-02",
-                    "bomComponentQuantity": "1.000",
-                    "bomUsage": "B",
-                    "posNumber": "0465",
-                    "product": {
-                        "aemProductType": "BBM",
-                        "code": "4252561-02"
-                    },
-                    "uid": "PRID00001011/B/4252561-02"
-                },
-                {
-                    "bomComponent": "4252551-02",
-                    "bomComponentQuantity": "1.000",
-                    "bomUsage": "B",
-                    "posNumber": "0520",
-                    "product": {
-                        "aemProductType": "BBM",
-                        "code": "4252551-02"
-                    },
-                    "uid": "PRID00001011/B/4252551-02"
-                },
-                {
-                    "bomComponent": "4251687-02",
-                    "bomComponentQuantity": "1.000",
-                    "bomUsage": "B",
-                    "posNumber": "0570",
-                    "product": {
-                        "aemProductType": "BBM",
-                        "code": "4251687-02"
-                    },
-                    "uid": "PRID00001011/B/4251687-02"
-                },
-                {
-                    "bomComponent": "4251652-02",
-                    "bomComponentQuantity": "1.000",
-                    "bomUsage": "B",
-                    "posNumber": "0360",
-                    "product": {
-                        "aemProductType": "BBM",
-                        "code": "4251652-02"
-                    },
-                    "uid": "PRID00001011/B/4251652-02"
-                },
-                {
-                    "bomComponent": "4252543-02",
-                    "bomComponentQuantity": "1.000",
-                    "bomUsage": "B",
-                    "posNumber": "0410",
-                    "product": {
-                        "aemProductType": "BBM",
-                        "code": "4252543-02"
-                    },
-                    "uid": "PRID00001011/B/4252543-02"
-                },
-                {
                     "bomComponent": "4252560-02",
                     "bomComponentQuantity": "1.000",
                     "bomUsage": "B",
@@ -93,15 +27,15 @@
                     "uid": "PRID00001011/B/4251695-02"
                 },
                 {
-                    "bomComponent": "4252578-02",
+                    "bomComponent": "4251687-02",
                     "bomComponentQuantity": "1.000",
                     "bomUsage": "B",
-                    "posNumber": "0720",
+                    "posNumber": "0570",
                     "product": {
                         "aemProductType": "BBM",
-                        "code": "4252578-02"
+                        "code": "4251687-02"
                     },
-                    "uid": "PRID00001011/B/4252578-02"
+                    "uid": "PRID00001011/B/4251687-02"
                 },
                 {
                     "bomComponent": "4251709-02",
@@ -113,6 +47,17 @@
                         "code": "4251709-02"
                     },
                     "uid": "PRID00001011/B/4251709-02"
+                },
+                {
+                    "bomComponent": "4252578-02",
+                    "bomComponentQuantity": "1.000",
+                    "bomUsage": "B",
+                    "posNumber": "0720",
+                    "product": {
+                        "aemProductType": "BBM",
+                        "code": "4252578-02"
+                    },
+                    "uid": "PRID00001011/B/4252578-02"
                 },
                 {
                     "bomComponent": "4252586-02",
@@ -148,6 +93,61 @@
                     "uid": "PRID00001011/B/4252594-02"
                 },
                 {
+                    "bomComponent": "4251652-02",
+                    "bomComponentQuantity": "1.000",
+                    "bomUsage": "B",
+                    "posNumber": "0360",
+                    "product": {
+                        "aemProductType": "BBM",
+                        "code": "4251652-02"
+                    },
+                    "uid": "PRID00001011/B/4251652-02"
+                },
+                {
+                    "bomComponent": "4252543-02",
+                    "bomComponentQuantity": "1.000",
+                    "bomUsage": "B",
+                    "posNumber": "0410",
+                    "product": {
+                        "aemProductType": "BBM",
+                        "code": "4252543-02"
+                    },
+                    "uid": "PRID00001011/B/4252543-02"
+                },
+                {
+                    "bomComponent": "4252561-02",
+                    "bomComponentQuantity": "1.000",
+                    "bomUsage": "B",
+                    "posNumber": "0468",
+                    "product": {
+                        "aemProductType": "BBM",
+                        "code": "4252561-02"
+                    },
+                    "uid": "PRID00001011/B/4252561-02"
+                },
+                {
+                    "bomComponent": "4251679-02",
+                    "bomComponentQuantity": "1.000",
+                    "bomUsage": "B",
+                    "posNumber": "0480",
+                    "product": {
+                        "aemProductType": "BBM",
+                        "code": "4251679-02"
+                    },
+                    "uid": "PRID00001011/B/4251679-02"
+                },
+                {
+                    "bomComponent": "4252551-02",
+                    "bomComponentQuantity": "1.000",
+                    "bomUsage": "B",
+                    "posNumber": "0520",
+                    "product": {
+                        "aemProductType": "BBM",
+                        "code": "4252551-02"
+                    },
+                    "uid": "PRID00001011/B/4252551-02"
+                },
+                {
                     "bomComponent": "4251890-02",
                     "bomComponentQuantity": "1.000",
                     "bomUsage": "B",
@@ -157,17 +157,6 @@
                         "code": "4251890-02"
                     },
                     "uid": "PRID00001011/B/4251890-02"
-                },
-                {
-                    "bomComponent": "4251611-02",
-                    "bomComponentQuantity": "1.000",
-                    "bomUsage": "B",
-                    "posNumber": "0010",
-                    "product": {
-                        "aemProductType": "BBM",
-                        "code": "4251611-02"
-                    },
-                    "uid": "PRID00001011/B/4251611-02"
                 },
                 {
                     "bomComponent": "4251607-02",
@@ -192,50 +181,6 @@
                     "uid": "PRID00001011/B/4251612-02"
                 },
                 {
-                    "bomComponent": "4251601-02",
-                    "bomComponentQuantity": "1.000",
-                    "bomUsage": "B",
-                    "posNumber": "0130",
-                    "product": {
-                        "aemProductType": "BBM",
-                        "code": "4251601-02"
-                    },
-                    "uid": "PRID00001011/B/4251601-02"
-                },
-                {
-                    "bomComponent": "4252500-02",
-                    "bomComponentQuantity": "1.000",
-                    "bomUsage": "B",
-                    "posNumber": "0180",
-                    "product": {
-                        "aemProductType": "BBM",
-                        "code": "4252500-02"
-                    },
-                    "uid": "PRID00001011/B/4252500-02"
-                },
-                {
-                    "bomComponent": "4252520-02",
-                    "bomComponentQuantity": "1.000",
-                    "bomUsage": "B",
-                    "posNumber": "0220",
-                    "product": {
-                        "aemProductType": "BBM",
-                        "code": "4252520-02"
-                    },
-                    "uid": "PRID00001011/B/4252520-02"
-                },
-                {
-                    "bomComponent": "4251628-02",
-                    "bomComponentQuantity": "1.000",
-                    "bomUsage": "B",
-                    "posNumber": "0250",
-                    "product": {
-                        "aemProductType": "BBM",
-                        "code": "4251628-02"
-                    },
-                    "uid": "PRID00001011/B/4251628-02"
-                },
-                {
                     "bomComponent": "4252519-02",
                     "bomComponentQuantity": "1.000",
                     "bomUsage": "B",
@@ -245,17 +190,6 @@
                         "code": "4252519-02"
                     },
                     "uid": "PRID00001011/B/4252519-02"
-                },
-                {
-                    "bomComponent": "4252511-02",
-                    "bomComponentQuantity": "1.000",
-                    "bomUsage": "B",
-                    "posNumber": "0065",
-                    "product": {
-                        "aemProductType": "BBM",
-                        "code": "4252511-02"
-                    },
-                    "uid": "PRID00001011/B/4252511-02"
                 },
                 {
                     "bomComponent": "4252527-02",
@@ -289,6 +223,116 @@
                         "code": "4252535-02"
                     },
                     "uid": "PRID00001011/B/4252535-02"
+                },
+                {
+                    "bomComponent": "4252500-02",
+                    "bomComponentQuantity": "1.000",
+                    "bomUsage": "B",
+                    "posNumber": "0180",
+                    "product": {
+                        "aemProductType": "BBM",
+                        "code": "4252500-02"
+                    },
+                    "uid": "PRID00001011/B/4252500-02"
+                },
+                {
+                    "bomComponent": "4251611-02",
+                    "bomComponentQuantity": "1.000",
+                    "bomUsage": "B",
+                    "posNumber": "0010",
+                    "product": {
+                        "aemProductType": "BBM",
+                        "code": "4251611-02"
+                    },
+                    "uid": "PRID00001011/B/4251611-02"
+                },
+                {
+                    "bomComponent": "4252520-02",
+                    "bomComponentQuantity": "1.000",
+                    "bomUsage": "B",
+                    "posNumber": "0220",
+                    "product": {
+                        "aemProductType": "BBM",
+                        "code": "4252520-02"
+                    },
+                    "uid": "PRID00001011/B/4252520-02"
+                },
+                {
+                    "bomComponent": "4252511-02",
+                    "bomComponentQuantity": "1.000",
+                    "bomUsage": "B",
+                    "posNumber": "0065",
+                    "product": {
+                        "aemProductType": "BBM",
+                        "code": "4252511-02"
+                    },
+                    "uid": "PRID00001011/B/4252511-02"
+                },
+                {
+                    "bomComponent": "4251628-02",
+                    "bomComponentQuantity": "1.000",
+                    "bomUsage": "B",
+                    "posNumber": "0250",
+                    "product": {
+                        "aemProductType": "BBM",
+                        "code": "4251628-02"
+                    },
+                    "uid": "PRID00001011/B/4251628-02"
+                },
+                {
+                    "bomComponent": "4251601-02",
+                    "bomComponentQuantity": "1.000",
+                    "bomUsage": "B",
+                    "posNumber": "0130",
+                    "product": {
+                        "aemProductType": "BBM",
+                        "code": "4251601-02"
+                    },
+                    "uid": "PRID00001011/B/4251601-02"
+                },
+                {
+                    "bomComponent": "4251623-02",
+                    "bomComponentQuantity": "1.000",
+                    "bomUsage": "B",
+                    "posNumber": "0206",
+                    "product": {
+                        "aemProductType": "BBM",
+                        "code": "4251623-02"
+                    },
+                    "uid": "PRID00001011/B/4251623-02"
+                },
+                {
+                    "bomComponent": "4251622-02",
+                    "bomComponentQuantity": "1.000",
+                    "bomUsage": "B",
+                    "posNumber": "0325",
+                    "product": {
+                        "aemProductType": "BBM",
+                        "code": "4251622-02"
+                    },
+                    "uid": "PRID00001011/B/4251622-02"
+                },
+                {
+                    "bomComponent": "4251621-02",
+                    "bomComponentQuantity": "1.000",
+                    "bomUsage": "B",
+                    "posNumber": "0462",
+                    "product": {
+                        "aemProductType": "BBM",
+                        "code": "4251621-02"
+                    },
+                    "uid": "PRID00001011/B/4251621-02"
+                },
+                {
+                    "bomComponent": "4251620-02",
+                    "bomComponentQuantity": "1.000",
+                    "bomUsage": "B",
+                    "posNumber": "0651",
+                    "product": {
+                        "aemProductType": "BBM",
+                        "code": "4251620-02"
+                    },
+                    "uid": "PRID00001011/B/4251620-02"
                 }
             ],
             "bomAlternative": "01",
@@ -377,12 +421,16 @@
                             "value": "TR"
                         },
                         {
-                            "code": "ZA",
-                            "value": "ZA"
+                            "code": "BG",
+                            "value": "BG"
                         },
                         {
                             "code": "PL",
                             "value": "PL"
+                        },
+                        {
+                            "code": "ZA",
+                            "value": "ZA"
                         },
                         {
                             "code": "01",
@@ -499,10 +547,6 @@
                         {
                             "code": "NZ",
                             "value": "NZ"
-                        },
-                        {
-                            "code": "BG",
-                            "value": "BG"
                         }
                     ],
                     "name": "Marketing release",
@@ -696,25 +740,13 @@
             "preselected": false,
             "referenceType": "DOCUMENT",
             "target": {
-                "code": "BPG000000000000000100008997600000",
-                "mimeDetails": "image/jpeg",
-                "name": "Introcan Safety® IV Catheter",
-                "pictureSortOrder": 1000000,
-                "url": "/doc/BPG000000000000000100008997600000"
-            }
-        },
-        {
-            "posNr": 5,
-            "preselected": false,
-            "referenceType": "DOCUMENT",
-            "target": {
                 "code": "BPB000000000000000100011724000000",
                 "name": "Request study: \"Needlestick Injury Rates...\" Tosini 2010",
                 "url": "/doc/BPB000000000000000100011724000000"
             }
         },
         {
-            "posNr": 6,
+            "posNr": 5,
             "preselected": false,
             "referenceType": "DOCUMENT",
             "target": {
@@ -724,7 +756,7 @@
             }
         },
         {
-            "posNr": 7,
+            "posNr": 6,
             "preselected": false,
             "referenceType": "DOCUMENT",
             "target": {
@@ -734,7 +766,7 @@
             }
         },
         {
-            "posNr": 8,
+            "posNr": 7,
             "preselected": false,
             "referenceType": "DOCUMENT",
             "target": {
@@ -744,7 +776,7 @@
             }
         },
         {
-            "posNr": 9,
+            "posNr": 8,
             "preselected": false,
             "referenceType": "DOCUMENT",
             "target": {
@@ -754,7 +786,7 @@
             }
         },
         {
-            "posNr": 10,
+            "posNr": 9,
             "preselected": false,
             "referenceType": "DOCUMENT",
             "target": {
@@ -764,7 +796,7 @@
             }
         },
         {
-            "posNr": 11,
+            "posNr": 10,
             "preselected": false,
             "referenceType": "DOCUMENT",
             "target": {
@@ -775,7 +807,7 @@
             }
         },
         {
-            "posNr": 12,
+            "posNr": 11,
             "preselected": false,
             "referenceType": "DOCUMENT",
             "target": {
@@ -786,7 +818,7 @@
             }
         },
         {
-            "posNr": 13,
+            "posNr": 12,
             "preselected": false,
             "referenceType": "DOCUMENT",
             "target": {
@@ -795,13 +827,25 @@
                 "name": "Introcan Safety Practice Suggestions VAD27 Jun11",
                 "url": "/doc/BPR000000000000000100011722900000"
             }
+        },
+        {
+            "posNr": 13,
+            "preselected": false,
+            "referenceType": "DOCUMENT",
+            "target": {
+                "code": "BPG000000000000000100008997600000",
+                "mimeDetails": "image/jpeg",
+                "name": "Introcan Safety® IV Catheter",
+                "pictureSortOrder": 1000000,
+                "url": "/doc/BPG000000000000000100008997600000"
+            }
         }
     ],
     "productType": "PRID",
     "purStatus": "M1",
     "resourceStatus": "UPDATED",
     "salStatus": "V1",
-    "sapModifiedTime": "2017-08-11T12:40:44+0000",
+    "sapModifiedTime": "2017-12-13T09:17:02+0000",
     "stock": {
         "stockLevel": 0,
         "stockLevelStatus": "inStock"
@@ -814,18 +858,18 @@
             "alternativeUnitIso": "PCE",
             "code": "ST/PRID00001011",
             "denominator": 1,
-            "grossWeight": 0,
-            "height": 0,
+            "grossWeight": 0E-8,
+            "height": 0E-8,
             "internationalCharacteristics": "0000000000",
-            "length": 0,
-            "netWeight": 0,
+            "length": 0E-8,
+            "netWeight": 0E-8,
             "numberOfSubUom": 0,
             "numerator": 1,
             "uomSortNumber": 0,
-            "volume": 0,
+            "volume": 0E-8,
             "weightUnit": "KG",
             "weightUnitIso": "KGM",
-            "width": 0
+            "width": 0E-8
         }
     ],
     "url": "/p/PRID00001011"
