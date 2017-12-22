@@ -1,5 +1,6 @@
 package com.bbraun.imageproxy;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import com.bbraun.bbmtest.ws.BBMWebServiceTestBuilder;
@@ -9,6 +10,7 @@ import com.bbraun.bbmtest.ws.BBMWebServiceTestBuilder;
  * 
  * @author stefans
  */
+@Ignore
 public class ImageProxyTest {
 
 	@Test
