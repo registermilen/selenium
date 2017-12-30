@@ -9,15 +9,27 @@ import com.bbraun.bbmtest.ui.BBMUiTestBuilder;
 @Ignore
 public class ProductCenterLoginTest {
 
+
+	@Test
+	public void testDragNDrop() {
+		new BBMUiTestBuilder<>() //
+				.doStartBrowser() //
+//				.doMaximizeWindow() //
+				.doOpenUrl("http://jqueryui.com/resources/demos/droppable/default.html") //
+				.doDragNDrop(By.id("draggable"), By.id("droppable")) //
+				.doCloseBrowser() //
+		;
+	}
+	
 	@Test
 	public void testRenderLoginPageSuccess() {
 		new BBMUiTestBuilder<>() //
 				.doStartBrowser() //
-				.doMaximizeWindow() //
+//				.doMaximizeWindow() //
 				.doOpenUrl("https://qas-products.bbraun.com/hybrislogin") //
 				.assertTextDisplayedOnPage(
 						"Melden Sie sich bitte an und erleben Sie die digitale Produktwelt der B. Braun Gruppe") // ;
-				.assertPageSectionScreenshotEquals(By.className("headerContent"), "PageHeader.PNG", 1) //
+				.assertPageSectionScreenshotEquals(By.className("headerContent"), "PageHeader.PNG", 10) //
 				.assertPageSectionScreenshotEquals(By.className("userLogin"), "UserLoginBox.PNG", 10) //
 
 				.doCloseBrowser() //
