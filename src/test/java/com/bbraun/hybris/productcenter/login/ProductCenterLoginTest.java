@@ -1,31 +1,40 @@
 package com.bbraun.hybris.productcenter.login;
 
-import org.junit.Ignore;
 import org.junit.Test;
 import org.openqa.selenium.By;
 
 import com.bbraun.bbmtest.ui.BBMUiTestBuilder;
+import com.bbraun.bbmtest.ui.UiTest;
 
-@Ignore
+//@Ignore
 public class ProductCenterLoginTest {
 
+	@Test
+	public void testLambda() {
+		UiTest.go(builder -> {
+			builder //
+					.doStartBrowser() //
+					.doOpenUrl("http://jqueryui.com/resources/demos/droppable/default.html") //
+					.doDragNDrop(By.id("draggable"), By.id("droppable")); //
+		});
+	}
 
 	@Test
 	public void testDragNDrop() {
 		new BBMUiTestBuilder<>() //
 				.doStartBrowser() //
-//				.doMaximizeWindow() //
+				// .doMaximizeWindow() //
 				.doOpenUrl("http://jqueryui.com/resources/demos/droppable/default.html") //
 				.doDragNDrop(By.id("draggable"), By.id("droppable")) //
 				.doCloseBrowser() //
 		;
 	}
-	
+
 	@Test
 	public void testRenderLoginPageSuccess() {
 		new BBMUiTestBuilder<>() //
 				.doStartBrowser() //
-//				.doMaximizeWindow() //
+				// .doMaximizeWindow() //
 				.doOpenUrl("https://qas-products.bbraun.com/hybrislogin") //
 				.assertTextDisplayedOnPage(
 						"Melden Sie sich bitte an und erleben Sie die digitale Produktwelt der B. Braun Gruppe") // ;
