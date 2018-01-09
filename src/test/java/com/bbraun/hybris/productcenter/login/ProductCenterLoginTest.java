@@ -1,12 +1,13 @@
 package com.bbraun.hybris.productcenter.login;
 
+import org.junit.Ignore;
 import org.junit.Test;
 import org.openqa.selenium.By;
 
 import com.bbraun.bbmtest.ui.BBMUiTestBuilder;
 import com.bbraun.bbmtest.ui.UiTest;
 
-//@Ignore
+@Ignore
 public class ProductCenterLoginTest {
 
 	@Test
