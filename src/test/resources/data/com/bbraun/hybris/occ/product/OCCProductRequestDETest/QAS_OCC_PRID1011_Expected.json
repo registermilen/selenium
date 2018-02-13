@@ -440,6 +440,10 @@
                         {
                             "code": "NZ",
                             "value": "NZ"
+                        },
+                        {
+                            "code": "SP",
+                            "value": "SP"
                         }
                     ],
                     "name": "Marketingfreigabe",
