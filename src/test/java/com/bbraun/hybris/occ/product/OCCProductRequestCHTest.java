@@ -35,10 +35,13 @@ public class OCCProductRequestCHTest {
 
 				.assertResponseContentType(ContentType.JSON) //
 				.assertResponseBodyEqualsReference("${hybris.occ.product.prid1011.expectedFile}",
-						"sapModifiedTime", "productReferences", "billOfMaterials", "localizedBkcTexts") //
+						"sapModifiedTime", "productReferences", "billOfMaterials", "localizedBkcTexts",
+						"classifications", "marketingReleaseFeatureValue") //
 				
 				.assertResponseBodyByPathEquals("billOfMaterials.size() > 0", Boolean.TRUE) 
 				.assertResponseBodyByPathEquals("localizedBkcTexts.size() > 0", Boolean.TRUE) 
+				.assertResponseBodyByPathEquals("classifications.size() > 0", Boolean.TRUE)
+				.assertResponseBodyByPathEquals("marketingReleaseFeatureValue.size() > 0", Boolean.TRUE)
 				.assertResponseBodyByPathEquals("productReferences.findAll {p -> p.target.mimeDetails=='image/jpeg'}.size() > 0", Boolean.TRUE) // min. one picture
 				.assertResponseBodyByPathEquals("productReferences.findAll {p -> p.target.mimeDetails=='application/pdf'}.size() > 0 ", Boolean.TRUE) // min. one document
 		;
