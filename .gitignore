@@ -1,6 +1,7 @@
 **/.settings
 **/.project
 **/.idea
+**/.iml
 **/.classpath
 **/TMP_*.PNG
 **/target
