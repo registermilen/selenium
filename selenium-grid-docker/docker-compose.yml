@@ -5,6 +5,9 @@ services:
     container_name: selenium-hub
     ports:
       - "4444:4444"
+    environment:
+      - https_proxy=fra1.sme.zscalertwo.net:9480
+      - http_proxy=fra1.sme.zscalertwo.net:9480
   chrome:
     image: selenium/node-chrome
     depends_on:
@@ -14,6 +17,8 @@ services:
     environment:
       - HUB_PORT_4444_TCP_ADDR=selenium-hub
       - HUB_PORT_4444_TCP_PORT=4444
+      - https_proxy=fra1.sme.zscalertwo.net:9480
+      - http_proxy=fra1.sme.zscalertwo.net:9480
   firefox:
     image: selenium/node-firefox
     depends_on:
@@ -23,3 +28,5 @@ services:
     environment:
       - HUB_PORT_4444_TCP_ADDR=selenium-hub
       - HUB_PORT_4444_TCP_PORT=4444
+      - https_proxy=fra1.sme.zscalertwo.net:9480
+      - http_proxy=fra1.sme.zscalertwo.net:9480
