@@ -7,10 +7,9 @@ import org.openqa.selenium.By;
 import com.bbraun.bbmtest.ui.BBMUiTestBuilder;
 import com.bbraun.bbmtest.ui.UiTest;
 
-@Ignore
 public class ProductCenterLoginTest {
 
-	@Test
+	// @Test
 	public void testLambda() {
 		UiTest.go(builder -> {
 			builder //
@@ -20,7 +19,7 @@ public class ProductCenterLoginTest {
 		});
 	}
 
-	@Test
+	// @Test
 	public void testDragNDrop() {
 		new BBMUiTestBuilder<>() //
 				.doStartBrowser() //
@@ -31,7 +30,7 @@ public class ProductCenterLoginTest {
 		;
 	}
 
-	@Test
+	// @Test
 	public void testRenderLoginPageSuccess() {
 		new BBMUiTestBuilder<>() //
 				.doStartBrowser() //
