@@ -61,6 +61,10 @@
 					{
 						"code": "CORPORATE WEBSITE",
 						"value": "Corporate Website"
+					},
+					{
+						"code": "VETCARESHOP",
+						"value": "Vet Care Shop"
 					}
 				],
 				"name": "Publikationskanal",
