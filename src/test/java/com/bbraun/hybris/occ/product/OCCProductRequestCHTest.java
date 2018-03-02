@@ -66,6 +66,7 @@ public class OCCProductRequestCHTest {
 				.assertResponseContentType(ContentType.JSON) //
 				.assertResponseBodyEqualsReference("${hybris.occ.product.article425161101.expectedFile}",
 						"sapModifiedTime", "eanNumber", "uom", "localizedBkcTexts", "materialLocalDatas") //
+
 				.assertResponseBodyByPathEquals("eanNumber.size() > 0", Boolean.TRUE)
 				.assertResponseBodyByPathEquals("uom.size() > 0", Boolean.TRUE)
 				.assertResponseBodyByPathEquals("localizedBkcTexts.size() > 0", Boolean.TRUE)

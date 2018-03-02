@@ -66,8 +66,13 @@ public class OCCProductRequestDETest {
 
 				.assertResponseContentType(ContentType.JSON) //
 				.assertResponseBodyEqualsReference("${hybris.occ.product.article3887138.expectedFile}",
-						"sapModifiedTime", "productReferences") //
+						"sapModifiedTime", "productReferences", "materialLocalDatas", "eanNumber", "uom", "localizedBkcTexts") //
+
 				.assertResponseBodyByPathEquals("productReferences.findAll {p -> p.target.mimeDetails=='image/jpeg'}.size() > 0", Boolean.TRUE) // min. one picture
+				.assertResponseBodyByPathEquals("materialLocalDatas.size() > 0", Boolean.TRUE)
+                .assertResponseBodyByPathEquals("eanNumber.size() > 0", Boolean.TRUE)
+                .assertResponseBodyByPathEquals("uom.size() > 0", Boolean.TRUE)
+                .assertResponseBodyByPathEquals("localizedBkcTexts.size() > 0", Boolean.TRUE)
 		;
 	}
 
