@@ -6,7 +6,6 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.openqa.selenium.By;
 
-import com.bbraun.bbmtest.ui.BBMUiTestBuilder;
 import com.bbraun.bbmtest.ui.UiTest;
 
 public class ProductCenterLoginTest {
