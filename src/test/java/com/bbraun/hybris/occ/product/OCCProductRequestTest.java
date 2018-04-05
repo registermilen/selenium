@@ -107,4 +107,25 @@ public class OCCProductRequestTest {
 				.assertResponseBodyEqualsReference("OCC_BPG000000000000000100006550700000_Expected.json") //
 		;
 	}
+
+	@Test
+	public void testOCCProductRequestUrlLanguageTestForRussia() {
+		new BBMWebServiceTestBuilder<>() //
+				.withNewRequest() //
+				.withBasicAuth("trusted_client", "secret") //
+				.doAuthenticateOAuth2("${hybris.oauth.url}", //
+						GrantType.PASSWORD, //
+						"${hybris.oauth.username}", //
+						"${hybris.oauth.password}") //
+				.withNewRequest() //
+				.withQueryParam("applicationKey", "AEM2015")//
+				.withQueryParam("viewId", "ru_RU") //
+				.withQueryParam("access_token", "${accessToken}") //
+
+				.doGet("${hybris.occ.product.prid988.url}") //
+
+				.assertResponseContentType(ContentType.JSON) //
+				.assertResponseBodyByPathNotNull("additionalName") //
+		;
+	}
 }
