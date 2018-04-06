@@ -14,6 +14,21 @@ public class ProductCenterLoginTest {
 	public RunOnStageRule rule = new RunOnStageRule();
 
 	@Test
+	public void testMRLogoForPRID1011DE() {
+		UiTest.go(builder -> {
+			builder.doStartBrowser() //
+					.doOpenUrl("https://qas-products.bbraun.com/hybrislogin") //
+					.doType(By.id("j_username"), "stuestxl") //
+					.doType(By.id("j_password"), "stuestxl") //
+					.doSubmitForm(By.id("loginForm")) //
+					.assertUrl("https://qas-products.bbraun.com/") //
+					.doOpenUrl("https://qas-products.bbraun.com/p/PRID00001011") //
+					.assertPageSectionScreenshotEquals(By.className("marketing-releases"), "MR.PNG", 0) //
+			;
+		});
+	}
+
+	@Test
 	@RunOnStage(stages = "QAS")
 	public void testRenderLoginPageSuccess() {
 		UiTest.go(builder -> {
