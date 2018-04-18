@@ -35,7 +35,8 @@ public class OCCProductRequestTest {
 				.assertResponseContentType(ContentType.JSON) //
 				.assertResponseBodyByPathEquals("url", "/p/PRID00001270") //
 				.assertResponseBodyByPathEquals("code", "PRID00001270") //
-				.assertResponseBodyEqualsReference("OCC_PRID1270_Expected.json", "sapModifiedTime", "productReferences") //
+				.assertResponseBodyEqualsReference("OCC_PRID1270_Expected.json", "sapModifiedTime", "productReferences","localizedBkcTexts") //
+				.assertResponseBodyByPathEquals("localizedBkcTexts.size() > 0", Boolean.TRUE)
 				.assertResponseBodyByPathEquals("productReferences.findAll {p -> p.target.mimeDetails=='application/pdf'}.size() > 0", Boolean.TRUE) // min. one document) //
 		;
 	}
