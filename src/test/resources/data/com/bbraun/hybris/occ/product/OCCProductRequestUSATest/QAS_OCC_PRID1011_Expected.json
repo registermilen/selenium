@@ -523,7 +523,7 @@
     "code": "PRID00001011",
     "description": "<p>Preferred passive safety design</p>",
     "division": "MM",
-    "hasClassifications": false,
+    "hasClassifications": true,
     "localizedBkcTexts": [
         {
             "key": "en",
