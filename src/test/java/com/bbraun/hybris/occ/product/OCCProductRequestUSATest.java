@@ -65,7 +65,8 @@ public class OCCProductRequestUSATest {
 
 				.assertResponseContentType(ContentType.JSON) //
 				.assertResponseBodyEqualsReference("${hybris.occ.product.article425161102.expectedFile}",
-						"sapModifiedTime", "productReferences", "materialLocalDatas", "eanNumber", "uom", "localizedBkcTexts") //
+						"sapModifiedTime", "productReferences", "materialLocalDatas", "eanNumber", "uom",
+						"classifications","localizedBkcTexts") //
 
 				.assertResponseBodyByPathEquals("productReferences.findAll {p -> p.target.mimeDetails=='image/jpeg'}.size() > 0", Boolean.TRUE) // min. one picture
 				.assertResponseBodyByPathEquals("productReferences.findAll {p -> p.target.mimeDetails=='application/pdf'}.size() > 0", Boolean.TRUE) // min. one document
@@ -73,6 +74,8 @@ public class OCCProductRequestUSATest {
 				.assertResponseBodyByPathEquals("eanNumber.size() > 0", Boolean.TRUE)
 				.assertResponseBodyByPathEquals("uom.size() > 0", Boolean.TRUE)
 				.assertResponseBodyByPathEquals("localizedBkcTexts.size() > 0", Boolean.TRUE)
+				.assertResponseBodyByPathEquals("classifications.size() > 0", Boolean.TRUE)
+
 		;
 	}
 
