@@ -26,7 +26,7 @@ public class B2BShopLoginTest {
 					.doType(By.id("username"), "shopdemo@bbraun.com") //
 					.doType(By.id("password"), "demo") //
 				.doSubmitForm(By.className("button-primary")) //
-				.assertUrl("https://qas-shop.bbraun.com/bob") //
+				.assertUrl("https://qas-shop.bbraun.com/bobs") //
             ;
 
 			try {
