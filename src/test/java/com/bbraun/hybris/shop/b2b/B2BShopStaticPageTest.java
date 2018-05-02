@@ -29,7 +29,7 @@ public class B2BShopStaticPageTest {
                     .assertUrl("https://qas-shop.bbraun.com/bob") //
                     .doClick(By.linkText("20005585"))
                     .doWaitUntil(ExpectedConditions.urlContains("https://qas-shop.bbraun.com"))
-                    .assertElementPresent(By.linkText("Nutzungsbedingungen"))
+                    .assertElementExists(By.linkText("Nutzungsbedingungen"))
                     .doClick(By.linkText("Nutzungsbedingungen"))
                     .assertUrl("https://qas-shop.bbraun.com/info-pages/termsOfUse")
                     .assertTextDisplayedOnPage("Nutzungsbedingung")
@@ -53,7 +53,7 @@ public class B2BShopStaticPageTest {
                     .assertUrl("https://qas-shop.bbraun.com/bob") //
                     .doClick(By.linkText("20005585"))
                     .doWaitUntil(ExpectedConditions.urlContains("https://qas-shop.bbraun.com"))
-                    .assertElementPresent(By.linkText("Datenschutz"))
+                    .assertElementExists(By.linkText("Datenschutz"))
                     .doClick(By.linkText("Datenschutz"))
                     .assertUrl("https://qas-shop.bbraun.com/info-pages/privacyPolicy")
                     .assertTextDisplayedOnPage("Datenschutz")

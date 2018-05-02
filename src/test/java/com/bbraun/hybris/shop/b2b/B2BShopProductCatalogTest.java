@@ -32,8 +32,8 @@ public class B2BShopProductCatalogTest {
                     .doClick(By.className("catalog"))
                     .doWaitUntil(ExpectedConditions.urlContains("bbraunRootCategory"))
                     .assertTitle("Category Page")
-                    .assertElementPresent(By.className("leftsidebar"))
-                    .assertElementPresent(By.className("subCategoryRefinementToggle"))
+                    .assertElementExists(By.className("leftsidebar"))
+                    .assertElementExists(By.className("subCategoryRefinementToggle"))
             ;
         });
     }

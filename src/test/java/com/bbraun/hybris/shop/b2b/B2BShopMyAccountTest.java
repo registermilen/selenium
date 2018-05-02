@@ -35,9 +35,9 @@ public class B2BShopMyAccountTest {
 
                     .doClick(By.linkText("Ihr Konto"))
                     .assertUrl("https://qas-shop.bbraun.com/my-account/orders")
-                    .assertElementPresent(By.className("accountNav"))
+                    .assertElementExists(By.className("accountNav"))
                     .assertTextDisplayedOnPage("Bestellhistorie")
-                    .assertElementPresent(By.id("submitFilter")) // "Filter anwenden"
+                    .assertElementExists(By.id("submitFilter")) // "Filter anwenden"
                     .assertTitle(startsWith("Bestellhistorie"))
             ;
         });
