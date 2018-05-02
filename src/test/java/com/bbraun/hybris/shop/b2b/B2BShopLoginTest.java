@@ -1,4 +1,4 @@
-package com.bbraun.hybris.shop.b2b.login;
+package com.bbraun.hybris.shop.b2b;
 
 import com.bbraun.bbmtest.conf.RunOnStage;
 import com.bbraun.bbmtest.conf.RunOnStageRule;
@@ -14,12 +14,12 @@ public class B2BShopLoginTest {
     @Rule
     public RunOnStageRule rule = new RunOnStageRule();
 
-
     @Test
     @RunOnStage(stages = "QAS")
-    public void testLoginIDPBOBUserSuccess() {
+    public void testBobUserLoginAndLogoutViaIdpSuccess() {
         UiTest.go(builder -> {
             builder.doStartBrowser() //
+                    .doMaximizeWindow() //
                     .doOpenUrl("https://qas-shop.bbraun.com")
                     .doWaitUntil(ExpectedConditions.urlContains("idp-dev.bbraun.com"))
                     .assertUrl("https://idp-dev.bbraun.com/idp/SSO.saml2")
@@ -27,13 +27,16 @@ public class B2BShopLoginTest {
                     .doType(By.id("password"), "demo")
                     .doSubmitForm(By.className("button-primary"))
                     .assertUrl("https://qas-shop.bbraun.com/bob")
+                    .doClick(By.linkText("Logout"))
+                    .doWaitUntil(ExpectedConditions.urlContains("idp-dev.bbraun.com"))
+                    .assertUrl("https://idp-dev.bbraun.com/idp/SSO.saml2")
             ;
         });
     }
 
     @Test
     @RunOnStage(stages = "QAS")
-    public void testOpenSavedCarts() {
+    public void testUserSwitch() {
         UiTest.go(builder -> {
             builder.doStartBrowser() //
                     .doMaximizeWindow() //
@@ -45,23 +48,16 @@ public class B2BShopLoginTest {
                     .doSubmitForm(By.className("button-primary")) //
 
                     .assertUrl("https://qas-shop.bbraun.com/bob") //
+                    .doClick(By.linkText("20344385"))
+                    .doWaitUntil(ExpectedConditions.urlContains("https://qas-shop.bbraun.com"))
+                    .assertTextDisplayedOnPage("20344385")
+
+                    .doClick(By.linkText("Switch User"))
+                    .assertUrl("https://qas-shop.bbraun.com/bob")
                     .doClick(By.linkText("20005585"))
                     .doWaitUntil(ExpectedConditions.urlContains("https://qas-shop.bbraun.com"))
-
-                    .doClick(By.linkText("Ihr Konto"))
-                    .assertUrl("https://qas-shop.bbraun.com/my-account/orders")
-
-                    .doClick(By.linkText("Bestellvorlagen"))
-                    .assertUrl("https://qas-shop.bbraun.com/my-account/saved-carts")
-                    .assertTextDisplayedOnPage("Gespeicherte Warenkörbe")
-                    .assertElementPresent(By.linkText("Neue Bestellvorlage anlegen"))
+                    .assertTextDisplayedOnPage("20005585")
             ;
-
-            try {
-                Thread.sleep(3000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
         });
     }
 
