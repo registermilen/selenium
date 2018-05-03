@@ -8,18 +8,17 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 
 import static org.hamcrest.core.StringContains.containsString;
-import static org.hamcrest.core.StringStartsWith.startsWith;
 import static org.openqa.selenium.support.ui.ExpectedConditions.urlContains;
 import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElementLocated;
 
-public class B2BShopSearchTest {
+public class B2BShopFavoritesTest {
 
     @Rule
     public RunOnStageRule rule = new RunOnStageRule();
 
     @Test
     @RunOnStage(stages = "QAS")
-    public void testPerformSearchFromHomepageWithSearchResults() {
+    public void testAddPridAsFavoriteFromSearch() {
         UiTest.go(builder -> {
             builder.doStartBrowser() //
                     .doMaximizeWindow() //
@@ -35,19 +34,26 @@ public class B2BShopSearchTest {
                     .doClick(By.linkText("20005585"))
                     .doWaitUntil(visibilityOfElementLocated(By.id("search")))
 
-                    .doType(By.id("search"), "Introcan")
+                    .doType(By.id("search"), "PRID00003923")
                     .doClick(By.className("siteSearchSubmit "))
                     .doWaitUntil(urlContains("/search/"))
-                    .assertUrl(containsString("/search/?text=Introcan"))
-                    .assertElementExists(By.className("searchResultList"))
-                    .assertTitle(startsWith("Suchen Introcan"))
+                    .doClick(By.id("direct_favouriteWishlist"))
+
+                    .doOpenUrl("https://qas-shop.bbraun.com/favourite/Prid")
+                    .doWaitUntil(urlContains("favourite/Prid"))
+                    .assertElementExists(By.className("favouritesVanish1"))
+
+                    .doOpenUrl("https://qas-shop.bbraun.com/p/PRID00003923")
+                    .doClick(By.id("direct_favouriteWishlist")) // remove favorite
+
+
             ;
         });
     }
 
     @Test
     @RunOnStage(stages = "QAS")
-    public void testPerformSearchFromHomepageWithEmptySearchResult() {
+    public void testAddPridAsFavoriteFromProductDetailPage() {
         UiTest.go(builder -> {
             builder.doStartBrowser() //
                     .doMaximizeWindow() //
@@ -63,20 +69,24 @@ public class B2BShopSearchTest {
                     .doClick(By.linkText("20005585"))
                     .doWaitUntil(visibilityOfElementLocated(By.id("search")))
 
-                    .doType(By.id("search"), "Blablabla")
-                    .doClick(By.className("siteSearchSubmit "))
-                    .doWaitUntil(urlContains("/search/"))
-                    .assertUrl(containsString("/search/?text=Blablabla"))
-                    .assertElementNotExists(By.className("searchResultList"))
-                    .assertTitle(containsString("Blablabla"))
-                    .assertTextDisplayedOnPage("Keine Suchergebnisse gefunden")
+                    .doOpenUrl("https://qas-shop.bbraun.com/p/PRID00003923")
+                    .doWaitUntil(urlContains("p/PRID00003923"))
+                    .doClick(By.id("direct_favouriteWishlist")) // set as favorite
+
+                    .doOpenUrl("https://qas-shop.bbraun.com/favourite/Prid")
+                    .doWaitUntil(urlContains("favourite/Prid"))
+                    .assertElementExists(By.className("favouritesVanish1"))
+
+                    .doGoBack()
+                    .doWaitUntil(urlContains("p/PRID00003923"))
+                    .doClick(By.id("direct_favouriteWishlist")) // remove from favorites
             ;
         });
     }
 
     @Test
     @RunOnStage(stages = "QAS")
-    public void testPerformSearchAndAddItemToCartFromSearchResult() {
+    public void testAddPridAsFavoriteFromProductDetailPageAndPassItToCart() {
         UiTest.go(builder -> {
             builder.doStartBrowser() //
                     .doMaximizeWindow() //
@@ -92,13 +102,21 @@ public class B2BShopSearchTest {
                     .doClick(By.linkText("20005585"))
                     .doWaitUntil(visibilityOfElementLocated(By.id("search")))
 
-                    .doType(By.id("search"), "Introcan")
-                    .doClick(By.className("siteSearchSubmit "))
-                    .doWaitUntil(urlContains("/search/"))
-                    .doClick(By.partialLinkText("Artikel"))
-                    .doWaitUntil(urlContains("pt=ARTICLE"))
+                    .doOpenUrl("https://qas-shop.bbraun.com/p/000000000004251300")
+                    .doWaitUntil(urlContains("p/000000000004251300"))
+                    .doClick(By.id("direct_favouriteWishlist")) // set as favorite
+
+                    .doOpenUrl("https://qas-shop.bbraun.com//favourite/Article")
+                    .doWaitUntil(urlContains("/favourite/Article"))
+                    .assertElementExists(By.className("favouritesVanish1"))
                     .doClick(By.id("addToCartButton"))
+                    .assertElementExists(By.id("addToCartLayer"))
+
+                    .doGoBack()
+                    .doWaitUntil(urlContains("p/000000000004251300"))
+                    .doClick(By.id("direct_favouriteWishlist")) // remove from favorites
             ;
         });
     }
+
 }
