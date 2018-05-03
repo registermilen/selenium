@@ -2,12 +2,14 @@ package com.bbraun.hybris.productcenter.login;
 
 import com.bbraun.bbmtest.conf.RunOnStage;
 import com.bbraun.bbmtest.conf.RunOnStageRule;
+import org.junit.Ignore;
 import org.junit.Rule;
 import org.junit.Test;
 import org.openqa.selenium.By;
 
 import com.bbraun.bbmtest.ui.UiTest;
 
+@Ignore
 public class ProductCenterLoginTest {
 
 	@Rule
