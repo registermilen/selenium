@@ -46,13 +46,13 @@ public class B2BShopCheckoutTest {
                     .doWaitUntil(urlContains("/checkout/multi/common-information/add"))
                     .assertTextDisplayedOnPage("Bestellübersicht")
                     .assertTextDisplayedOnPage("Gesamtnettopreis")
-                    .assertTextDisplayedOnPage("€ 66,83")
+                    .assertTextDisplayedOnPage("66,83")
                     .assertTextDisplayedOnPage("Mindermengenzuschlag")
-                    .assertTextDisplayedOnPage("€ 6,00")
+                    .assertTextDisplayedOnPage("6,00")
                     .assertTextDisplayedOnPage("Umsatzsteuer")
-                    .assertTextDisplayedOnPage("€ 13,84")
+                    .assertTextDisplayedOnPage("13,84")
                     .assertTextDisplayedOnPage("Rechnungsbetrag")
-                    .assertTextDisplayedOnPage("€ 86,67")
+                    .assertTextDisplayedOnPage("86,67")
 
                     .doClick(By.className("force-right")) // Weiter
                     .doWaitUntil(urlContains("/checkout/multi/delivery-address/add"))
