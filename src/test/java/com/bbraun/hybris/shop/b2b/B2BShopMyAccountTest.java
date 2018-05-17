@@ -33,7 +33,7 @@ public class B2BShopMyAccountTest {
                     .doClick(By.linkText("20005585"))
                     .doWaitUntil(urlContains("https://qas-shop.bbraun.com"))
 
-                    .doClick(By.linkText("Ihr Konto"))
+                    .doClick(By.linkText("Mein Konto"))
                     .assertUrl("https://qas-shop.bbraun.com/my-account/orders")
                     .assertElementExists(By.className("accountNav"))
                     .assertTextDisplayedOnPage("Bestellhistorie")
