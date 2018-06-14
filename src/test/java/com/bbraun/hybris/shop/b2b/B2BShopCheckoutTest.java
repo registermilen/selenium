@@ -48,11 +48,11 @@ public class B2BShopCheckoutTest {
                     .assertTextDisplayedOnPage("Gesamtnettopreis")
                     .assertTextDisplayedOnPage("66,83")
                     .assertTextDisplayedOnPage("Mindermengenzuschlag")
-                    .assertTextDisplayedOnPage("6,00")
+                    .assertTextDisplayedOnPage("15,00")
                     .assertTextDisplayedOnPage("Umsatzsteuer")
-                    .assertTextDisplayedOnPage("13,84")
+                    .assertTextDisplayedOnPage("15,55")
                     .assertTextDisplayedOnPage("Rechnungsbetrag")
-                    .assertTextDisplayedOnPage("86,67")
+                    .assertTextDisplayedOnPage("97,38")
 
                     .doClick(By.className("force-right")) // Weiter
                     .doWaitUntil(urlContains("/checkout/multi/delivery-address/add"))
