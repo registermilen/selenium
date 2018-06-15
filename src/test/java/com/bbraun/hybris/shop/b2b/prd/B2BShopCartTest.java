@@ -7,6 +7,7 @@ import com.bbraun.hybris.shop.b2b.B2BActions;
 import org.junit.Rule;
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import static org.hamcrest.core.StringContains.containsString;
 import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElementLocated;
@@ -27,10 +28,12 @@ public class B2BShopCartTest {
                     .assertUrl("https://shop.bbraun.com/bob") //
                     .doClick(By.linkText("20158045"))
                     .doWaitUntil(visibilityOfElementLocated(By.className("miniCart")))
+
                     .doClick(By.className("miniCart"))
+                    .doWaitUntil(ExpectedConditions.urlContains("/cart"))
 
                     .assertUrl(containsString("/cart"))
-                    .assertElementExists(By.id("cartItems")) // items table
+                    .assertElementExists(By.className("uploadForm")) // upload area
                     .assertElementExists(By.id("checkoutButtonTop")) // order button
             ;
         });
