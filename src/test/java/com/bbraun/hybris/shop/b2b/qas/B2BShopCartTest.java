@@ -53,6 +53,7 @@ public class B2BShopCartTest {
                     .doWaitUntil(visibilityOfElementLocated(By.className("miniCart")))
                     .doClick(By.className("miniCart"))
 
+                    .doWaitUntil(ExpectedConditions.urlContains("/cart"))
                     .assertUrl(containsString("/cart"))
                     .doOpenUrl("https://qas-shop.bbraun.com/cart/remove") // clear cart
                     .assertElementNotExists(By.className("cartItem")) // cart item row

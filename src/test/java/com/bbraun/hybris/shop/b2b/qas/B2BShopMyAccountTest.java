@@ -7,6 +7,7 @@ import com.bbraun.hybris.shop.b2b.B2BActions;
 import org.junit.Rule;
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import static org.hamcrest.core.StringStartsWith.startsWith;
 import static org.openqa.selenium.support.ui.ExpectedConditions.urlContains;
@@ -29,6 +30,7 @@ public class B2BShopMyAccountTest {
                     .doWaitUntil(urlContains("https://qas-shop.bbraun.com"))
 
                     .doClick(By.linkText("Mein Konto"))
+                    .doWaitUntil(ExpectedConditions.urlContains("/my-account/orders"))
                     .assertUrl("https://qas-shop.bbraun.com/my-account/orders")
                     .assertElementExists(By.className("accountNav"))
                     .assertTextDisplayedOnPage("Bestellhistorie")

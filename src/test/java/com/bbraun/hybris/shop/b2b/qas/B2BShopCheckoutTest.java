@@ -7,6 +7,7 @@ import com.bbraun.hybris.shop.b2b.B2BActions;
 import org.junit.Rule;
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import static org.hamcrest.core.StringContains.containsString;
 import static org.openqa.selenium.support.ui.ExpectedConditions.urlContains;
@@ -29,6 +30,7 @@ public class B2BShopCheckoutTest {
                     .doClick(By.linkText("20005585"))
                     .doWaitUntil(visibilityOfElementLocated(By.className("miniCart")))
                     .doClick(By.className("miniCart"))
+                    .doWaitUntil(ExpectedConditions.urlContains("/cart"))
 
                     .assertUrl(containsString("/cart"))
                     .doOpenUrl("https://qas-shop.bbraun.com/cart/remove") // clear cart
