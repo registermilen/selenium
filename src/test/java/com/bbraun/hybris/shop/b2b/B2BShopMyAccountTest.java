@@ -3,6 +3,7 @@ package com.bbraun.hybris.shop.b2b;
 import com.bbraun.bbmtest.conf.RunOnStage;
 import com.bbraun.bbmtest.conf.RunOnStageRule;
 import com.bbraun.bbmtest.ui.UiTest;
+import com.bbraun.hybris.shop.b2b.actions.B2BActions;
 import org.junit.Rule;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -21,15 +22,9 @@ public class B2BShopMyAccountTest {
         UiTest.go(builder -> {
             builder.doStartBrowser() //
                     .doMaximizeWindow() //
+                    .execute(B2BActions::loginQAS) //
 
-                    .doOpenUrl("https://qas-shop.bbraun.com")
-                    .doWaitUntil(urlContains("idp-dev.bbraun.com"))
-                    .assertUrl("https://idp-dev.bbraun.com/idp/SSO.saml2") //
-                    .doType(By.id("username"), "shopdemo@bbraun.com") //
-                    .doType(By.id("password"), "demo") //
-                    .doSubmitForm(By.className("button-primary")) //
                     .assertUrl("https://qas-shop.bbraun.com/bob") //
-
                     .doClick(By.linkText("20005585"))
                     .doWaitUntil(urlContains("https://qas-shop.bbraun.com"))
 

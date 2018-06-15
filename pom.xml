@@ -5,7 +5,7 @@
 	<artifactId>hybris-test-poc</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Hybris Test Project</name>
-	<description>UI and API test for Hybris platform (PoC)</description>
+	<description>UI and API test for Hybris platform</description>
 
 	<parent>
 		<groupId>com.bbraun.company</groupId>
@@ -23,7 +23,7 @@
 		<dependency>
 			<groupId>com.bbraun.bbmtest</groupId>
 			<artifactId>bbmtest-framework</artifactId>
-			<version>0.1.0</version>
+			<version>0.2.0</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>

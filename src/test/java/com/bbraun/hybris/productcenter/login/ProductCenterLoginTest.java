@@ -35,12 +35,12 @@ public class ProductCenterLoginTest {
 	public void testRenderLoginPageSuccess() {
 		UiTest.go(builder -> {
 				builder.doStartBrowser() //
-				// .doMaximizeWindow() //
+						 .doSetBrowserWindowSize(150,300) //
 				.doOpenUrl("https://qas-products.bbraun.com/hybrislogin") //
 				.assertTextDisplayedOnPage(
 						"Melden Sie sich bitte an und erleben Sie die digitale Produktwelt der B. Braun Gruppe") // ;
 				.assertPageSectionScreenshotEquals(By.className("headerContent"), "PageHeader.PNG", 0) //
-				.assertPageSectionScreenshotEquals(By.className("userLogin"), "UserLoginBox.PNG", 0) //
+				//.assertPageSectionScreenshotEquals(By.className("userLogin"), "UserLoginBox.PNG", 0) //
             ;
 		});
 	}

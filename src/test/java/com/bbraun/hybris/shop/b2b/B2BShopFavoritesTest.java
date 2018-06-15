@@ -3,6 +3,7 @@ package com.bbraun.hybris.shop.b2b;
 import com.bbraun.bbmtest.conf.RunOnStage;
 import com.bbraun.bbmtest.conf.RunOnStageRule;
 import com.bbraun.bbmtest.ui.UiTest;
+import com.bbraun.hybris.shop.b2b.actions.B2BActions;
 import org.junit.Rule;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -22,15 +23,9 @@ public class B2BShopFavoritesTest {
         UiTest.go(builder -> {
             builder.doStartBrowser() //
                     .doMaximizeWindow() //
+                    .execute(B2BActions::loginQAS) //
 
-                    .doOpenUrl("https://qas-shop.bbraun.com")
-                    .doWaitUntil(urlContains("idp-dev.bbraun.com"))
-                    .assertUrl("https://idp-dev.bbraun.com/idp/SSO.saml2") //
-                    .doType(By.id("username"), "shopdemo@bbraun.com") //
-                    .doType(By.id("password"), "demo") //
-                    .doSubmitForm(By.className("button-primary")) //
                     .assertUrl(containsString("/bob")) //
-
                     .doClick(By.linkText("20005585"))
                     .doWaitUntil(visibilityOfElementLocated(By.id("search")))
 
@@ -57,15 +52,9 @@ public class B2BShopFavoritesTest {
         UiTest.go(builder -> {
             builder.doStartBrowser() //
                     .doMaximizeWindow() //
+                    .execute(B2BActions::loginQAS)
 
-                    .doOpenUrl("https://qas-shop.bbraun.com")
-                    .doWaitUntil(urlContains("idp-dev.bbraun.com"))
-                    .assertUrl("https://idp-dev.bbraun.com/idp/SSO.saml2") //
-                    .doType(By.id("username"), "shopdemo@bbraun.com") //
-                    .doType(By.id("password"), "demo") //
-                    .doSubmitForm(By.className("button-primary")) //
                     .assertUrl(containsString("/bob")) //
-
                     .doClick(By.linkText("20005585"))
                     .doWaitUntil(visibilityOfElementLocated(By.id("search")))
 
@@ -77,7 +66,7 @@ public class B2BShopFavoritesTest {
                     .doWaitUntil(urlContains("favourite/Prid"))
                     .assertElementExists(By.className("favouritesVanish1"))
 
-                    .doGoBack()
+                    .doClickBrowserBackButton()
                     .doWaitUntil(urlContains("p/PRID00003923"))
                     .doClick(By.id("direct_favouriteWishlist")) // remove from favorites
             ;
@@ -90,15 +79,9 @@ public class B2BShopFavoritesTest {
         UiTest.go(builder -> {
             builder.doStartBrowser() //
                     .doMaximizeWindow() //
+                    .execute(B2BActions::loginQAS) //
 
-                    .doOpenUrl("https://qas-shop.bbraun.com")
-                    .doWaitUntil(urlContains("idp-dev.bbraun.com"))
-                    .assertUrl("https://idp-dev.bbraun.com/idp/SSO.saml2") //
-                    .doType(By.id("username"), "shopdemo@bbraun.com") //
-                    .doType(By.id("password"), "demo") //
-                    .doSubmitForm(By.className("button-primary")) //
                     .assertUrl(containsString("/bob")) //
-
                     .doClick(By.linkText("20005585"))
                     .doWaitUntil(visibilityOfElementLocated(By.id("search")))
 
@@ -112,7 +95,7 @@ public class B2BShopFavoritesTest {
                     .doClick(By.id("addToCartButton"))
                     .assertElementExists(By.id("addToCartLayer"))
 
-                    .doGoBack()
+                    .doClickBrowserBackButton()
                     .doWaitUntil(urlContains("p/000000000004251300"))
                     .doClick(By.id("direct_favouriteWishlist")) // remove from favorites
             ;
