@@ -34,7 +34,7 @@ public class B2BShopCartTest {
 
                     .assertUrl(containsString("/cart"))
                     .assertElementExists(By.className("uploadForm")) // upload area
-                    .assertElementExists(By.id("checkoutButtonTop")) // order button
+                    .assertElementExists(By.id("instantAddToCartButton")) // add to cart button
             ;
         });
     }
