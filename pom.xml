@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.bbraun.hybris.test</groupId>
 	<artifactId>hybris-test-poc</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<name>Hybris Test Project</name>
 	<description>UI and API test for Hybris platform</description>
 
