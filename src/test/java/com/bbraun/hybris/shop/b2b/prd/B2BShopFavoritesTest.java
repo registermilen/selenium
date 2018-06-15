@@ -1,9 +1,9 @@
-package com.bbraun.hybris.shop.b2b;
+package com.bbraun.hybris.shop.b2b.prd;
 
 import com.bbraun.bbmtest.conf.RunOnStage;
 import com.bbraun.bbmtest.conf.RunOnStageRule;
 import com.bbraun.bbmtest.ui.UiTest;
-import com.bbraun.hybris.shop.b2b.actions.B2BActions;
+import com.bbraun.hybris.shop.b2b.B2BActions;
 import org.junit.Rule;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -18,15 +18,15 @@ public class B2BShopFavoritesTest {
     public RunOnStageRule rule = new RunOnStageRule();
 
     @Test
-    @RunOnStage(stages = "QAS")
+    @RunOnStage(stages = "PRD")
     public void testAddPridAsFavoriteFromSearch() {
         UiTest.go(builder -> {
             builder.doStartBrowser() //
                     .doMaximizeWindow() //
-                    .execute(B2BActions::loginQAS) //
+                    .execute(B2BActions::loginPRD) //
 
                     .assertUrl(containsString("/bob")) //
-                    .doClick(By.linkText("20005585"))
+                    .doClick(By.linkText("20158045"))
                     .doWaitUntil(visibilityOfElementLocated(By.id("search")))
 
                     .doType(By.id("search"), "PRID00003923")
@@ -34,11 +34,11 @@ public class B2BShopFavoritesTest {
                     .doWaitUntil(urlContains("/search/"))
                     .doClick(By.id("direct_favouriteWishlist"))
 
-                    .doOpenUrl("https://qas-shop.bbraun.com/favourite/Prid")
+                    .doOpenUrl("https://shop.bbraun.com/favourite/Prid")
                     .doWaitUntil(urlContains("favourite/Prid"))
                     .assertElementExists(By.className("favouritesVanish1"))
 
-                    .doOpenUrl("https://qas-shop.bbraun.com/p/PRID00003923")
+                    .doOpenUrl("https://shop.bbraun.com/p/PRID00003923")
                     .doClick(By.id("direct_favouriteWishlist")) // remove favorite
 
 
@@ -47,22 +47,22 @@ public class B2BShopFavoritesTest {
     }
 
     @Test
-    @RunOnStage(stages = "QAS")
+    @RunOnStage(stages = "PRD")
     public void testAddPridAsFavoriteFromProductDetailPage() {
         UiTest.go(builder -> {
             builder.doStartBrowser() //
                     .doMaximizeWindow() //
-                    .execute(B2BActions::loginQAS)
+                    .execute(B2BActions::loginPRD)
 
                     .assertUrl(containsString("/bob")) //
-                    .doClick(By.linkText("20005585"))
+                    .doClick(By.linkText("20158045"))
                     .doWaitUntil(visibilityOfElementLocated(By.id("search")))
 
-                    .doOpenUrl("https://qas-shop.bbraun.com/p/PRID00003923")
+                    .doOpenUrl("https://shop.bbraun.com/p/PRID00003923")
                     .doWaitUntil(urlContains("p/PRID00003923"))
                     .doClick(By.id("direct_favouriteWishlist")) // set as favorite
 
-                    .doOpenUrl("https://qas-shop.bbraun.com/favourite/Prid")
+                    .doOpenUrl("https://shop.bbraun.com/favourite/Prid")
                     .doWaitUntil(urlContains("favourite/Prid"))
                     .assertElementExists(By.className("favouritesVanish1"))
 
@@ -74,22 +74,22 @@ public class B2BShopFavoritesTest {
     }
 
     @Test
-    @RunOnStage(stages = "QAS")
+    @RunOnStage(stages = "PRD")
     public void testAddPridAsFavoriteFromProductDetailPageAndPassItToCart() {
         UiTest.go(builder -> {
             builder.doStartBrowser() //
                     .doMaximizeWindow() //
-                    .execute(B2BActions::loginQAS) //
+                    .execute(B2BActions::loginPRD) //
 
                     .assertUrl(containsString("/bob")) //
-                    .doClick(By.linkText("20005585"))
+                    .doClick(By.linkText("20158045"))
                     .doWaitUntil(visibilityOfElementLocated(By.id("search")))
 
-                    .doOpenUrl("https://qas-shop.bbraun.com/p/000000000004251300")
+                    .doOpenUrl("https://shop.bbraun.com/p/000000000004251300")
                     .doWaitUntil(urlContains("p/000000000004251300"))
                     .doClick(By.id("direct_favouriteWishlist")) // set as favorite
 
-                    .doOpenUrl("https://qas-shop.bbraun.com//favourite/Article")
+                    .doOpenUrl("https://shop.bbraun.com//favourite/Article")
                     .doWaitUntil(urlContains("/favourite/Article"))
                     .assertElementExists(By.className("favouritesVanish1"))
                     .doClick(By.id("addToCartButton"))

@@ -1,55 +1,54 @@
-package com.bbraun.hybris.shop.b2b;
+package com.bbraun.hybris.shop.b2b.qas;
 
 import com.bbraun.bbmtest.conf.RunOnStage;
 import com.bbraun.bbmtest.conf.RunOnStageRule;
 import com.bbraun.bbmtest.ui.UiTest;
-import com.bbraun.hybris.shop.b2b.actions.B2BActions;
-import org.junit.Ignore;
+import com.bbraun.hybris.shop.b2b.B2BActions;
 import org.junit.Rule;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-public class B2BShopLoginTest {
+public class B2BShopStaticPageTest {
 
     @Rule
     public RunOnStageRule rule = new RunOnStageRule();
 
     @Test
     @RunOnStage(stages = "QAS")
-    public void testBobUserLoginAndLogoutViaIdpSuccess() {
-        UiTest.go(builder -> {
-            builder.doStartBrowser() //
-                    .doMaximizeWindow() //
-                    .execute(B2BActions::loginQAS) //
-                    .assertUrl("https://qas-shop.bbraun.com/bob")
-                    .doClick(By.linkText("Logout"))
-                    .doWaitUntil(ExpectedConditions.urlContains("idp-dev.bbraun.com"))
-                    .assertUrl("https://idp-dev.bbraun.com/idp/SSO.saml2")
-            ;
-        });
-    }
-
-    @Test
-    @RunOnStage(stages = "QAS")
-    public void testUserSwitch() {
+    public void testOpenTermsOfUsePage() {
         UiTest.go(builder -> {
             builder.doStartBrowser() //
                     .doMaximizeWindow() //
                     .execute(B2BActions::loginQAS) //
 
                     .assertUrl("https://qas-shop.bbraun.com/bob") //
-                    .doClick(By.linkText("20344385"))
-                    .doWaitUntil(ExpectedConditions.urlContains("https://qas-shop.bbraun.com"))
-                    .assertTextDisplayedOnPage("20344385")
-
-                    .doClick(By.linkText("Switch User"))
-                    .assertUrl("https://qas-shop.bbraun.com/bob")
                     .doClick(By.linkText("20005585"))
                     .doWaitUntil(ExpectedConditions.urlContains("https://qas-shop.bbraun.com"))
-                    .assertTextDisplayedOnPage("20005585")
+                    .assertElementExists(By.linkText("Nutzungsbedingungen"))
+                    .doClick(By.linkText("Nutzungsbedingungen"))
+                    .assertUrl("https://qas-shop.bbraun.com/info-pages/termsOfUse")
+                    .assertTextDisplayedOnPage("Nutzungsbedingung")
             ;
         });
     }
 
+    @Test
+    @RunOnStage(stages = "QAS")
+    public void testOpenPrivacyPolicyPage() {
+        UiTest.go(builder -> {
+            builder.doStartBrowser() //
+                    .doMaximizeWindow() //
+                    .execute(B2BActions::loginQAS) //
+
+                    .assertUrl("https://qas-shop.bbraun.com/bob") //
+                    .doClick(By.linkText("20005585"))
+                    .doWaitUntil(ExpectedConditions.urlContains("https://qas-shop.bbraun.com"))
+                    .assertElementExists(By.linkText("Datenschutz"))
+                    .doClick(By.linkText("Datenschutz"))
+                    .assertUrl("https://qas-shop.bbraun.com/info-pages/privacyPolicy")
+                    .assertTextDisplayedOnPage("Datenschutz")
+            ;
+        });
+    }
 }

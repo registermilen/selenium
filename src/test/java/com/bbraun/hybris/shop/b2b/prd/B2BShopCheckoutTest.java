@@ -1,13 +1,12 @@
-package com.bbraun.hybris.shop.b2b;
+package com.bbraun.hybris.shop.b2b.prd;
 
 import com.bbraun.bbmtest.conf.RunOnStage;
 import com.bbraun.bbmtest.conf.RunOnStageRule;
 import com.bbraun.bbmtest.ui.UiTest;
-import com.bbraun.hybris.shop.b2b.actions.B2BActions;
+import com.bbraun.hybris.shop.b2b.B2BActions;
 import org.junit.Rule;
 import org.junit.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import static org.hamcrest.core.StringContains.containsString;
 import static org.openqa.selenium.support.ui.ExpectedConditions.urlContains;
@@ -19,20 +18,20 @@ public class B2BShopCheckoutTest {
     public RunOnStageRule rule = new RunOnStageRule();
 
     @Test
-    @RunOnStage(stages = "QAS")
+    @RunOnStage(stages = "PRD")
     public void testPassCartToCheckout() {
         UiTest.go(builder -> {
             builder.doStartBrowser() //
                     .doMaximizeWindow() //
-                    .execute(B2BActions::loginQAS) //
+                    .execute(B2BActions::loginPRD) //
 
-                    .assertUrl("https://qas-shop.bbraun.com/bob") //
-                    .doClick(By.linkText("20005585"))
+                    .assertUrl("https://shop.bbraun.com/bob") //
+                    .doClick(By.linkText("20158045"))
                     .doWaitUntil(visibilityOfElementLocated(By.className("miniCart")))
                     .doClick(By.className("miniCart"))
 
                     .assertUrl(containsString("/cart"))
-                    .doOpenUrl("https://qas-shop.bbraun.com/cart/remove") // clear cart
+                    .doOpenUrl("https://shop.bbraun.com/cart/remove") // clear cart
 
                     .doType(By.name("productCodePost"), "5391010")
                     .doClick(By.id("instantAddToCartButton"))
@@ -42,13 +41,13 @@ public class B2BShopCheckoutTest {
                     .doWaitUntil(urlContains("/checkout/multi/common-information/add"))
                     .assertTextDisplayedOnPage("Bestellübersicht")
                     .assertTextDisplayedOnPage("Gesamtnettopreis")
-                    .assertTextDisplayedOnPage("66,83")
+                    .assertTextDisplayedOnPage("23,39")
                     .assertTextDisplayedOnPage("Mindermengenzuschlag")
                     .assertTextDisplayedOnPage("15,00")
                     .assertTextDisplayedOnPage("Umsatzsteuer")
-                    .assertTextDisplayedOnPage("15,55")
+                    .assertTextDisplayedOnPage("7,29")
                     .assertTextDisplayedOnPage("Rechnungsbetrag")
-                    .assertTextDisplayedOnPage("97,38")
+                    .assertTextDisplayedOnPage("45,68")
 
                     .doClick(By.className("force-right")) // Weiter
                     .doWaitUntil(urlContains("/checkout/multi/delivery-address/add"))
@@ -62,9 +61,10 @@ public class B2BShopCheckoutTest {
                     .doWaitUntil(urlContains("/checkout/multi/summary/view"))
                     .assertTextDisplayedOnPage("Abschließende Prüfung")
 
-                    .doClick(By.className("force-right")) //Kostenpflichtig bestellen
-                    .doWaitUntil(urlContains("/checkout/documentsConfirmation/"))
-                    .assertTextDisplayedOnPage("Vielen Dank für Ihre Bestellung")
+
+                    // There is no real order executed here !!!
+
+                    .doOpenUrl("https://shop.bbraun.com/cart/remove") // clear cart
             ;
         });
     }
