@@ -59,6 +59,7 @@ public class B2BShopCartTest {
                     .assertElementNotExists(By.className("cartItem")) // cart item row
 
                     .doType(By.name("productCodePost"), "5391010")
+                    .doClick(By.className("code"))
                     .doClick(By.id("instantAddToCartButton"))
                     .assertElementExists(By.className("cartItem")) // cart item row
                     .doClick(By.linkText("Warenkorb entfernen"))

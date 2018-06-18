@@ -36,6 +36,7 @@ public class B2BShopCheckoutTest {
                     .doOpenUrl("https://shop.bbraun.com/cart/remove") // clear cart
 
                     .doType(By.name("productCodePost"), "5391010")
+                    .doClick(By.className("code"))
                     .doClick(By.id("instantAddToCartButton"))
                     .assertElementExists(By.className("cartItem")) // cart item row
 
