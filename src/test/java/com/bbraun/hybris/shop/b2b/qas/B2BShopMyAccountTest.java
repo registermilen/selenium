@@ -19,7 +19,7 @@ public class B2BShopMyAccountTest {
 
     @Test
     @RunOnStage(stages = "QAS")
-    public void testOpenMyAccountPageWithOrderHistory() {
+    public void testOpenMyAccountPageWithSavedCarts() {
         UiTest.go(builder -> {
             builder.doStartBrowser() //
                     .doMaximizeWindow() //
@@ -30,12 +30,11 @@ public class B2BShopMyAccountTest {
                     .doWaitUntil(urlContains("https://qas-shop.bbraun.com"))
 
                     .doClick(By.linkText("Mein Konto"))
-                    .doWaitUntil(ExpectedConditions.urlContains("/my-account/orders"))
-                    .assertUrl("https://qas-shop.bbraun.com/my-account/orders")
+                    .doWaitUntil(ExpectedConditions.urlContains("/my-account/saved-carts"))
+                    .assertUrl("https://qas-shop.bbraun.com/my-account/saved-carts")
                     .assertElementExists(By.className("accountNav"))
-                    .assertTextDisplayedOnPage("Bestellhistorie")
-                    .assertElementExists(By.id("submitFilter")) // "Filter anwenden"
-                    .assertTitle(startsWith("Bestellhistorie"))
+                    .assertTextDisplayedOnPage("Bestellvorlagen")
+                    .assertTextDisplayedOnPage("Neue Bestellvorlage anlegen")
             ;
         });
     }
