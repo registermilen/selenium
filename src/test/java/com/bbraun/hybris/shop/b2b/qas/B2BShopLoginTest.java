@@ -9,13 +9,13 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
+@RunOnStage(stages = "QAS")
 public class B2BShopLoginTest {
 
     @Rule
     public RunOnStageRule rule = new RunOnStageRule();
 
     @Test
-    @RunOnStage(stages = "QAS")
     public void testBobUserLoginAndLogoutViaIdpSuccess() {
         UiTest.go(builder -> {
             builder.doStartBrowser() //
@@ -30,7 +30,6 @@ public class B2BShopLoginTest {
     }
 
     @Test
-    @RunOnStage(stages = "QAS")
     public void testUserSwitch() {
         UiTest.go(builder -> {
             builder.doStartBrowser() //

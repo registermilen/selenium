@@ -12,13 +12,13 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import static org.hamcrest.core.StringStartsWith.startsWith;
 import static org.openqa.selenium.support.ui.ExpectedConditions.urlContains;
 
+@RunOnStage(stages = "PRD")
 public class B2BShopMyAccountTest {
 
     @Rule
     public RunOnStageRule rule = new RunOnStageRule();
 
     @Test
-    @RunOnStage(stages = "PRD")
     public void testOpenMyAccountPageWithOrderHistory() {
         UiTest.go(builder -> {
             builder.doStartBrowser() //

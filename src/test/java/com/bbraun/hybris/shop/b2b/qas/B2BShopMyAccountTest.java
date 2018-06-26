@@ -9,16 +9,15 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-import static org.hamcrest.core.StringStartsWith.startsWith;
 import static org.openqa.selenium.support.ui.ExpectedConditions.urlContains;
 
+@RunOnStage(stages = "QAS")
 public class B2BShopMyAccountTest {
 
     @Rule
     public RunOnStageRule rule = new RunOnStageRule();
 
     @Test
-    @RunOnStage(stages = "QAS")
     public void testOpenMyAccountPageWithSavedCarts() {
         UiTest.go(builder -> {
             builder.doStartBrowser() //

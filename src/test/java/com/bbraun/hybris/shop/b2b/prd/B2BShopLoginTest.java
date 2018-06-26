@@ -10,13 +10,13 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
+@RunOnStage(stages = "PRD")
 public class B2BShopLoginTest {
 
     @Rule
     public RunOnStageRule rule = new RunOnStageRule();
 
     @Test
-    @RunOnStage(stages = "PRD")
     public void testBobUserLoginAndLogoutViaIdpSuccess() {
         UiTest.go(builder -> {
             builder.doStartBrowser() //
@@ -32,7 +32,6 @@ public class B2BShopLoginTest {
     }
 
     @Ignore // Not in place on PRD yet
-    @RunOnStage(stages = "PRD")
     public void testUserSwitch() {
         UiTest.go(builder -> {
             builder.doStartBrowser() //

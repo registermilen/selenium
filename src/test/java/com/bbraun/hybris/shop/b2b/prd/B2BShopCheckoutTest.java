@@ -13,13 +13,13 @@ import static org.hamcrest.core.StringContains.containsString;
 import static org.openqa.selenium.support.ui.ExpectedConditions.urlContains;
 import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElementLocated;
 
+@RunOnStage(stages = "PRD")
 public class B2BShopCheckoutTest {
 
     @Rule
     public RunOnStageRule rule = new RunOnStageRule();
 
     @Test
-    @RunOnStage(stages = "PRD")
     public void testPassCartToCheckout() {
         UiTest.go(builder -> {
             builder.doStartBrowser() //

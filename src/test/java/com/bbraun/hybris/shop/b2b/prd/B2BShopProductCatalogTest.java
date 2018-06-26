@@ -9,13 +9,13 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
+@RunOnStage(stages = "PRD")
 public class B2BShopProductCatalogTest {
 
     @Rule
     public RunOnStageRule rule = new RunOnStageRule();
 
     @Test
-    @RunOnStage(stages = "PRD")
     public void testOpenProductCatalogPage() {
         UiTest.go(builder -> {
             builder.doStartBrowser() //

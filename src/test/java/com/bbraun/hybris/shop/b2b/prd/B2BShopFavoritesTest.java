@@ -12,13 +12,13 @@ import static org.hamcrest.core.StringContains.containsString;
 import static org.openqa.selenium.support.ui.ExpectedConditions.urlContains;
 import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElementLocated;
 
+@RunOnStage(stages = "PRD")
 public class B2BShopFavoritesTest {
 
     @Rule
     public RunOnStageRule rule = new RunOnStageRule();
 
     @Test
-    @RunOnStage(stages = "PRD")
     public void testAddPridAsFavoriteFromSearch() {
         UiTest.go(builder -> {
             builder.doStartBrowser() //
@@ -47,7 +47,6 @@ public class B2BShopFavoritesTest {
     }
 
     @Test
-    @RunOnStage(stages = "PRD")
     public void testAddPridAsFavoriteFromProductDetailPage() {
         UiTest.go(builder -> {
             builder.doStartBrowser() //
@@ -74,7 +73,6 @@ public class B2BShopFavoritesTest {
     }
 
     @Test
-    @RunOnStage(stages = "PRD")
     public void testAddPridAsFavoriteFromProductDetailPageAndPassItToCart() {
         UiTest.go(builder -> {
             builder.doStartBrowser() //

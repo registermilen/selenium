@@ -21,7 +21,7 @@ public class B2BActions {
     }
 
     /**
-     * Performs a login via IDP to B2B e-Shop on QAS system
+     * Performs a login via Hybris login form to B2B e-Shop on PRD system
      *
      * @param builder
      */
