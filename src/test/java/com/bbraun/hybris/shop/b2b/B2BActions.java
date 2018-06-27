@@ -1,6 +1,7 @@
 package com.bbraun.hybris.shop.b2b;
 
 import com.bbraun.bbmtest.ui.BBMUiTestBuilder;
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
@@ -11,6 +12,7 @@ public class B2BActions {
      *
      * @param builder
      */
+    @Step("Login to QAS Shop via IDP")
     public static void loginQAS(BBMUiTestBuilder<BBMUiTestBuilder<?>> builder) {
         builder.doOpenUrl("https://qas-shop.bbraun.com")
                 .doWaitUntil(ExpectedConditions.urlContains("idp-dev.bbraun.com"))
@@ -25,6 +27,7 @@ public class B2BActions {
      *
      * @param builder
      */
+    @Step("Login to Shop via Hybris Login form")
     public static void loginPRD(BBMUiTestBuilder<BBMUiTestBuilder<?>> builder) {
         builder.doOpenUrl("https://shop.bbraun.com")
                 .doWaitUntil(ExpectedConditions.urlContains("/login"))

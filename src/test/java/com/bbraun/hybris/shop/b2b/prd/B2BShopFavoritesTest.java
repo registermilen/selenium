@@ -4,6 +4,8 @@ import com.bbraun.bbmtest.conf.RunOnStage;
 import com.bbraun.bbmtest.conf.RunOnStageRule;
 import com.bbraun.bbmtest.ui.UiTest;
 import com.bbraun.hybris.shop.b2b.B2BActions;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
 import org.junit.Rule;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -13,6 +15,8 @@ import static org.openqa.selenium.support.ui.ExpectedConditions.urlContains;
 import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElementLocated;
 
 @RunOnStage(stages = "PRD")
+@Epic("E-Shop Tests")
+@Feature("Favorite Functionality Tests")
 public class B2BShopFavoritesTest {
 
     @Rule

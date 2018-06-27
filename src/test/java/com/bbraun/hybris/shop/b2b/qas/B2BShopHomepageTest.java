@@ -4,12 +4,14 @@ import com.bbraun.bbmtest.conf.RunOnStage;
 import com.bbraun.bbmtest.conf.RunOnStageRule;
 import com.bbraun.bbmtest.ui.UiTest;
 import com.bbraun.hybris.shop.b2b.B2BActions;
+import io.qameta.allure.Epic;
 import org.junit.Rule;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 @RunOnStage(stages = "QAS")
+@Epic("E-Shop Tests")
 public class B2BShopHomepageTest {
 
     @Rule
