@@ -10,13 +10,14 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
+import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElementLocated;
+
 @RunOnStage(stages = "QAS")
 @Epic("B2B E-Shop Tests")
 @Feature("Product Detail Page Tests")
 public class B2BShopProductDetailPageTest {
 
-    @Rule
-    public RunOnStageRule rule = new RunOnStageRule();
+	 @Rule public RunOnStageRule rule = new RunOnStageRule();
 
     @Test
     @Severity(SeverityLevel.NORMAL)
@@ -30,13 +31,14 @@ public class B2BShopProductDetailPageTest {
 
                     .assertUrl("https://qas-shop.bbraun.com/bob") //
                     .doClick(By.linkText("20005585"))
-                    .doWaitUntil(ExpectedConditions.urlContains("https://qas-shop.bbraun.com"))
-                    .assertTextDisplayedOnPage("20005585")
+                    .doWaitUntil(visibilityOfElementLocated(By.className("miniCart")))
+                    .assertUrl("https://qas-shop.bbraun.com/")
 
                     .doOpenUrl("https://qas-shop.bbraun.com/p/PRID00003923")
                     .doWaitUntil(ExpectedConditions.urlContains("https://qas-shop.bbraun.com/p/PRID00003923"))
                     .assertTextDisplayedOnPage("Introcan®")
 
+                    .doScrollToElement(By.id("billOfMaterialItemsARTICLES"))
                     .assertElementExists(By.id("billOfMaterialItemsARTICLES"))
                     .assertElementExists(By.xpath("//*[@id=\"billOfMaterialItemsARTICLES\"]/tbody/tr[2]"))
             ;

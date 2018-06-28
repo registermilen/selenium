@@ -15,32 +15,30 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 @Feature("Product Detail Page Tests")
 public class B2BShopProductDetailPageTest {
 
-    @Rule
-    public RunOnStageRule rule = new RunOnStageRule();
+	 @Rule public RunOnStageRule rule = new RunOnStageRule();
 
     @Test
     @Severity(SeverityLevel.NORMAL)
     @Description("Test Description: Access product detail page and assert BOM component exists")
     @Story("Acsess product detail page and check BOM component")
-
-    public void testBOMTable() {
-        UiTest.go(builder -> {
-            builder.doStartBrowser() //
-                    .doMaximizeWindow() //
-                    .execute(B2BActions::loginPRD) //
-
-                    .assertUrl("https://shop.bbraun.com/bob") //
-                    .doClick(By.linkText("20158045"))
-                    .doWaitUntil(ExpectedConditions.urlContains("https://shop.bbraun.com"))
-                    .assertTextDisplayedOnPage("20158045")
-
-                    .doOpenUrl("https://shop.bbraun.com/p/PRID00003923")
-                    .doWaitUntil(ExpectedConditions.urlContains("https://shop.bbraun.com/p/PRID00003923"))
-                    .assertTextDisplayedOnPage("Introcan®")
-
-                    .assertElementExists(By.id("billOfMaterialItemsARTICLES"))
-                    .assertElementExists(By.xpath("//*[@id=\"billOfMaterialItemsARTICLES\"]/tbody/tr[2]"))
-            ;
-        });
-    }
+	 public void testBOMTable() {
+		 UiTest.go(builder -> {
+	            builder.doStartBrowser() //
+	                    .doMaximizeWindow() //
+	                    .execute(B2BActions::loginPRD) //
+	                    
+	                    .assertUrl("https://shop.bbraun.com/bob") //
+	                    .doClick(By.linkText("20158045"))
+	                    .doWaitUntil(ExpectedConditions.urlContains("https://shop.bbraun.com"))
+	                    .assertTextDisplayedOnPage("20158045")
+	                    
+	                    .doOpenUrl("https://shop.bbraun.com/p/PRID00003923")
+	                    .doWaitUntil(ExpectedConditions.urlContains("https://shop.bbraun.com/p/PRID00003923"))
+	                    .assertTextDisplayedOnPage("Introcan®")
+	                    
+	                    .assertElementExists(By.id("billOfMaterialItemsARTICLES"))
+	                    .assertElementExists(By.xpath("//*[@id=\"billOfMaterialItemsARTICLES\"]/tbody/tr[2]"))
+	            ;
+	        });
+	 }
 }
