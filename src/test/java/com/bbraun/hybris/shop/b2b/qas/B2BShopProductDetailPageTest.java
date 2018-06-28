@@ -33,6 +33,7 @@ public class B2BShopProductDetailPageTest {
 	                    .assertTextDisplayedOnPage("Introcan®")
 	                    
 	                    .assertElementExists(By.id("billOfMaterialItemsARTICLES"))
+	                    .assertElementExists(By.xpath("//*[@id=\"billOfMaterialItemsARTICLES\"]/tbody/tr[2]"))
 	            ;
 	        });
 	 }
