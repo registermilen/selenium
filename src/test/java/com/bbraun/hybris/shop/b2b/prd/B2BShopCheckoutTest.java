@@ -26,7 +26,7 @@ public class B2BShopCheckoutTest {
     @Severity(SeverityLevel.CRITICAL)
     @Description("Test Description: Test access to shopping cart and complete the whole checkout process.")
     @Story("Process checkout and place order.")
-    public void testPassCartToCheckout() {
+    public void testPassCartToCheckoutAndPlaceOrder() {
         UiTest.go(builder -> {
             builder.doStartBrowser() //
                     .doMaximizeWindow() //

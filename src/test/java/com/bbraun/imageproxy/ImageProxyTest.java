@@ -1,5 +1,7 @@
 package com.bbraun.imageproxy;
 
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
 import org.junit.Ignore;
 import org.junit.Test;
 
@@ -11,6 +13,7 @@ import com.bbraun.bbmtest.ws.BBMWebServiceTestBuilder;
  * @author stefans
  */
 @Ignore
+@Epic("Image Proxy test")
 public class ImageProxyTest {
 
 	@Test
