@@ -4,8 +4,7 @@ import com.bbraun.bbmtest.conf.RunOnStage;
 import com.bbraun.bbmtest.conf.RunOnStageRule;
 import com.bbraun.bbmtest.ui.UiTest;
 import com.bbraun.hybris.shop.b2b.B2BActions;
-import io.qameta.allure.Epic;
-import io.qameta.allure.Feature;
+import io.qameta.allure.*;
 import org.junit.Rule;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -15,7 +14,7 @@ import static org.hamcrest.core.StringContains.containsString;
 import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElementLocated;
 
 @RunOnStage(stages = "PRD")
-@Epic("E-Shop Tests")
+@Epic("B2B E-Shop Tests")
 @Feature("Cart Tests")
 public class B2BShopCartTest {
 
@@ -23,6 +22,9 @@ public class B2BShopCartTest {
     public RunOnStageRule rule = new RunOnStageRule();
 
     @Test
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("Test Description: Test access shopping cart")
+    @Story("Open shopping cart page")
     public void testAccessToShoppingCart() {
         UiTest.go(builder -> {
             builder.doStartBrowser() //
@@ -45,6 +47,9 @@ public class B2BShopCartTest {
 
 
     @Test
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("Test Description: Test access shopping cart and add an article to the cart")
+    @Story("Open shopping cart page and add an article to the cart")
     public void testAddArticleToShoppingCart() {
         UiTest.go(builder -> {
             builder.doStartBrowser() //

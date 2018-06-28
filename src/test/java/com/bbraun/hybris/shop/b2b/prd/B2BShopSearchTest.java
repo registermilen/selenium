@@ -4,8 +4,7 @@ import com.bbraun.bbmtest.conf.RunOnStage;
 import com.bbraun.bbmtest.conf.RunOnStageRule;
 import com.bbraun.bbmtest.ui.UiTest;
 import com.bbraun.hybris.shop.b2b.B2BActions;
-import io.qameta.allure.Epic;
-import io.qameta.allure.Feature;
+import io.qameta.allure.*;
 import org.junit.Rule;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -16,14 +15,17 @@ import static org.openqa.selenium.support.ui.ExpectedConditions.urlContains;
 import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElementLocated;
 
 @RunOnStage(stages = "PRD")
-@Epic("E-Shop Tests")
-@Feature("Search Tests")
+@Epic("B2B E-Shop Tests")
+@Feature("Search Functionality Tests")
 public class B2BShopSearchTest {
 
     @Rule
     public RunOnStageRule rule = new RunOnStageRule();
 
     @Test
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("Test Description: Perform Search from Homepage with results expected")
+    @Story("Access homepage and search for existing material")
     public void testPerformSearchFromHomepageWithSearchResults() {
         UiTest.go(builder -> {
             builder.doStartBrowser() //
@@ -45,6 +47,9 @@ public class B2BShopSearchTest {
     }
 
     @Test
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("Test Description: Perform Search from Homepage with no results expected")
+    @Story("Access homepage and search for non existing material")
     public void testPerformSearchFromHomepageWithEmptySearchResult() {
         UiTest.go(builder -> {
             builder.doStartBrowser() //
@@ -67,6 +72,9 @@ public class B2BShopSearchTest {
     }
 
     @Test
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("Test Description: Perform Search from Homepage with results expected and add material to cart")
+    @Story("Access homepage and search for existing material that will be added to cart")
     public void testPerformSearchAndAddItemToCartFromSearchResult() {
         UiTest.go(builder -> {
             builder.doStartBrowser() //

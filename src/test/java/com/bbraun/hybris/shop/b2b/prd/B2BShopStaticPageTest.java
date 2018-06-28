@@ -4,15 +4,14 @@ import com.bbraun.bbmtest.conf.RunOnStage;
 import com.bbraun.bbmtest.conf.RunOnStageRule;
 import com.bbraun.bbmtest.ui.UiTest;
 import com.bbraun.hybris.shop.b2b.B2BActions;
-import io.qameta.allure.Epic;
-import io.qameta.allure.Feature;
+import io.qameta.allure.*;
 import org.junit.Rule;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 @RunOnStage(stages = "PRD")
-@Epic("E-Shop Tests")
+@Epic("B2B E-Shop Tests")
 @Feature("Static Pages Tests")
 public class B2BShopStaticPageTest {
 
@@ -20,6 +19,9 @@ public class B2BShopStaticPageTest {
     public RunOnStageRule rule = new RunOnStageRule();
 
     @Test
+    @Severity(SeverityLevel.NORMAL)
+    @Description("Test Description: Access terms of use page")
+    @Story("Access terms of use page")
     public void testOpenTermsOfUsePage() {
         UiTest.go(builder -> {
             builder.doStartBrowser() //
@@ -38,6 +40,9 @@ public class B2BShopStaticPageTest {
     }
 
     @Test
+    @Severity(SeverityLevel.NORMAL)
+    @Description("Test Description: Access privacy policy page")
+    @Story("Access privacy policy page")
     public void testOpenPrivacyPolicyPage() {
         UiTest.go(builder -> {
             builder.doStartBrowser() //

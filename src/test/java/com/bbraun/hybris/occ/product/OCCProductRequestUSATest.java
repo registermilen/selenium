@@ -1,5 +1,6 @@
 package com.bbraun.hybris.occ.product;
 
+import io.qameta.allure.*;
 import org.junit.Test;
 
 import com.bbraun.bbmtest.ws.BBMWebServiceTestBuilder;
@@ -15,9 +16,14 @@ import io.restassured.http.ContentType;
  * 
  * @author stuestde
  */
+@Epic("OCC Webservice Tests")
+@Feature("OCC Product endpoint Tests")
 public class OCCProductRequestUSATest {
 
 	@Test
+	@Severity(SeverityLevel.CRITICAL)
+	@Description("Test Description: Get PRID by material number with AEM user.")
+	@Story("Request PRID by material number with AEM user for en_US")
 	public void testGetPRIDIntrocanSafetyUSWithAEMUser() {
 		new BBMWebServiceTestBuilder<>() //
 				.withNewRequest() //
@@ -48,6 +54,9 @@ public class OCCProductRequestUSATest {
 	}
 
 	@Test
+	@Severity(SeverityLevel.CRITICAL)
+	@Description("Test Description: Get Article by material number with AEM user.")
+	@Story("Request article by material number with AEM user for en_US")
 	public void testGetArticleIntrocanSafetyUSWithAEMUser() {
 		new BBMWebServiceTestBuilder<>() //
 				.withNewRequest() //
@@ -80,6 +89,9 @@ public class OCCProductRequestUSATest {
 	}
 
 	@Test
+	@Severity(SeverityLevel.CRITICAL)
+	@Description("Test Description: Get Image classification by material number with AEM user.")
+	@Story("Request image classification by material number with AEM user for en_US")
 	public void testGetBPGImageClassificationIntrocanSafetyUSWithAEMUser() {
 		new BBMWebServiceTestBuilder<>() //
 				.withNewRequest() //

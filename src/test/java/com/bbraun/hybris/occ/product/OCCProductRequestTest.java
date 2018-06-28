@@ -1,5 +1,6 @@
 package com.bbraun.hybris.occ.product;
 
+import io.qameta.allure.*;
 import org.junit.Test;
 
 import com.bbraun.bbmtest.ws.BBMWebServiceTestBuilder;
@@ -14,9 +15,14 @@ import io.restassured.http.ContentType;
  * 
  * @author stuestde
  */
+@Epic("OCC Webservice Tests")
+@Feature("OCC Product endpoint Tests")
 public class OCCProductRequestTest {
 
 	@Test
+	@Severity(SeverityLevel.CRITICAL)
+	@Description("Test Description: Get PRID by material number with AEM user.")
+	@Story("Request PRID by material number with AEM user for en_01")
 	public void testOCCProductRequestPRIDWithAEMUserEn01() {
 		new BBMWebServiceTestBuilder<>() //
 				.withNewRequest() //
@@ -42,6 +48,9 @@ public class OCCProductRequestTest {
 	}
 
 	@Test
+	@Severity(SeverityLevel.CRITICAL)
+	@Description("Test Description: Get PRID by material number and modifiedSince flag with AEM user.")
+	@Story("Request PRID by material number and modifiedSince flag with AEM user for en_01")
 	public void testOCCProductRequestWithModifiedSinceFlag() {
 		long unixTimestampNow = System.currentTimeMillis() / 1000;
 		long unixTimestamp5MinutesAgo = unixTimestampNow - (5 * 60);
@@ -68,6 +77,9 @@ public class OCCProductRequestTest {
 	}
 
 	@Test
+	@Severity(SeverityLevel.CRITICAL)
+	@Description("Test Description: Get BPR by material number with AEM user.")
+	@Story("Request BPR by material number with AEM user for en_01")
 	public void testOCCProductRequestProductRelatedBPRWithAEMUserEn01() {
 		new BBMWebServiceTestBuilder<>() //
 				.withNewRequest() //
@@ -89,6 +101,9 @@ public class OCCProductRequestTest {
 	}
 
 	@Test
+	@Severity(SeverityLevel.CRITICAL)
+	@Description("Test Description: Get Image classification by material number with AEM user.")
+	@Story("Request image classification by material number with AEM user for en_01")
 	public void testOCCProductRequestImageBPGWithAEMUserEn01() {
 		new BBMWebServiceTestBuilder<>() //
 				.withNewRequest() //
@@ -110,6 +125,9 @@ public class OCCProductRequestTest {
 	}
 
 	@Test
+	@Severity(SeverityLevel.CRITICAL)
+	@Description("Test Description: Get PRID and URL language by material number with AEM user.")
+	@Story("Request PRID with and URL language by material number with AEM user for ru_RU")
 	public void testOCCProductRequestUrlLanguageTestForRussia() {
 		new BBMWebServiceTestBuilder<>() //
 				.withNewRequest() //

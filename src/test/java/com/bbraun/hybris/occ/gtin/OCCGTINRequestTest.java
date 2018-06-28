@@ -1,5 +1,6 @@
 package com.bbraun.hybris.occ.gtin;
 
+import io.qameta.allure.*;
 import org.junit.Test;
 
 import com.bbraun.bbmtest.ws.BBMWebServiceTestBuilder;
@@ -11,11 +12,15 @@ import io.restassured.http.ContentType;
  * Test of the {@code /article/gtin} OCC webservice endpoint.
  * 
  * @author stuestde
- *
  */
+@Epic("OCC Webservice Tests")
+@Feature("OCC GTIN endpoint Tests")
 public class OCCGTINRequestTest {
 
 	@Test
+	@Severity(SeverityLevel.NORMAL)
+	@Description("Test Description: Get article by GTIN")
+	@Story("Request article by GTIN with AEM user for de_DE")
 	public void testGetArticleSoftaSeptByGtinDeAEMUser() {
 		new BBMWebServiceTestBuilder<>() //
 				.withNewRequest() //
@@ -36,8 +41,11 @@ public class OCCGTINRequestTest {
 				.assertResponseBodyByPathEquals("materialShortText", "SOFTASEPT-N UNCOLORED SPRAY \"DE\" 250ML") //
 		;
 	}
-	
+
 	@Test
+	@Severity(SeverityLevel.NORMAL)
+	@Description("Test Description: Get unknown article by GTIN")
+	@Story("Request unknown article by GTIN with AEM user for de_DE")
 	public void testGetUnknownArticleByGtinDeAEMUser() {
 		new BBMWebServiceTestBuilder<>() //
 		.withNewRequest() //
@@ -57,8 +65,11 @@ public class OCCGTINRequestTest {
 		.assertResponseBodyEqualsReference("OCC_GTIN_Unknown_Expected.json")
 		;
 	}
-	
+
 	@Test
+	@Severity(SeverityLevel.NORMAL)
+	@Description("Test Description: Get article by GTIN with anonymous user.")
+	@Story("Request article by GTIN with anonymous user for de_DE")
 	public void testGetArticleSoftaSeptByGtinDeAnonymousBarcodeAppUser() {
 		new BBMWebServiceTestBuilder<>() //
 				.withNewRequest() //

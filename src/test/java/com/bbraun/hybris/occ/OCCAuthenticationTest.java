@@ -1,5 +1,6 @@
 package com.bbraun.hybris.occ;
 
+import io.qameta.allure.*;
 import org.apache.http.HttpStatus;
 import org.junit.Test;
 
@@ -13,12 +14,17 @@ import io.restassured.http.ContentType;
  * @author stuestde
  *
  */
+@Epic("OCC Webservice Tests")
+@Feature("OCC Authentication Tests")
 public class OCCAuthenticationTest {
 
 	/**
 	 * Tests OAuth authentication using GET request and JSON response
 	 */
 	@Test
+	@Severity(SeverityLevel.CRITICAL)
+	@Description("Test Description: OAuth authentication with HTTP GET and expected JSON response.")
+	@Story("Request OAuth authentication token with HTTP GET and expected JSON response.")
 	public void testOAuthWithGetRequestJSONSuccess() {
 
 		new BBMWebServiceTestBuilder<>() //
@@ -43,6 +49,9 @@ public class OCCAuthenticationTest {
 	 * Tests OAuth authentication using POST request and JSON response
 	 */
 	@Test
+	@Severity(SeverityLevel.CRITICAL)
+	@Description("Test Description: OAuth authentication with HTTP POST and expected JSON response.")
+	@Story("Request OAuth authentication token with HTTP POST and expected JSON response.")
 	public void testOAuthWithPostRequestJSONSuccess() {
 
 		new BBMWebServiceTestBuilder<>() //
@@ -67,6 +76,9 @@ public class OCCAuthenticationTest {
 	 * Tests OAuth authentication using GET request and XML response
 	 */
 	@Test
+	@Severity(SeverityLevel.CRITICAL)
+	@Description("Test Description: OAuth authentication with HTTP GET and expected XML response.")
+	@Story("Request OAuth authentication token with HTTP GET and expected XML response.")
 	public void testOAuthWithGetRequestXMLSuccess() {
 
 		new BBMWebServiceTestBuilder<>() //
@@ -90,6 +102,9 @@ public class OCCAuthenticationTest {
 	 * Tests OAuth authentication using POST request and XML response
 	 */
 	@Test
+	@Severity(SeverityLevel.CRITICAL)
+	@Description("Test Description: OAuth authentication with HTTP POST and expected XML response.")
+	@Story("Request OAuth authentication token with HTTP POST and expected XML response.")
 	public void testOAuthWithPostRequestXMLSuccess() {
 
 		new BBMWebServiceTestBuilder<>() //
@@ -113,6 +128,9 @@ public class OCCAuthenticationTest {
 	 * Tests OAuth authentication with wrong Basic auth credentials
 	 */
 	@Test
+	@Severity(SeverityLevel.CRITICAL)
+	@Description("Test Description: OAuth authentication with wrong Basic Auth credentials")
+	@Story("Request OAuth authentication with wrong Basic Auth credentials.")
 	public void testOAuthWithWrongBasicAuthCredentials() {
 
 		new BBMWebServiceTestBuilder<>() //
@@ -135,6 +153,9 @@ public class OCCAuthenticationTest {
 	 * Tests OAuth authentication with wrong Hybris credentials
 	 */
 	@Test
+	@Severity(SeverityLevel.CRITICAL)
+	@Description("Test Description: OAuth authentication with wrong webservice user credentials")
+	@Story("Request OAuth authentication with wrong webservice user credentials.")
 	public void testOAuthWithWrongHybrisCredentials() {
 
 		new BBMWebServiceTestBuilder<>() //

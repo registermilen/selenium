@@ -4,8 +4,7 @@ import com.bbraun.bbmtest.conf.RunOnStage;
 import com.bbraun.bbmtest.conf.RunOnStageRule;
 import com.bbraun.bbmtest.ui.UiTest;
 import com.bbraun.hybris.shop.b2b.B2BActions;
-import io.qameta.allure.Epic;
-import io.qameta.allure.Feature;
+import io.qameta.allure.*;
 import org.junit.Ignore;
 import org.junit.Rule;
 import org.junit.Test;
@@ -13,7 +12,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 @RunOnStage(stages = "PRD")
-@Epic("E-Shop Tests")
+@Epic("B2B E-Shop Tests")
 @Feature("Login Tests")
 public class B2BShopLoginTest {
 
@@ -21,6 +20,9 @@ public class B2BShopLoginTest {
     public RunOnStageRule rule = new RunOnStageRule();
 
     @Test
+    @Severity(SeverityLevel.BLOCKER)
+    @Description("Test Description: Test of Login and Logout via IDP success.")
+    @Story("Login with correct credentials using IDP")
     public void testBobUserLoginAndLogoutViaIdpSuccess() {
         UiTest.go(builder -> {
             builder.doStartBrowser() //
@@ -36,6 +38,9 @@ public class B2BShopLoginTest {
     }
 
     @Ignore // Not in place on PRD yet
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("Test Description: Test BOB user switch")
+    @Story("Login and switch BOB user without logout")
     public void testUserSwitch() {
         UiTest.go(builder -> {
             builder.doStartBrowser() //

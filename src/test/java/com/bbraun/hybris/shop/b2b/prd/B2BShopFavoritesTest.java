@@ -4,8 +4,7 @@ import com.bbraun.bbmtest.conf.RunOnStage;
 import com.bbraun.bbmtest.conf.RunOnStageRule;
 import com.bbraun.bbmtest.ui.UiTest;
 import com.bbraun.hybris.shop.b2b.B2BActions;
-import io.qameta.allure.Epic;
-import io.qameta.allure.Feature;
+import io.qameta.allure.*;
 import org.junit.Rule;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -15,7 +14,7 @@ import static org.openqa.selenium.support.ui.ExpectedConditions.urlContains;
 import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElementLocated;
 
 @RunOnStage(stages = "PRD")
-@Epic("E-Shop Tests")
+@Epic("B2B E-Shop Tests")
 @Feature("Favorite Functionality Tests")
 public class B2BShopFavoritesTest {
 
@@ -23,6 +22,9 @@ public class B2BShopFavoritesTest {
     public RunOnStageRule rule = new RunOnStageRule();
 
     @Test
+    @Severity(SeverityLevel.MINOR)
+    @Description("Test Description: Add a product to favourites list from search.")
+    @Story("Add favourite PRID from search result")
     public void testAddPridAsFavoriteFromSearch() {
         UiTest.go(builder -> {
             builder.doStartBrowser() //
@@ -51,6 +53,9 @@ public class B2BShopFavoritesTest {
     }
 
     @Test
+    @Severity(SeverityLevel.MINOR)
+    @Description("Test Description: Add a product to favourites list from product detail page.")
+    @Story("Add favourite PRID from product detail page")
     public void testAddPridAsFavoriteFromProductDetailPage() {
         UiTest.go(builder -> {
             builder.doStartBrowser() //
@@ -77,6 +82,11 @@ public class B2BShopFavoritesTest {
     }
 
     @Test
+    @Severity(SeverityLevel.MINOR)
+    @Description("Test Description: Add a product to favourites list from product detail page. Afterwards the favourites list is " +
+            "accessed and the article is added to the cart")
+    @Story("Add favourite PRID from product detail page and pass it to the cart")
+
     public void testAddPridAsFavoriteFromProductDetailPageAndPassItToCart() {
         UiTest.go(builder -> {
             builder.doStartBrowser() //

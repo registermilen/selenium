@@ -2,6 +2,7 @@ package com.bbraun.hybris.productcenter.login;
 
 import com.bbraun.bbmtest.conf.RunOnStage;
 import com.bbraun.bbmtest.conf.RunOnStageRule;
+import io.qameta.allure.Epic;
 import org.junit.Ignore;
 import org.junit.Rule;
 import org.junit.Test;
@@ -10,6 +11,7 @@ import org.openqa.selenium.By;
 import com.bbraun.bbmtest.ui.UiTest;
 
 @Ignore
+@Epic("ProductCenter Tests")
 public class ProductCenterLoginTest {
 
 	@Rule

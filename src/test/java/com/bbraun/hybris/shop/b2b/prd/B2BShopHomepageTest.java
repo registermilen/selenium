@@ -4,15 +4,14 @@ import com.bbraun.bbmtest.conf.RunOnStage;
 import com.bbraun.bbmtest.conf.RunOnStageRule;
 import com.bbraun.bbmtest.ui.UiTest;
 import com.bbraun.hybris.shop.b2b.B2BActions;
-import io.qameta.allure.Epic;
-import io.qameta.allure.Feature;
+import io.qameta.allure.*;
 import org.junit.Rule;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 @RunOnStage(stages = "PRD")
-@Epic("E-Shop Tests")
+@Epic("B2B E-Shop Tests")
 @Feature("Homepage Tests")
 public class B2BShopHomepageTest {
 
@@ -20,6 +19,9 @@ public class B2BShopHomepageTest {
     public RunOnStageRule rule = new RunOnStageRule();
 
     @Test
+    @Severity(SeverityLevel.NORMAL)
+    @Description("Test Description: Access B2B Shop homepage")
+    @Story("Access B2B Shop homepage")
     public void testAccessHomepageWithFavouritesTeaser() {
         UiTest.go(builder -> {
             builder.doStartBrowser() //

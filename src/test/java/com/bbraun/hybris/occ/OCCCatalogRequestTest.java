@@ -1,5 +1,6 @@
 package com.bbraun.hybris.occ;
 
+import io.qameta.allure.*;
 import org.junit.Test;
 
 import com.bbraun.bbmtest.ws.BBMWebServiceTestBuilder;
@@ -14,9 +15,14 @@ import io.restassured.http.ContentType;
  * 
  * @author stuestde
  */
+@Epic("OCC Webservice Tests")
+@Feature("OCC Catalog endpoint Tests")
 public class OCCCatalogRequestTest {
 
 	@Test
+	@Severity(SeverityLevel.CRITICAL)
+	@Description("Test Description: Get Catalog by id with AEM user.")
+	@Story("Request Catalog by id with AEM user for en_01")
 	public void testOCCCatalogRequestWithAEMUserEn01() {
 		new BBMWebServiceTestBuilder<>() //
 				.withNewRequest() //
@@ -38,6 +44,9 @@ public class OCCCatalogRequestTest {
 	}
 
 	@Test
+	@Severity(SeverityLevel.CRITICAL)
+	@Description("Test Description: Get Catalog by id with additional name for Russia and AEM user.")
+	@Story("Request Catalog by id with AEM user for en_01 with additional name for Russia")
 	public void testOCCCatalogRequestWithAdditionalNameForRussia() {
 		new BBMWebServiceTestBuilder<>() //
 				.withNewRequest() //
@@ -58,5 +67,4 @@ public class OCCCatalogRequestTest {
 				.assertResponseBodyByPathNotNull("categories[0].supercategories[0].additionalName") //
 		;
 	}
-	
 }

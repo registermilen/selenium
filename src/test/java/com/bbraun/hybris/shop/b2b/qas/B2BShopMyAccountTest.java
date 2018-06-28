@@ -4,7 +4,7 @@ import com.bbraun.bbmtest.conf.RunOnStage;
 import com.bbraun.bbmtest.conf.RunOnStageRule;
 import com.bbraun.bbmtest.ui.UiTest;
 import com.bbraun.hybris.shop.b2b.B2BActions;
-import io.qameta.allure.Epic;
+import io.qameta.allure.*;
 import org.junit.Rule;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -13,13 +13,17 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import static org.openqa.selenium.support.ui.ExpectedConditions.urlContains;
 
 @RunOnStage(stages = "QAS")
-@Epic("E-Shop Tests")
+@Epic("B2B E-Shop Tests")
+@Feature("My Account Functionality Tests")
 public class B2BShopMyAccountTest {
 
     @Rule
     public RunOnStageRule rule = new RunOnStageRule();
 
     @Test
+    @Severity(SeverityLevel.NORMAL)
+    @Description("Test Description: Open My Account page")
+    @Story("Open My Account page")
     public void testOpenMyAccountPageWithSavedCarts() {
         UiTest.go(builder -> {
             builder.doStartBrowser() //
