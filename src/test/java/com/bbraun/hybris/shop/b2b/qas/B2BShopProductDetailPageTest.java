@@ -22,7 +22,7 @@ public class B2BShopProductDetailPageTest {
     @Test
     @Severity(SeverityLevel.NORMAL)
     @Description("Test Description: Access product detail page and assert BOM component exists")
-    @Story("Acsess product detail page and check BOM component")
+    @Story("Access product detail page and check BOM component")
     public void testBOMTable() {
         UiTest.go(builder -> {
             builder.doStartBrowser() //
