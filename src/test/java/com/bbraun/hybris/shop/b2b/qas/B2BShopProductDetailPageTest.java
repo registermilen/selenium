@@ -4,6 +4,9 @@ import com.bbraun.bbmtest.conf.RunOnStage;
 import com.bbraun.bbmtest.conf.RunOnStageRule;
 import com.bbraun.bbmtest.ui.UiTest;
 import com.bbraun.hybris.shop.b2b.B2BActions;
+
+import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElementLocated;
+
 import org.junit.Rule;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -23,13 +26,14 @@ public class B2BShopProductDetailPageTest {
 	                    
 	                    .assertUrl("https://qas-shop.bbraun.com/bob") //
 	                    .doClick(By.linkText("20005585"))
-	                    .doWaitUntil(ExpectedConditions.urlContains("https://qas-shop.bbraun.com"))
-	                    .assertTextDisplayedOnPage("20005585")
+	                    .doWaitUntil(visibilityOfElementLocated(By.className("miniCart")))
+	                    .assertUrl("https://qas-shop.bbraun.com/")
 	                    
 	                    .doOpenUrl("https://qas-shop.bbraun.com/p/PRID00003923")
 	                    .doWaitUntil(ExpectedConditions.urlContains("https://qas-shop.bbraun.com/p/PRID00003923"))
 	                    .assertTextDisplayedOnPage("Introcan®")
 	                    
+	                    .doScrollToElement(By.id("billOfMaterialItemsARTICLES"))
 	                    .assertElementExists(By.id("billOfMaterialItemsARTICLES"))
 	                    .assertElementExists(By.xpath("//*[@id=\"billOfMaterialItemsARTICLES\"]/tbody/tr[2]"))
 	            ;
