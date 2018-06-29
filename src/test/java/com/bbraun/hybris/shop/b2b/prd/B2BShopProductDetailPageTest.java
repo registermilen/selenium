@@ -32,7 +32,7 @@ public class B2BShopProductDetailPageTest {
 	                    .assertUrl("https://shop.bbraun.com/bob") //
 	                    .doClick(By.linkText("20158045"))
 						.doWaitUntil(visibilityOfElementLocated(By.className("miniCart")))
-						.assertUrl("https://qas-shop.bbraun.com/")
+						.assertUrl("https://shop.bbraun.com/")
 
 	                    .doOpenUrl("https://shop.bbraun.com/p/PRID00003923")
 	                    .doWaitUntil(ExpectedConditions.urlContains("https://shop.bbraun.com/p/PRID00003923"))
