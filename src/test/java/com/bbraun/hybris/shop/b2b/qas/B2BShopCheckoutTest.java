@@ -41,7 +41,8 @@ public class B2BShopCheckoutTest {
                     .assertUrl(containsString("/cart"))
                     .doOpenUrl("https://qas-shop.bbraun.com/cart/remove") // clear cart
 
-                    .doType(By.name("productCodePost"), "18564")
+                    .doType(By.className("instantAddToCartQty"), "100")
+                    .doType(By.name("productCodePost"), "4097076")
                     .doClick(By.className("code"))
                     .doClick(By.id("instantAddToCartButton"))
                     .assertElementExists(By.className("cartItem")) // cart item row
@@ -50,15 +51,13 @@ public class B2BShopCheckoutTest {
                     .doWaitUntil(urlContains("/checkout/multi/common-information/add"))
                     .assertTextDisplayedOnPage("Bestellübersicht")
                     .assertTextDisplayedOnPage("Gesamtnettopreis")
-                    .assertTextDisplayedOnPage("5,12")
+                    .assertTextDisplayedOnPage("32,90")
                     .assertTextDisplayedOnPage("Mindermengenzuschlag")
                     .assertTextDisplayedOnPage("30,00")
                     .assertTextDisplayedOnPage("Mehrwertsteuer")
-                    .assertTextDisplayedOnPage("2,73")
-                    .assertTextDisplayedOnPage("VOC Abgabe")
-                    .assertTextDisplayedOnPage("0,35")
+                    .assertTextDisplayedOnPage("4,84")
                     .assertTextDisplayedOnPage("Rechnungsbetrag")
-                    .assertTextDisplayedOnPage("38,20")
+                    .assertTextDisplayedOnPage("67,75")
 
                     .doClick(By.className("force-right")) // Weiter
                     .doWaitUntil(urlContains("/checkout/multi/delivery-address/add"))
@@ -72,6 +71,7 @@ public class B2BShopCheckoutTest {
                     .doWaitUntil(urlContains("/checkout/multi/summary/view"))
                     .assertTextDisplayedOnPage("Abschließende Prüfung")
 
+                    .doClick(By.id("termsCheck1")) // AGB akzeptieren
                     .doClick(By.className("force-right")) //Kostenpflichtig bestellen
                     .doWaitUntil(urlContains("/checkout/documentsConfirmation/"))
                     .assertTextDisplayedOnPage("Vielen Dank für Ihre Bestellung")
