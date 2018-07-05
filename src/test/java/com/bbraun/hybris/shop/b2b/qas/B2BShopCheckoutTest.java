@@ -25,15 +25,15 @@ public class B2BShopCheckoutTest {
     @Test
     @Severity(SeverityLevel.CRITICAL)
     @Description("Test Description: Test access to shopping cart and complete the whole checkout process.")
-    @Story("Process checkout and place order.")
-    public void testPassCartToCheckoutAndPlaceOrder() {
+    @Story("Process checkout and place order for CH customer.")
+    public void testPassCartToCheckoutAndPlaceOrderForCHCustomer() {
         UiTest.go(builder -> {
             builder.doStartBrowser() //
                     .doMaximizeWindow() //
                     .execute(B2BActions::loginQAS) //
 
                     .assertUrl("https://qas-shop.bbraun.com/bob") //
-                    .doClick(By.linkText("20005585"))
+                    .doClick(By.linkText("20262030"))
                     .doWaitUntil(visibilityOfElementLocated(By.className("miniCart")))
                     .doClick(By.className("miniCart"))
                     .doWaitUntil(ExpectedConditions.urlContains("/cart"))
@@ -41,7 +41,7 @@ public class B2BShopCheckoutTest {
                     .assertUrl(containsString("/cart"))
                     .doOpenUrl("https://qas-shop.bbraun.com/cart/remove") // clear cart
 
-                    .doType(By.name("productCodePost"), "5391010")
+                    .doType(By.name("productCodePost"), "18564")
                     .doClick(By.className("code"))
                     .doClick(By.id("instantAddToCartButton"))
                     .assertElementExists(By.className("cartItem")) // cart item row
@@ -50,13 +50,15 @@ public class B2BShopCheckoutTest {
                     .doWaitUntil(urlContains("/checkout/multi/common-information/add"))
                     .assertTextDisplayedOnPage("Bestellübersicht")
                     .assertTextDisplayedOnPage("Gesamtnettopreis")
-                    .assertTextDisplayedOnPage("66,83")
+                    .assertTextDisplayedOnPage("5,12")
                     .assertTextDisplayedOnPage("Mindermengenzuschlag")
-                    .assertTextDisplayedOnPage("15,00")
-                    .assertTextDisplayedOnPage("Umsatzsteuer")
-                    .assertTextDisplayedOnPage("15,55")
+                    .assertTextDisplayedOnPage("30,00")
+                    .assertTextDisplayedOnPage("Mehrwertsteuer")
+                    .assertTextDisplayedOnPage("2,73")
+                    .assertTextDisplayedOnPage("VOC Abgabe")
+                    .assertTextDisplayedOnPage("0,35")
                     .assertTextDisplayedOnPage("Rechnungsbetrag")
-                    .assertTextDisplayedOnPage("97,38")
+                    .assertTextDisplayedOnPage("38,20")
 
                     .doClick(By.className("force-right")) // Weiter
                     .doWaitUntil(urlContains("/checkout/multi/delivery-address/add"))
