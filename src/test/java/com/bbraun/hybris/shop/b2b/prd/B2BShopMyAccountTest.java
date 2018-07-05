@@ -40,7 +40,6 @@ public class B2BShopMyAccountTest {
                     .assertUrl("https://shop.bbraun.com/my-account/orders")
                     .assertElementExists(By.className("accountNav"))
                     .assertTextDisplayedOnPage("Bestellhistorie")
-                    .assertElementExists(By.id("submitFilter")) // "Filter anwenden"
                     .assertTitle(startsWith("Bestellhistorie"))
             ;
         });
