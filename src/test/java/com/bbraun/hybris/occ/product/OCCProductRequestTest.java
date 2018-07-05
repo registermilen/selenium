@@ -1,7 +1,7 @@
 package com.bbraun.hybris.occ.product;
 
 import io.qameta.allure.*;
-^import org.junit.Ignore;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import com.bbraun.bbmtest.ws.BBMWebServiceTestBuilder;
