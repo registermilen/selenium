@@ -1,6 +1,7 @@
 package com.bbraun.hybris.occ.product;
 
 import io.qameta.allure.*;
+^import org.junit.Ignore;
 import org.junit.Test;
 
 import com.bbraun.bbmtest.ws.BBMWebServiceTestBuilder;
@@ -19,6 +20,7 @@ import io.restassured.http.ContentType;
 @Feature("OCC Product endpoint Tests")
 public class OCCProductRequestTest {
 
+	@Ignore
 	@Test
 	@Severity(SeverityLevel.CRITICAL)
 	@Description("Test Description: Get PRID by material number with AEM user.")
@@ -47,6 +49,7 @@ public class OCCProductRequestTest {
 		;
 	}
 
+	@Ignore
 	@Test
 	@Severity(SeverityLevel.CRITICAL)
 	@Description("Test Description: Get PRID by material number and modifiedSince flag with AEM user.")
@@ -76,6 +79,7 @@ public class OCCProductRequestTest {
 		;
 	}
 
+	@Ignore
 	@Test
 	@Severity(SeverityLevel.CRITICAL)
 	@Description("Test Description: Get BPR by material number with AEM user.")
@@ -100,6 +104,7 @@ public class OCCProductRequestTest {
 		;
 	}
 
+	@Ignore
 	@Test
 	@Severity(SeverityLevel.CRITICAL)
 	@Description("Test Description: Get Image classification by material number with AEM user.")
