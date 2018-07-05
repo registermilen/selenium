@@ -10,6 +10,7 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
+import static org.hamcrest.core.StringStartsWith.startsWith;
 import static org.openqa.selenium.support.ui.ExpectedConditions.urlContains;
 
 @RunOnStage(stages = "QAS")
@@ -35,12 +36,13 @@ public class B2BShopMyAccountTest {
                     .doWaitUntil(urlContains("https://qas-shop.bbraun.com"))
 
                     .doClick(By.linkText("Mein Konto"))
-                    .doWaitUntil(ExpectedConditions.urlContains("/my-account/saved-carts"))
-                    .assertUrl("https://qas-shop.bbraun.com/my-account/saved-carts")
+                    .doWaitUntil(ExpectedConditions.urlContains("/my-account/orders"))
+                    .assertUrl("https://qas-shop.bbraun.com/my-account/orders")
                     .assertElementExists(By.className("accountNav"))
-                    .assertTextDisplayedOnPage("Bestellvorlagen")
-                    .assertTextDisplayedOnPage("Neue Bestellvorlage anlegen")
+                    .assertTextDisplayedOnPage("Bestellhistorie")
+                    .assertTitle(startsWith("Bestellhistorie"))
             ;
         });
     }
+
 }
