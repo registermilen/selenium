@@ -41,7 +41,7 @@ public class B2BShopCheckoutTest {
                     .assertUrl(containsString("/cart"))
                     .doOpenUrl("https://qas-shop.bbraun.com/cart/remove") // clear cart
 
-                    .doType(By.className("instantAddToCartQty"), "100")
+                    .doType(By.className("instantAddToCartQty"), "100") // currently means 1001
                     .doType(By.name("productCodePost"), "4097076")
                     .doClick(By.className("code"))
                     .doClick(By.id("instantAddToCartButton"))
@@ -51,13 +51,13 @@ public class B2BShopCheckoutTest {
                     .doWaitUntil(urlContains("/checkout/multi/common-information/add"))
                     .assertTextDisplayedOnPage("Bestellübersicht")
                     .assertTextDisplayedOnPage("Gesamtnettopreis")
-                    .assertTextDisplayedOnPage("32,90")
+                    .assertTextDisplayedOnPage("329,33")
                     .assertTextDisplayedOnPage("Mindermengenzuschlag")
                     .assertTextDisplayedOnPage("30,00")
                     .assertTextDisplayedOnPage("Mehrwertsteuer")
-                    .assertTextDisplayedOnPage("4,84")
+                    .assertTextDisplayedOnPage("27,67")
                     .assertTextDisplayedOnPage("Rechnungsbetrag")
-                    .assertTextDisplayedOnPage("67,75")
+                    .assertTextDisplayedOnPage("387,00")
 
                     .doClick(By.className("force-right")) // Weiter
                     .doWaitUntil(urlContains("/checkout/multi/delivery-address/add"))
@@ -71,7 +71,7 @@ public class B2BShopCheckoutTest {
                     .doWaitUntil(urlContains("/checkout/multi/summary/view"))
                     .assertTextDisplayedOnPage("Abschließende Prüfung")
 
-                    .doClick(By.id("termsCheck1")) // AGB akzeptieren
+                    .doClick(By.id("termsCheck1")) // AGB akzeptieren bei CH
                     .doClick(By.className("force-right")) //Kostenpflichtig bestellen
                     .doWaitUntil(urlContains("/checkout/documentsConfirmation/"))
                     .assertTextDisplayedOnPage("Vielen Dank für Ihre Bestellung")
