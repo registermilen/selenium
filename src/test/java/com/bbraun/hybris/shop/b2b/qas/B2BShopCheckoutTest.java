@@ -46,7 +46,6 @@ public class B2BShopCheckoutTest {
                     .doClick(By.className("code"))
                     .doClick(By.id("instantAddToCartButton"))
                     .assertElementExists(By.className("cartItem")) // cart item row
-
                     .doClick(By.id("checkoutButtonTop"))
                     .doWaitUntil(urlContains("/checkout/multi/common-information/add"))
                     .assertTextDisplayedOnPage("Bestellübersicht")
@@ -58,10 +57,6 @@ public class B2BShopCheckoutTest {
                     .assertTextDisplayedOnPage("27,67")
                     .assertTextDisplayedOnPage("Rechnungsbetrag")
                     .assertTextDisplayedOnPage("387,00")
-
-                    .doClick(By.className("force-right")) // Weiter
-                    .doWaitUntil(urlContains("/checkout/multi/delivery-address/add"))
-                    .assertTextDisplayedOnPage("Lieferadresse")
 
                     .doClick(By.className("force-right")) // Weiter
                     .doWaitUntil(urlContains("/checkout/multi/delivery-method/choose"))
