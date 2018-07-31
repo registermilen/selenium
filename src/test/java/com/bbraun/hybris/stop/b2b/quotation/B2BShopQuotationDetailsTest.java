@@ -58,8 +58,7 @@ public class B2BShopQuotationDetailsTest {
 	
 	@Test
 	@Severity(SeverityLevel.CRITICAL)
-	@Description("Test Description: Try to checkout invalid quantity for a "
-			+ "product with minimum valid quantity, correct it and proceed to checkout.")
+	@Description("Test Description: Place a PCR and make sure the details are propertly displayed.")
 	@Story("Create Order based on confirmed PCR")
 	@Issue("PCAG-4451")
 	public void testProductCheckoutWithInvalidThenValidQuantity() {

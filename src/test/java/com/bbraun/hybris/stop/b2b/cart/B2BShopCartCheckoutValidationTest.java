@@ -23,7 +23,7 @@ import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
 
-@Epic("B2B E-Shop Tests")
+@Epic("B2C E-Shop Tests")
 @Feature("Checkout Tests")
 @RunOnStage(stages = "QAS")
 public class B2BShopCartCheckoutValidationTest {
@@ -31,7 +31,7 @@ public class B2BShopCartCheckoutValidationTest {
 	@ClassRule
 	public static TestPropertyRule testPropertiesRule = new TestPropertyRule();
 	
-	@TestProperty("hybris.shop.b2b.host")
+	@TestProperty("hybris.shop.b2c.host")
 	private static String host;
 	
 	@TestProperty("hybris.shop.b2b.german.user.username")

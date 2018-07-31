@@ -59,8 +59,7 @@ public class B2BShopCartAddressSelectionTest {
 	
 	@Test
 	@Severity(SeverityLevel.CRITICAL)
-	@Description("Test Description: Try to checkout invalid quantity for a "
-			+ "product with minimum valid quantity, correct it and proceed to checkout.")
+	@Description("Test Description: Make sure address is selectable on cart level.")
 	@Story("Introduce address selection component on cart position")
 	@Issue("PCAG-4707")
 	public void testProductCheckoutWithInvalidThenValidQuantity() {
