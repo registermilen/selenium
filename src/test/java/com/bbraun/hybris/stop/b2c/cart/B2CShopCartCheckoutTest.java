@@ -5,11 +5,13 @@ import static org.openqa.selenium.support.ui.ExpectedConditions.urlContains;
 import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElementLocated;
 
 import org.junit.ClassRule;
+import org.junit.Rule;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import com.bbraun.bbmtest.conf.RunOnStage;
+import com.bbraun.bbmtest.conf.RunOnStageRule;
 import com.bbraun.bbmtest.conf.TestProperty;
 import com.bbraun.bbmtest.conf.TestPropertyRule;
 import com.bbraun.bbmtest.ui.UiTest;
@@ -26,6 +28,9 @@ import io.qameta.allure.Story;
 @Feature("Checkout Tests")
 @RunOnStage(stages = "QAS")
 public class B2CShopCartCheckoutTest {
+	
+	@Rule
+    public RunOnStageRule rule = new RunOnStageRule();
 	
 	@ClassRule
 	public static TestPropertyRule testPropertiesRule = new TestPropertyRule();
