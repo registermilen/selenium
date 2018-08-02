@@ -21,7 +21,7 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<bbmtest-framework.version>0.6.0</bbmtest-framework.version>
+		<bbmtest-framework.version>0.7.0</bbmtest-framework.version>
 		<allure.version>2.6.0</allure.version>
 		<surefire.version>2.20</surefire.version>
 		<aspectj.version>1.8.10</aspectj.version>
