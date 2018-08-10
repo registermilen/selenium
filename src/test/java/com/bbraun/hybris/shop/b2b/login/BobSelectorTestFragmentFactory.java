@@ -34,12 +34,17 @@ public class BobSelectorTestFragmentFactory {
 					}
 				};
 			case PRD :
-				loginTestFragment = B2BActions::loginPRD;
-				break;
+				return new UiTestFragment() {
+					
+					@Override
+					public void runWithTestBuilder(BBMUiTestBuilder<BBMUiTestBuilder<?>> builder) {
+						builder.assertUrl("https://shop.bbraun.com/bob")
+						.doClick(By.linkText(b2bUnit));
+					}
+				};
 			default :
 				throw new RuntimeException("Unexpected stage "+BBMTestConfiguration.get().getStage());
 		}
 		
-		return loginTestFragment;
 	} 
 }

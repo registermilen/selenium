@@ -27,7 +27,7 @@ import io.qameta.allure.Story;
 
 @Epic("B2C E-Shop Tests")
 @Feature("Checkout Tests")
-@RunOnStage(stages = "QAS")
+@RunOnStage(stages = {"QAS", "PRD"})
 public class B2BShopCartCheckoutValidationTest {
 	
 	@Rule
@@ -86,7 +86,7 @@ public class B2BShopCartCheckoutValidationTest {
                     .assertUrl(containsString("/cart"))//make sure we stay on the cart
                     .assertTextDisplayedOnPage("Fehler im Bestellvorgang") //cart level error message
                     
-                    .assertTextDisplayedOnPage("Bitte die Mindestbestellmenge beachten: 10 ST") //item level error message
+                    .assertTextDisplayedOnPage("Bitte die Mindestbestellmenge beachten") //item level error message
                     .assertTextDisplayedOnPage("Preis kann nicht ermittelt werden") //item level error message
                     
                     .doType(By.name("quantity"), 200)
