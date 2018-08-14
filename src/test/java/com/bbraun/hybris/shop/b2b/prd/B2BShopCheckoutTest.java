@@ -33,7 +33,7 @@ public class B2BShopCheckoutTest {
                     .execute(B2BActions::loginPRD) //
 
                     .assertUrl("https://shop.bbraun.com/bob") //
-                    .doClick(By.linkText("20158045"))
+                    .doClick(By.linkText("0020158045"))
                     .doWaitUntil(visibilityOfElementLocated(By.className("miniCart")))
                     .doClick(By.className("miniCart"))
                     .doWaitUntil(ExpectedConditions.urlContains("/cart"))

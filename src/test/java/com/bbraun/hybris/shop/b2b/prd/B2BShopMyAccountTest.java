@@ -32,7 +32,7 @@ public class B2BShopMyAccountTest {
                     .execute(B2BActions::loginPRD) //
 
                     .assertUrl("https://shop.bbraun.com/bob") //
-                    .doClick(By.linkText("20158045"))
+                    .doClick(By.linkText("0020158045"))
                     .doWaitUntil(urlContains("https://shop.bbraun.com"))
 
                     .doClick(By.linkText("Ihr Konto"))
