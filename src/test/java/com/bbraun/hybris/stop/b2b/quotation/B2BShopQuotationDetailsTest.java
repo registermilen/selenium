@@ -28,7 +28,7 @@ import io.qameta.allure.Story;
 
 @Epic("B2B E-Shop Tests")
 @Feature("Quotation Tests")
-@RunOnStage(stages = "QAS")
+@RunOnStage(stages = {"QAS"})
 public class B2BShopQuotationDetailsTest {
 	
 	@Rule

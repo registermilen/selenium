@@ -29,7 +29,7 @@ public class B2BShopProductCatalogTest {
                     .execute(B2BActions::loginPRD) //
 
                     .assertUrl("https://shop.bbraun.com/bob") //
-                    .doClick(By.linkText("20158045"))
+                    .doClick(By.linkText("0020158045"))
                     .doWaitUntil(ExpectedConditions.urlContains("https://shop.bbraun.com"))
                     .doClick(By.className("catalog"))
                     .doWaitUntil(ExpectedConditions.urlContains("bbraunRootCategory"))

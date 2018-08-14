@@ -29,7 +29,7 @@ public class B2BShopStaticPageTest {
                     .execute(B2BActions::loginPRD) //
 
                     .assertUrl("https://shop.bbraun.com/bob") //
-                    .doClick(By.linkText("20158045"))
+                    .doClick(By.linkText("0020158045"))
                     .doWaitUntil(ExpectedConditions.urlContains("https://shop.bbraun.com"))
                     .assertElementExists(By.linkText("Nutzungsbedingungen"))
                     .doClick(By.linkText("Nutzungsbedingungen"))
@@ -50,7 +50,7 @@ public class B2BShopStaticPageTest {
                     .execute(B2BActions::loginPRD) //
 
                     .assertUrl("https://shop.bbraun.com/bob") //
-                    .doClick(By.linkText("20158045"))
+                    .doClick(By.linkText("0020158045"))
                     .doWaitUntil(ExpectedConditions.urlContains("https://shop.bbraun.com"))
                     .assertElementExists(By.linkText("Datenschutz"))
                     .doClick(By.linkText("Datenschutz"))
