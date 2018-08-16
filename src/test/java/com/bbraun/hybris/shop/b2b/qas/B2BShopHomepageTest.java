@@ -29,7 +29,7 @@ public class B2BShopHomepageTest {
                     .execute(B2BActions::loginQAS) //
 
                     .assertUrl("https://qas-shop.bbraun.com/bob") //
-                    .doClick(By.linkText("20005585"))
+                    .doClick(By.linkText("0020005585"))
                     .doWaitUntil(ExpectedConditions.urlContains("https://qas-shop.bbraun.com"))
                     .assertTextDisplayedOnPage("Meine Favoriten")
             ;
