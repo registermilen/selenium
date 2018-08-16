@@ -33,7 +33,7 @@ public class B2BShopSearchTest {
                     .execute(B2BActions::loginQAS) //
 
                     .assertUrl(containsString("/bob")) //
-                    .doClick(By.linkText("20005585"))
+                    .doClick(By.linkText("0020005585"))
                     .doWaitUntil(visibilityOfElementLocated(By.id("search")))
 
                     .doType(By.id("search"), "Introcan")
@@ -57,7 +57,7 @@ public class B2BShopSearchTest {
                     .execute(B2BActions::loginQAS) //
 
                     .assertUrl(containsString("/bob")) //
-                    .doClick(By.linkText("20005585"))
+                    .doClick(By.linkText("0020005585"))
                     .doWaitUntil(visibilityOfElementLocated(By.id("search")))
 
                     .doType(By.id("search"), "Blablabla")
@@ -82,7 +82,7 @@ public class B2BShopSearchTest {
                     .execute(B2BActions::loginQAS) //
 
                     .assertUrl(containsString("/bob")) //
-                    .doClick(By.linkText("20005585"))
+                    .doClick(By.linkText("0020005585"))
                     .doWaitUntil(visibilityOfElementLocated(By.id("search")))
 
                     .doType(By.id("search"), "Introcan")

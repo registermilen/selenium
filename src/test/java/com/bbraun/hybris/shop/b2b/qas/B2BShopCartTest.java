@@ -32,7 +32,7 @@ public class B2BShopCartTest {
                     .execute(B2BActions::loginQAS) //
 
                     .assertUrl("https://qas-shop.bbraun.com/bob") //
-                    .doClick(By.linkText("20005585"))
+                    .doClick(By.linkText("0020005585"))
                     .doWaitUntil(visibilityOfElementLocated(By.className("miniCart")))
 
                     .doClick(By.className("miniCart"))
@@ -57,7 +57,7 @@ public class B2BShopCartTest {
                     .execute(B2BActions::loginQAS) //
 
                     .assertUrl("https://qas-shop.bbraun.com/bob") //
-                    .doClick(By.linkText("20005585"))
+                    .doClick(By.linkText("0020005585"))
                     .doWaitUntil(visibilityOfElementLocated(By.className("miniCart")))
                     .doClick(By.className("miniCart"))
 

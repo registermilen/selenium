@@ -32,7 +32,7 @@ public class B2BShopFavoritesTest {
                     .execute(B2BActions::loginQAS) //
 
                     .assertUrl(containsString("/bob")) //
-                    .doClick(By.linkText("20005585"))
+                    .doClick(By.linkText("0020005585"))
                     .doWaitUntil(visibilityOfElementLocated(By.id("search")))
 
                     .doType(By.id("search"), "PRID00003923")
@@ -63,7 +63,7 @@ public class B2BShopFavoritesTest {
                     .execute(B2BActions::loginQAS)
 
                     .assertUrl(containsString("/bob")) //
-                    .doClick(By.linkText("20005585"))
+                    .doClick(By.linkText("0020005585"))
                     .doWaitUntil(visibilityOfElementLocated(By.id("search")))
 
                     .doOpenUrl("https://qas-shop.bbraun.com/p/PRID00003923")
@@ -93,7 +93,7 @@ public class B2BShopFavoritesTest {
                     .execute(B2BActions::loginQAS) //
 
                     .assertUrl(containsString("/bob")) //
-                    .doClick(By.linkText("20005585"))
+                    .doClick(By.linkText("0020005585"))
                     .doWaitUntil(visibilityOfElementLocated(By.id("search")))
 
                     .doOpenUrl("https://qas-shop.bbraun.com/p/000000000004251300")

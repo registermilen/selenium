@@ -52,9 +52,9 @@ public class B2BShopLoginTest {
 
                     .doClick(By.linkText("Switch User"))
                     .assertUrl("https://qas-shop.bbraun.com/bob")
-                    .doClick(By.linkText("20005585"))
+                    .doClick(By.linkText("0020005585"))
                     .doWaitUntil(ExpectedConditions.urlContains("https://qas-shop.bbraun.com"))
-                    .assertTextDisplayedOnPage("20005585")
+                    .assertTextDisplayedOnPage("0020005585")
             ;
         });
     }
