@@ -46,9 +46,9 @@ public class B2BShopLoginTest {
                     .execute(B2BActions::loginQAS) //
 
                     .assertUrl("https://qas-shop.bbraun.com/bob") //
-                    .doClick(By.linkText("20344385"))
+                    .doClick(By.linkText("0020344385"))
                     .doWaitUntil(ExpectedConditions.urlContains("https://qas-shop.bbraun.com"))
-                    .assertTextDisplayedOnPage("20344385")
+                    .assertTextDisplayedOnPage("0020344385")
 
                     .doClick(By.linkText("Switch User"))
                     .assertUrl("https://qas-shop.bbraun.com/bob")
