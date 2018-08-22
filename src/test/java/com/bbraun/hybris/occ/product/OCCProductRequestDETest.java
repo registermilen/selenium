@@ -1,6 +1,7 @@
 package com.bbraun.hybris.occ.product;
 
 import io.qameta.allure.*;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import com.bbraun.bbmtest.ws.BBMWebServiceTestBuilder;
@@ -54,6 +55,7 @@ public class OCCProductRequestDETest {
 		;
 	}
 
+	@Ignore
 	@Test
 	@Severity(SeverityLevel.CRITICAL)
 	@Description("Test Description: Get Article by material number with AEM user.")
@@ -86,6 +88,7 @@ public class OCCProductRequestDETest {
 		;
 	}
 
+	@Ignore
 	@Test
 	@Severity(SeverityLevel.CRITICAL)
 	@Description("Test Description: Get Image classification by material number with AEM user.")
