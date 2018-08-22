@@ -1,6 +1,7 @@
 package com.bbraun.hybris.occ.gtin;
 
 import io.qameta.allure.*;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import com.bbraun.bbmtest.ws.BBMWebServiceTestBuilder;
@@ -17,6 +18,7 @@ import io.restassured.http.ContentType;
 @Feature("OCC GTIN endpoint Tests")
 public class OCCGTINRequestTest {
 
+	@Ignore
 	@Test
 	@Severity(SeverityLevel.NORMAL)
 	@Description("Test Description: Get article by GTIN")
