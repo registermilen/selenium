@@ -1,4 +1,4 @@
-package com.bbraun.hybris.stop.b2c.cart;
+package com.bbraun.hybris.shop.b2c.cart;
 
 import static org.hamcrest.core.StringContains.containsString;
 import static org.openqa.selenium.support.ui.ExpectedConditions.urlContains;
@@ -24,9 +24,9 @@ import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
 
-@Epic("B2B E-Shop Tests")
+@Epic("B2C E-Shop Tests")
 @Feature("Checkout Tests")
-@RunOnStage(stages = {"QAS", "PRD"})
+@RunOnStage(stages = {"QAS" /*, "PRD" */})
 public class B2CShopCartCheckoutTest {
 	
 	@Rule
@@ -85,8 +85,9 @@ public class B2CShopCartCheckoutTest {
                     .doType(By.id("deliveryStreet"), "123 Main St")
                     .doType(By.id("deliveryPostalCode"), "456")
                     .doType(By.id("deliveryCity"), "Town")
-                    .doType(By.id("billingEMail"), "mail@example.com")
-                    
+                    .doType(By.id("deliveryEMail"), "mail@example.com")
+                    .doType(By.id("deliveryPhone"), "0030 351242 2145")
+
                     .doClick(By.className("float-right")) 
                     .doType(By.id("deliveryPostalCode"), "456789")
                     
@@ -97,5 +98,22 @@ public class B2CShopCartCheckoutTest {
                     
             		;
         });
+	}
+
+
+	@Test
+	@Severity(SeverityLevel.NORMAL)
+	@Description("Test Description: Check that INC number is rendered on page.")
+	@Issue("PCAG-4827")
+	@Story("INC Number Rendering")
+	public void testRenderINCNumeberOnPage() {
+		UiTest.go(builder -> {
+			builder.doStartBrowser() //
+					.doMaximizeWindow() //
+					.doOpenUrl(initialURL) // Initial url contains login information
+					.assertUrl(containsString("/cart"))
+					.assertTextDisplayedOnPage("INC_201808")
+			;
+		});
 	}
 }

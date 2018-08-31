@@ -41,22 +41,23 @@ public class B2BShopCheckoutTest {
                     .assertUrl(containsString("/cart"))
                     .doOpenUrl("https://qas-shop.bbraun.com/cart/remove") // clear cart
 
-                    .doType(By.className("instantAddToCartQty"), "100") // currently means 1001
                     .doType(By.name("productCodePost"), "4097076")
-                    .doClick(By.className("code"))
-                    .doClick(By.id("instantAddToCartButton"))
+                    .doSubmitForm(By.id("instantAddToCartForm"))
                     .assertElementExists(By.className("cartItem")) // cart item row
+
+                    .doSelectOptionFromSelectByIndex(By.id("uom"), 1)
+
                     .doClick(By.id("checkoutButtonTop"))
                     .doWaitUntil(urlContains("/checkout/multi/common-information/add"))
                     .assertTextDisplayedOnPage("Bestellübersicht")
                     .assertTextDisplayedOnPage("Gesamtnettopreis")
-                    .assertTextDisplayedOnPage("329,33")
+                    .assertTextDisplayedOnPage("32,90")
                     .assertTextDisplayedOnPage("Mindermengenzuschlag")
                     .assertTextDisplayedOnPage("30,00")
                     .assertTextDisplayedOnPage("Mehrwertsteuer")
-                    .assertTextDisplayedOnPage("27,67")
+                    .assertTextDisplayedOnPage("4,84")
                     .assertTextDisplayedOnPage("Rechnungsbetrag")
-                    .assertTextDisplayedOnPage("387,00")
+                    .assertTextDisplayedOnPage("67,75")
 
                     .doClick(By.className("force-right")) // Weiter
                     .doWaitUntil(urlContains("/checkout/multi/delivery-method/choose"))
