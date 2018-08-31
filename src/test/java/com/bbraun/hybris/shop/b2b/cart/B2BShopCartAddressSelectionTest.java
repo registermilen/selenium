@@ -1,6 +1,7 @@
-package com.bbraun.hybris.stop.b2b.cart;
+package com.bbraun.hybris.shop.b2b.cart;
 
 import static org.hamcrest.core.StringContains.containsString;
+import static org.openqa.selenium.support.ui.ExpectedConditions.urlContains;
 import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElementLocated;
 
 import org.junit.ClassRule;
@@ -25,10 +26,10 @@ import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
 
-@Epic("B2C E-Shop Tests")
+@Epic("B2B E-Shop Tests")
 @Feature("Checkout Tests")
 @RunOnStage(stages = {"QAS", "PRD"})
-public class B2BShopCartCheckoutValidationTest {
+public class B2BShopCartAddressSelectionTest {
 	
 	@Rule
     public RunOnStageRule rule = new RunOnStageRule();
@@ -54,13 +55,18 @@ public class B2BShopCartCheckoutValidationTest {
 	@TestProperty("hybris.shop.b2b.german.b2bunit")
 	private static String b2bUnit;
 	
+	@TestProperty("hybris.shop.b2b.german.address.name1")
+	private static String addressName1;
+	
+	@TestProperty("hybris.shop.b2b.german.address.line1")
+	private static String addressLine1;
+	
 	
 	@Test
 	@Severity(SeverityLevel.CRITICAL)
-	@Description("Test Description: Try to checkout invalid quantity for a "
-			+ "product with minimum valid quantity, correct it and proceed to checkout.")
-	@Issue("PCAG-3815")
-	@Story("Error Handling in Cart")
+	@Description("Test Description: Make sure address is selectable on cart level.")
+	@Story("Introduce address selection component on cart position")
+	@Issue("PCAG-4707")
 	public void testProductCheckoutWithInvalidThenValidQuantity() {
 		UiTest.go(builder -> {
             builder.doStartBrowser() //
@@ -81,20 +87,38 @@ public class B2BShopCartCheckoutValidationTest {
                     .doClick(By.id("instantAddToCartButton"))
                     .assertElementExists(By.className("cartItem")) // cart item row
 
-                    .doClick(By.id("checkoutButtonTop"))
+                    .assertElementExists(By.id("summaryDeliveryAddress"))
+                    .assertTextDisplayedOn(By.id("name1"), addressName1)
+                    .assertTextDisplayedOn(By.id("line1"), addressLine1)
+                    
+                    
+                    .doClick(By.id("viewAddressBook"))
+                    
+                    .assertElementExists(By.className("addressList"))
+                    
+                    .doClick(By.className("useThisAddress"))
                     
                     .assertUrl(containsString("/cart"))//make sure we stay on the cart
-                    .assertTextDisplayedOnPage("Fehler im Bestellvorgang") //cart level error message
-                    
-                    .assertTextDisplayedOnPage("Bitte die Mindestbestellmenge beachten") //item level error message
-                    .assertTextDisplayedOnPage("Preis kann nicht ermittelt werden") //item level error message
-                    
+                                        
                     .doType(By.name("quantity"), 200)
                     .doClick(By.className("_shopitems-item__update"))
                     
                     .doClick(By.id("checkoutButtonTop"))
                     
                     .doWaitUntil(ExpectedConditions.urlContains("/checkout"))
+                    
+                    .doClick(By.className("force-right")) // Weiter
+                    .doWaitUntil(urlContains("/checkout/multi/delivery-method/choose"))
+                    .assertTextDisplayedOnPage("Liefervereinbarung")
+
+                    .doClick(By.className("force-right")) // Weiter
+                    .doWaitUntil(urlContains("/checkout/multi/summary/view"))
+                    .assertTextDisplayedOnPage("Abschließende Prüfung")
+                    
+                    .assertTextDisplayedOnPage(addressName1)
+                    .assertTextDisplayedOnPage(addressLine1)
+                    
+
                     // There is no real order executed here !!!
                     .doOpenUrl(host+"/cart/remove") // clear cart
 //                    .doOpenUrl("https://shop.bbraun.com/cart/remove") // clear cart

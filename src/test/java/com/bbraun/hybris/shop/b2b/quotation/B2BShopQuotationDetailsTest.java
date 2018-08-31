@@ -1,4 +1,4 @@
-package com.bbraun.hybris.stop.b2b.cart;
+package com.bbraun.hybris.shop.b2b.quotation;
 
 import static org.hamcrest.core.StringContains.containsString;
 import static org.openqa.selenium.support.ui.ExpectedConditions.urlContains;
@@ -27,9 +27,9 @@ import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
 
 @Epic("B2B E-Shop Tests")
-@Feature("Checkout Tests")
-@RunOnStage(stages = {"QAS", "PRD"})
-public class B2BShopCartAddressSelectionTest {
+@Feature("Quotation Tests")
+@RunOnStage(stages = {"QAS"})
+public class B2BShopQuotationDetailsTest {
 	
 	@Rule
     public RunOnStageRule rule = new RunOnStageRule();
@@ -40,33 +40,32 @@ public class B2BShopCartAddressSelectionTest {
 	@TestProperty("hybris.shop.b2b.host")
 	private static String host;
 	
-	@TestProperty("hybris.shop.b2b.german.user.username")
+	@TestProperty("hybris.shop.b2b.vn.user.username")
 	private static String username;
 	
-	@TestProperty("hybris.shop.b2b.german.user.password")
+	@TestProperty("hybris.shop.b2b.vn.user.password")
 	private static String password;
 	
 	@TestProperty("hybris.shop.b2b.initial.url")
 	private static String initialURL;
 	
-	@TestProperty("hybris.shop.b2b.german.product.with.minimal.quantity")
-	private static String productWithMinimalQuantity;
-	
-	@TestProperty("hybris.shop.b2b.german.b2bunit")
+	@TestProperty("hybris.shop.b2b.vn.b2bunit")
 	private static String b2bUnit;
 	
-	@TestProperty("hybris.shop.b2b.german.address.name1")
-	private static String addressName1;
+	@TestProperty("hybris.shop.b2b.vn.product")
+	private static String product;
 	
-	@TestProperty("hybris.shop.b2b.german.address.line1")
-	private static String addressLine1;
+	@TestProperty("hybris.shop.b2b.vn.delivery.address.label")
+	private static String deliveryAddressLabel;
 	
+	@TestProperty("hybris.shop.b2b.vn.delivery.method.label")
+	private static String deliveryMethodLabel;
 	
 	@Test
 	@Severity(SeverityLevel.CRITICAL)
-	@Description("Test Description: Make sure address is selectable on cart level.")
-	@Story("Introduce address selection component on cart position")
-	@Issue("PCAG-4707")
+	@Description("Test Description: Place a PCR and make sure the details are propertly displayed.")
+	@Story("Create Order based on confirmed PCR")
+	@Issue("PCAG-4451")
 	public void testProductCheckoutWithInvalidThenValidQuantity() {
 		UiTest.go(builder -> {
             builder.doStartBrowser() //
@@ -82,46 +81,37 @@ public class B2BShopCartAddressSelectionTest {
                     .doOpenUrl(host+"/cart/remove") // clear cart
 
                     .doWaitUntil(visibilityOfElementLocated(By.name("productCodePost")))
-                    .doType(By.name("productCodePost"), productWithMinimalQuantity)
+                    .doType(By.name("productCodePost"), product)
                     .doClick(By.className("code"))
                     .doClick(By.id("instantAddToCartButton"))
                     .assertElementExists(By.className("cartItem")) // cart item row
 
-                    .assertElementExists(By.id("summaryDeliveryAddress"))
-                    .assertTextDisplayedOn(By.id("name1"), addressName1)
-                    .assertTextDisplayedOn(By.id("line1"), addressLine1)
+                    .doClick(By.id("checkoutPcrButtonTop"))
                     
+                    .assertUrl(containsString("/checkout/multi/common-information/add"))
                     
-                    .doClick(By.id("viewAddressBook"))
-                    
-                    .assertElementExists(By.className("addressList"))
-                    
-                    .doClick(By.className("useThisAddress"))
-                    
-                    .assertUrl(containsString("/cart"))//make sure we stay on the cart
-                                        
-                    .doType(By.name("quantity"), 200)
-                    .doClick(By.className("_shopitems-item__update"))
-                    
-                    .doClick(By.id("checkoutButtonTop"))
-                    
-                    .doWaitUntil(ExpectedConditions.urlContains("/checkout"))
-                    
-                    .doClick(By.className("force-right")) // Weiter
+                    .doType(By.id("purchaseOrderNumber"), "testRefNumber")
+                    .doType(By.id("cartPriceChangeRequest"), "1111")
+                    .doType(By.id("cartText"), "some text")
+
+                    .doClick(By.className("force-right")) 
                     .doWaitUntil(urlContains("/checkout/multi/delivery-method/choose"))
-                    .assertTextDisplayedOnPage("Liefervereinbarung")
-
-                    .doClick(By.className("force-right")) // Weiter
+                    
+                    .assertTextDisplayedOnPage("1,111") // VND / PC"
+                    
+                    .doClick(By.className("force-right")) 
                     .doWaitUntil(urlContains("/checkout/multi/summary/view"))
-                    .assertTextDisplayedOnPage("Abschließende Prüfung")
                     
-                    .assertTextDisplayedOnPage(addressName1)
-                    .assertTextDisplayedOnPage(addressLine1)
-                    
+                    .doClick(By.className("force-right")) //place quotation
 
-                    // There is no real order executed here !!!
-                    .doOpenUrl(host+"/cart/remove") // clear cart
-//                    .doOpenUrl("https://shop.bbraun.com/cart/remove") // clear cart
+                    //redirected to quotation details
+                    
+                    .doWaitUntil(urlContains("/my-account/quotation/"))
+                    .assertTextDisplayedOnPage("Quotation Details")
+                    .assertTextDisplayedOnPage("Your Reference: testRefNumber")
+                    .assertTextDisplayedOnPage("some text")
+                    .assertTextDisplayedOnPage(deliveryAddressLabel)
+                    .assertTextDisplayedOnPage(deliveryMethodLabel) 
             ;
         });
 	}
