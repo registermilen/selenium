@@ -112,7 +112,7 @@ public class B2CShopCartCheckoutTest {
 					.doMaximizeWindow() //
 					.doOpenUrl(initialURL) // Initial url contains login information
 					.assertUrl(containsString("/cart"))
-					.assertTextDisplayedOnPage("INC_201808")
+					.assertTextDisplayedOnPage("INC_201806")
 			;
 		});
 	}
