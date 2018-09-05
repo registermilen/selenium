@@ -38,8 +38,9 @@ public class B2BShopProductDetailPageTest {
                     .doWaitUntil(ExpectedConditions.urlContains("https://qas-shop.bbraun.com/p/PRID00003923"))
                     .assertTextDisplayedOnPage("Introcan®")
 
-                    .doScrollToElement(By.id("billOfMaterialItems"))
-                    .assertElementExists(By.xpath("//*[@id=\"billOfMaterialItems\"]/tbody/tr[2]"))
+                    .doScrollToElement(By.id("billOfMaterialItemsARTICLES"))
+                    .assertElementExists(By.id("billOfMaterialItemsARTICLES"))
+                    .assertElementExists(By.xpath("//*[@id=\"billOfMaterialItemsARTICLES\"]/tbody/tr[2]"))
             ;
         });
     }
