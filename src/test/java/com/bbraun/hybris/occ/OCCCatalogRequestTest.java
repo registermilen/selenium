@@ -1,6 +1,9 @@
 package com.bbraun.hybris.occ;
 
+import com.bbraun.bbmtest.conf.TestProperty;
+import com.bbraun.bbmtest.conf.TestPropertyRule;
 import io.qameta.allure.*;
+import org.junit.ClassRule;
 import org.junit.Test;
 
 import com.bbraun.bbmtest.ws.BBMWebServiceTestBuilder;
@@ -19,6 +22,22 @@ import io.restassured.http.ContentType;
 @Feature("OCC Catalog endpoint Tests")
 public class OCCCatalogRequestTest {
 
+	@ClassRule
+	public static TestPropertyRule testPropertiesRule = new TestPropertyRule();
+
+	@TestProperty("hybris.oauth.username")
+	private static String oAuthUsername;
+
+	@TestProperty("hybris.oauth.password")
+	private static String oAuthPassword;
+
+	@TestProperty("hybris.oauth.url")
+	private static String oAuthUrl;
+
+	@TestProperty("hybris.occ.catalog.url")
+	private static String occCatalogUrl;
+
+
 	@Test
 	@Severity(SeverityLevel.CRITICAL)
 	@Description("Test Description: Get Catalog by id with AEM user.")
@@ -27,16 +46,16 @@ public class OCCCatalogRequestTest {
 		new BBMWebServiceTestBuilder<>() //
 				.withNewRequest() //
 				.withBasicAuth("trusted_client", "secret") //
-				.doAuthenticateOAuth2("${hybris.oauth.url}", //
+				.doAuthenticateOAuth2(oAuthUrl, //
 						GrantType.PASSWORD, //
-						"${hybris.oauth.username}", //
-						"${hybris.oauth.password}") //
+						oAuthUsername, //
+						oAuthPassword) //
 				.withNewRequest() //
 				.withQueryParam("applicationKey", "AEM2015")//
 				.withQueryParam("viewId", "en_01") //
 				.withQueryParam("access_token", "${accessToken}") //
 
-				.doGet("${hybris.occ.catalog.url}") //
+				.doGet(occCatalogUrl) //
 
 				.assertResponseContentType(ContentType.JSON) //
 				.assertResponseBodyByPathNotNull("categories") //
@@ -51,16 +70,16 @@ public class OCCCatalogRequestTest {
 		new BBMWebServiceTestBuilder<>() //
 				.withNewRequest() //
 				.withBasicAuth("trusted_client", "secret") //
-				.doAuthenticateOAuth2("${hybris.oauth.url}", //
+				.doAuthenticateOAuth2(oAuthUrl, //
 						GrantType.PASSWORD, //
-						"${hybris.oauth.username}", //
-						"${hybris.oauth.password}") //
+						oAuthUsername, //
+						oAuthPassword) //
 				.withNewRequest() //
 				.withQueryParam("applicationKey", "AEM2015")//
 				.withQueryParam("viewId", "ru_RU") //
 				.withQueryParam("access_token", "${accessToken}") //
 
-				.doGet("${hybris.occ.catalog.url}") //
+				.doGet(occCatalogUrl) //
 
 				.assertResponseContentType(ContentType.JSON) //
 				.assertResponseBodyByPathNotNull("categories") //

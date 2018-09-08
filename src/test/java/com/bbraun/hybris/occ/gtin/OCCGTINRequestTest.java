@@ -1,6 +1,9 @@
 package com.bbraun.hybris.occ.gtin;
 
+import com.bbraun.bbmtest.conf.TestProperty;
+import com.bbraun.bbmtest.conf.TestPropertyRule;
 import io.qameta.allure.*;
+import org.junit.ClassRule;
 import org.junit.Ignore;
 import org.junit.Test;
 
@@ -18,6 +21,24 @@ import io.restassured.http.ContentType;
 @Feature("OCC GTIN endpoint Tests")
 public class OCCGTINRequestTest {
 
+	@ClassRule
+	public static TestPropertyRule testPropertiesRule = new TestPropertyRule();
+
+	@TestProperty("hybris.oauth.username")
+	private static String oAuthUsername;
+
+	@TestProperty("hybris.oauth.password")
+	private static String oAuthPassword;
+
+	@TestProperty("hybris.oauth.url")
+	private static String oAuthUrl;
+
+	@TestProperty("hybris.occ.gtin.softasept.url")
+	private static String gtinSoftaseptUrl;
+
+	@TestProperty("hybris.occ.gtin.unknown.url")
+	private static String gtinUnknownProductUrl;
+
 	@Ignore
 	@Test
 	@Severity(SeverityLevel.NORMAL)
@@ -27,16 +48,16 @@ public class OCCGTINRequestTest {
 		new BBMWebServiceTestBuilder<>() //
 				.withNewRequest() //
 				.withBasicAuth("trusted_client", "secret") //
-				.doAuthenticateOAuth2("${hybris.oauth.url}", //
+				.doAuthenticateOAuth2(oAuthUrl, //
 						GrantType.PASSWORD, //
-						"${hybris.oauth.username}", //
-						"${hybris.oauth.password}") //
+						oAuthUsername, //
+						oAuthPassword) //
 				.withNewRequest() //
 				.withQueryParam("applicationKey", "AEM2015")//
 				.withQueryParam("viewId", "de_DE") //
 				.withQueryParam("access_token", "${accessToken}") //
 
-				.doGet("${hybris.occ.gtin.softasept.url}") //
+				.doGet(gtinSoftaseptUrl) //
 
 				.assertResponseContentType(ContentType.JSON) //
 				.assertResponseBodyByPathEquals("code", "000000000003887138") //
@@ -52,16 +73,16 @@ public class OCCGTINRequestTest {
 		new BBMWebServiceTestBuilder<>() //
 		.withNewRequest() //
 		.withBasicAuth("trusted_client", "secret") //
-		.doAuthenticateOAuth2("${hybris.oauth.url}", //
+		.doAuthenticateOAuth2(oAuthUrl, //
 				GrantType.PASSWORD, //
-				"${hybris.oauth.username}", //
-				"${hybris.oauth.password}") //
+				oAuthUsername, //
+				oAuthPassword) //
 		.withNewRequest() //
 		.withQueryParam("applicationKey", "AEM2015")//
 		.withQueryParam("viewId", "de_DE") //
 		.withQueryParam("access_token", "${accessToken}") //
 		
-		.doGet("${hybris.occ.gtin.unknown.url}") //
+		.doGet(gtinUnknownProductUrl) //
 		
 		.assertResponseContentType(ContentType.JSON) //
 		.assertResponseBodyEqualsReference("OCC_GTIN_Unknown_Expected.json")
@@ -78,7 +99,7 @@ public class OCCGTINRequestTest {
 				.withQueryParam("applicationKey", "BarcodeApp")//
 				.withQueryParam("viewId", "de_DE") //
 
-				.doGet("${hybris.occ.gtin.softasept.url}") //
+				.doGet(gtinSoftaseptUrl) //
 
 				.assertResponseContentType(ContentType.JSON) //
 				.assertResponseBodyByPathEquals("code", "000000000003887138") //

@@ -21,7 +21,6 @@ import io.restassured.http.ContentType;
 @Feature("OCC Authentication Tests")
 public class OCCAuthenticationTest {
 
-
 	@ClassRule
 	public static TestPropertyRule testPropertiesRule = new TestPropertyRule();
 

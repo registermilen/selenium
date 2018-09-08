@@ -1,6 +1,9 @@
 package com.bbraun.hybris.occ.product;
 
+import com.bbraun.bbmtest.conf.TestProperty;
+import com.bbraun.bbmtest.conf.TestPropertyRule;
 import io.qameta.allure.*;
+import org.junit.ClassRule;
 import org.junit.Ignore;
 import org.junit.Test;
 
@@ -21,6 +24,36 @@ import io.restassured.http.ContentType;
 @Feature("OCC Product endpoint Tests")
 public class OCCProductRequestUSATest {
 
+	@ClassRule
+	public static TestPropertyRule testPropertiesRule = new TestPropertyRule();
+
+	@TestProperty("hybris.oauth.username")
+	private static String oAuthUsername;
+
+	@TestProperty("hybris.oauth.password")
+	private static String oAuthPassword;
+
+	@TestProperty("hybris.oauth.url")
+	private static String oAuthUrl;
+
+	@TestProperty("hybris.occ.product.prid1011.url")
+	private static String prid1011Url;
+
+	@TestProperty("hybris.occ.product.prid1011.expectedFile")
+	private static String prid1011ExpectedFile;
+
+	@TestProperty("hybris.occ.product.article425161102.url")
+	private static String articleUrl;
+
+	@TestProperty("hybris.occ.product.article425161102.expectedFile")
+	private static String articleExpectedFile;
+
+	@TestProperty("hybris.occ.product.introcan.bpg.url")
+	private static String introcanBpgUrl;
+
+	@TestProperty("hybris.occ.product.introcan.bpg.expectedFile")
+	private static String introcanBpgExpectedFile;
+
 	@Test
 	@Severity(SeverityLevel.CRITICAL)
 	@Description("Test Description: Get PRID by material number with AEM user.")
@@ -29,19 +62,19 @@ public class OCCProductRequestUSATest {
 		new BBMWebServiceTestBuilder<>() //
 				.withNewRequest() //
 				.withBasicAuth("trusted_client", "secret") //
-				.doAuthenticateOAuth2("${hybris.oauth.url}", //
+				.doAuthenticateOAuth2(oAuthUrl, //
 						GrantType.PASSWORD, //
-						"${hybris.oauth.username}", //
-						"${hybris.oauth.password}") //
+						oAuthUsername, //
+						oAuthPassword) //
 				.withNewRequest() //
 				.withQueryParam("applicationKey", "AEM2015")//
 				.withQueryParam("viewId", "en_us") //
 				.withQueryParam("access_token", "${accessToken}") //
 
-				.doGet("${hybris.occ.product.prid1011.url}") //
+				.doGet(prid1011Url) //
 
 				.assertResponseContentType(ContentType.JSON) //
-				.assertResponseBodyEqualsReference("${hybris.occ.product.prid1011.expectedFile}",
+				.assertResponseBodyEqualsReference(prid1011ExpectedFile,
 						"sapModifiedTime", "productReferences", "billOfMaterials", "localizedBkcTexts",
 						"classifications", "marketingReleaseFeatureValue") //
 				
@@ -63,19 +96,19 @@ public class OCCProductRequestUSATest {
 		new BBMWebServiceTestBuilder<>() //
 				.withNewRequest() //
 				.withBasicAuth("trusted_client", "secret") //
-				.doAuthenticateOAuth2("${hybris.oauth.url}", //
+				.doAuthenticateOAuth2(oAuthUrl, //
 						GrantType.PASSWORD, //
-						"${hybris.oauth.username}", //
-						"${hybris.oauth.password}") //
+						oAuthUsername, //
+						oAuthPassword) //
 				.withNewRequest() //
 				.withQueryParam("applicationKey", "AEM2015")//
 				.withQueryParam("viewId", "en_us") //
 				.withQueryParam("access_token", "${accessToken}") //
 
-				.doGet("${hybris.occ.product.article425161102.url}") //
+				.doGet(articleUrl) //
 
 				.assertResponseContentType(ContentType.JSON) //
-				.assertResponseBodyEqualsReference("${hybris.occ.product.article425161102.expectedFile}",
+				.assertResponseBodyEqualsReference(articleExpectedFile,
 						"sapModifiedTime", "productReferences", "materialLocalDatas", "eanNumber", "uom",
 						"classifications","localizedBkcTexts") //
 
@@ -99,20 +132,20 @@ public class OCCProductRequestUSATest {
 		new BBMWebServiceTestBuilder<>() //
 				.withNewRequest() //
 				.withBasicAuth("trusted_client", "secret") //
-				.doAuthenticateOAuth2("${hybris.oauth.url}", //
+				.doAuthenticateOAuth2(oAuthUrl, //
 						GrantType.PASSWORD, //
-						"${hybris.oauth.username}", //
-						"${hybris.oauth.password}") //
+						oAuthUsername, //
+						oAuthPassword) //
 				.withNewRequest() //
 				.withQueryParam("applicationKey", "AEM2015")//
 				.withQueryParam("viewId", "en_us") //
 				.withQueryParam("access_token", "${accessToken}") //
 
-				.doGet("${hybris.occ.product.introcan.bpg.url}") //
+				.doGet(introcanBpgUrl) //
 
 				.assertResponseContentType(ContentType.JSON) //
 				.assertResponseBodyPartEqualsReference("classifications",
-						"${hybris.occ.product.introcan.bpg.expectedFile}") //
+						introcanBpgExpectedFile) //
 		;
 	}
 }

@@ -1,6 +1,9 @@
 package com.bbraun.hybris.occ.product;
 
+import com.bbraun.bbmtest.conf.TestProperty;
+import com.bbraun.bbmtest.conf.TestPropertyRule;
 import io.qameta.allure.*;
+import org.junit.ClassRule;
 import org.junit.Ignore;
 import org.junit.Test;
 
@@ -21,6 +24,36 @@ import io.restassured.http.ContentType;
 @Feature("OCC Product endpoint Tests")
 public class OCCProductRequestDETest {
 
+	@ClassRule
+	public static TestPropertyRule testPropertiesRule = new TestPropertyRule();
+
+	@TestProperty("hybris.oauth.username")
+	private static String oAuthUsername;
+
+	@TestProperty("hybris.oauth.password")
+	private static String oAuthPassword;
+
+	@TestProperty("hybris.oauth.url")
+	private static String oAuthUrl;
+
+	@TestProperty("hybris.occ.product.prid1011.url")
+	private static String prid1011Url;
+
+	@TestProperty("hybris.occ.product.prid1011.expectedFile")
+	private static String prid1011ExpectedFile;
+
+	@TestProperty("hybris.occ.product.article3887138.url")
+	private static String articleUrl;
+
+	@TestProperty("hybris.occ.product.article3887138.expectedFile")
+	private static String articleExpectedFile;
+
+	@TestProperty("hybris.occ.product.sofasept.bpg.url")
+	private static String softaseptBpgUrl;
+
+	@TestProperty("hybris.occ.product.sofasept.bpg.expectedFile")
+	private static String softaseptBgpExpectedFile;
+
 	@Test
 	@Severity(SeverityLevel.CRITICAL)
 	@Description("Test Description: Get PRID by material number with AEM user.")
@@ -29,19 +62,19 @@ public class OCCProductRequestDETest {
 		new BBMWebServiceTestBuilder<>() //
 				.withNewRequest() //
 				.withBasicAuth("trusted_client", "secret") //
-				.doAuthenticateOAuth2("${hybris.oauth.url}", //
+				.doAuthenticateOAuth2(oAuthUrl, //
 						GrantType.PASSWORD, //
-						"${hybris.oauth.username}", //
-						"${hybris.oauth.password}") //
+						oAuthUsername, //
+						oAuthPassword) //
 				.withNewRequest() //
 				.withQueryParam("applicationKey", "AEM2015")//
 				.withQueryParam("viewId", "de_DE") //
 				.withQueryParam("access_token", "${accessToken}") //
 
-				.doGet("${hybris.occ.product.prid1011.url}") //
+				.doGet(prid1011Url) //
 
 				.assertResponseContentType(ContentType.JSON) //
-				.assertResponseBodyEqualsReference("${hybris.occ.product.prid1011.expectedFile}",
+				.assertResponseBodyEqualsReference(prid1011ExpectedFile,
 						"sapModifiedTime", "productReferences", "billOfMaterials", "localizedBkcTexts",
                         "classifications", "marketingReleaseFeatureValue") //
 				
@@ -51,7 +84,6 @@ public class OCCProductRequestDETest {
                 .assertResponseBodyByPathEquals("marketingReleaseFeatureValue.size() > 0", Boolean.TRUE)
 				.assertResponseBodyByPathEquals("productReferences.findAll {p -> p.target.mimeDetails=='image/jpeg'}.size() > 0", Boolean.TRUE) // min. one picture
 				.assertResponseBodyByPathEquals("productReferences.findAll {p -> p.target.mimeDetails=='application/pdf'}.size() > 0", Boolean.TRUE) // min. one document
-
 		;
 	}
 
@@ -64,19 +96,19 @@ public class OCCProductRequestDETest {
 		new BBMWebServiceTestBuilder<>() //
 				.withNewRequest() //
 				.withBasicAuth("trusted_client", "secret") //
-				.doAuthenticateOAuth2("${hybris.oauth.url}", //
+				.doAuthenticateOAuth2(oAuthUrl, //
 						GrantType.PASSWORD, //
-						"${hybris.oauth.username}", //
-						"${hybris.oauth.password}") //
+						oAuthUsername, //
+						oAuthPassword) //
 				.withNewRequest() //
 				.withQueryParam("applicationKey", "AEM2015")//
 				.withQueryParam("viewId", "de_DE") //
 				.withQueryParam("access_token", "${accessToken}") //
 
-				.doGet("${hybris.occ.product.article3887138.url}") //
+				.doGet(articleUrl) //
 
 				.assertResponseContentType(ContentType.JSON) //
-				.assertResponseBodyEqualsReference("${hybris.occ.product.article3887138.expectedFile}",
+				.assertResponseBodyEqualsReference(articleExpectedFile,
 						"sapModifiedTime", "productReferences", "materialLocalDatas", "eanNumber", "uom", "localizedBkcTexts", "classifications") //
 
 				.assertResponseBodyByPathEquals("productReferences.findAll {p -> p.target.mimeDetails=='image/jpeg'}.size() > 0", Boolean.TRUE) // min. one picture
@@ -97,20 +129,20 @@ public class OCCProductRequestDETest {
 		new BBMWebServiceTestBuilder<>() //
 				.withNewRequest() //
 				.withBasicAuth("trusted_client", "secret") //
-				.doAuthenticateOAuth2("${hybris.oauth.url}", //
+				.doAuthenticateOAuth2(oAuthUrl, //
 						GrantType.PASSWORD, //
-						"${hybris.oauth.username}", //
-						"${hybris.oauth.password}") //
+						oAuthUsername, //
+						oAuthPassword) //
 				.withNewRequest() //
 				.withQueryParam("applicationKey", "AEM2015")//
 				.withQueryParam("viewId", "de_DE") //
 				.withQueryParam("access_token", "${accessToken}") //
 
-				.doGet("${hybris.occ.product.sofasept.bpg.url}") //
+				.doGet(softaseptBpgUrl) //
 
 				.assertResponseContentType(ContentType.JSON) //
 				.assertResponseBodyPartEqualsReference("classifications",
-						"${hybris.occ.product.sofasept.bpg.expectedFile}") //
+						softaseptBgpExpectedFile) //
 		;
 	}
 }

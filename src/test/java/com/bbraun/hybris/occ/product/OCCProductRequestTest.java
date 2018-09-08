@@ -1,6 +1,9 @@
 package com.bbraun.hybris.occ.product;
 
+import com.bbraun.bbmtest.conf.TestProperty;
+import com.bbraun.bbmtest.conf.TestPropertyRule;
 import io.qameta.allure.*;
+import org.junit.ClassRule;
 import org.junit.Ignore;
 import org.junit.Test;
 
@@ -20,6 +23,31 @@ import io.restassured.http.ContentType;
 @Feature("OCC Product endpoint Tests")
 public class OCCProductRequestTest {
 
+	@ClassRule
+	public static TestPropertyRule testPropertiesRule = new TestPropertyRule();
+
+	@TestProperty("hybris.oauth.username")
+	private static String oAuthUsername;
+
+	@TestProperty("hybris.oauth.password")
+	private static String oAuthPassword;
+
+	@TestProperty("hybris.oauth.url")
+	private static String oAuthUrl;
+
+	@TestProperty("hybris.occ.product.prid1270.url")
+	private static String prid1270Url;
+
+	@TestProperty("hybris.occ.product.prid988.url")
+	private static String prid988Url;
+
+	@TestProperty("hybris.occ.product.BPR000000000000000100007757500000.url")
+	private static String bprUrl;
+
+	@TestProperty("hybris.occ.product.BPG000000000000000100006550700000.url")
+	private static String bpgUrl;
+
+
 	@Ignore
 	@Test
 	@Severity(SeverityLevel.CRITICAL)
@@ -29,16 +57,16 @@ public class OCCProductRequestTest {
 		new BBMWebServiceTestBuilder<>() //
 				.withNewRequest() //
 				.withBasicAuth("trusted_client", "secret") //
-				.doAuthenticateOAuth2("${hybris.oauth.url}", //
+				.doAuthenticateOAuth2(oAuthUrl, //
 						GrantType.PASSWORD, //
-						"${hybris.oauth.username}", //
-						"${hybris.oauth.password}") //
+						oAuthUsername, //
+						oAuthPassword) //
 				.withNewRequest() //
 				.withQueryParam("applicationKey", "AEM2015")//
 				.withQueryParam("viewId", "en_01") //
 				.withQueryParam("access_token", "${accessToken}") //
 
-				.doGet("${hybris.occ.product.prid1270.url}") //
+				.doGet(prid1270Url) //
 
 				.assertResponseContentType(ContentType.JSON) //
 				.assertResponseBodyByPathEquals("url", "/p/PRID00001270") //
@@ -61,17 +89,17 @@ public class OCCProductRequestTest {
 		new BBMWebServiceTestBuilder<>() //
 				.withNewRequest() //
 				.withBasicAuth("trusted_client", "secret") //
-				.doAuthenticateOAuth2("${hybris.oauth.url}", //
+				.doAuthenticateOAuth2(oAuthUrl, //
 						GrantType.PASSWORD, //
-						"${hybris.oauth.username}", //
-						"${hybris.oauth.password}") //
+						oAuthUsername, //
+						oAuthPassword) //
 				.withNewRequest() //
 				.withQueryParam("applicationKey", "AEM2015")//
 				.withQueryParam("viewId", "en_01") //
 				.withQueryParam("access_token", "${accessToken}") //
 				.withQueryParam("modifiedSince", unixTimestamp5MinutesAgo) //
 
-				.doGet("${hybris.occ.product.prid1270.url}") //
+				.doGet(prid1270Url) //
 
 				.assertResponseContentType(ContentType.JSON) //
 				.assertResponseBodyByPathEquals("resourceStatus", "NOT_MODIFIED") //
@@ -88,16 +116,16 @@ public class OCCProductRequestTest {
 		new BBMWebServiceTestBuilder<>() //
 				.withNewRequest() //
 				.withBasicAuth("trusted_client", "secret") //
-				.doAuthenticateOAuth2("${hybris.oauth.url}", //
+				.doAuthenticateOAuth2(oAuthUrl, //
 						GrantType.PASSWORD, //
-						"${hybris.oauth.username}", //
-						"${hybris.oauth.password}") //
+						oAuthUsername, //
+						oAuthPassword) //
 				.withNewRequest() //
 				.withQueryParam("applicationKey", "AEM2015")//
 				.withQueryParam("viewId", "en_01") //
 				.withQueryParam("access_token", "${accessToken}") //
 
-				.doGet("${hybris.occ.product.BPR000000000000000100007757500000.url}") //
+				.doGet(bprUrl) //
 
 				.assertResponseContentType(ContentType.JSON) //
 				.assertResponseBodyEqualsReference("OCC_BPR000000000000000100007757500000_Expected.json") //
@@ -113,16 +141,16 @@ public class OCCProductRequestTest {
 		new BBMWebServiceTestBuilder<>() //
 				.withNewRequest() //
 				.withBasicAuth("trusted_client", "secret") //
-				.doAuthenticateOAuth2("${hybris.oauth.url}", //
+				.doAuthenticateOAuth2(oAuthUrl, //
 						GrantType.PASSWORD, //
-						"${hybris.oauth.username}", //
-						"${hybris.oauth.password}") //
+						oAuthUsername, //
+						oAuthPassword) //
 				.withNewRequest() //
 				.withQueryParam("applicationKey", "AEM2015")//
 				.withQueryParam("viewId", "en_01") //
 				.withQueryParam("access_token", "${accessToken}") //
 
-				.doGet("${hybris.occ.product.BPG000000000000000100006550700000.url}") //
+				.doGet(bpgUrl) //
 
 				.assertResponseContentType(ContentType.JSON) //
 				.assertResponseBodyEqualsReference("OCC_BPG000000000000000100006550700000_Expected.json") //
@@ -137,16 +165,16 @@ public class OCCProductRequestTest {
 		new BBMWebServiceTestBuilder<>() //
 				.withNewRequest() //
 				.withBasicAuth("trusted_client", "secret") //
-				.doAuthenticateOAuth2("${hybris.oauth.url}", //
+				.doAuthenticateOAuth2(oAuthUrl, //
 						GrantType.PASSWORD, //
-						"${hybris.oauth.username}", //
-						"${hybris.oauth.password}") //
+						oAuthUsername, //
+						oAuthPassword) //
 				.withNewRequest() //
 				.withQueryParam("applicationKey", "AEM2015")//
 				.withQueryParam("viewId", "ru_RU") //
 				.withQueryParam("access_token", "${accessToken}") //
 
-				.doGet("${hybris.occ.product.prid988.url}") //
+				.doGet(prid988Url) //
 
 				.assertResponseContentType(ContentType.JSON) //
 				.assertResponseBodyByPathNotNull("additionalName") //
