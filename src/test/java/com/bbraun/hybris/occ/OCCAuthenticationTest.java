@@ -1,7 +1,10 @@
 package com.bbraun.hybris.occ;
 
+import com.bbraun.bbmtest.conf.TestProperty;
+import com.bbraun.bbmtest.conf.TestPropertyRule;
 import io.qameta.allure.*;
 import org.apache.http.HttpStatus;
+import org.junit.ClassRule;
 import org.junit.Test;
 
 import com.bbraun.bbmtest.ws.BBMWebServiceTestBuilder;
@@ -18,6 +21,19 @@ import io.restassured.http.ContentType;
 @Feature("OCC Authentication Tests")
 public class OCCAuthenticationTest {
 
+
+	@ClassRule
+	public static TestPropertyRule testPropertiesRule = new TestPropertyRule();
+
+	@TestProperty("hybris.oauth.username")
+	private static String oAuthUsername;
+
+	@TestProperty("hybris.oauth.password")
+	private static String oAuthPassword;
+
+	@TestProperty("hybris.oauth.url")
+	private static String oAuthUrl;
+
 	/**
 	 * Tests OAuth authentication using GET request and JSON response
 	 */
@@ -32,10 +48,10 @@ public class OCCAuthenticationTest {
 				.withBasicAuth("trusted_client", "secret") //
 				.withHeader("Accept", "application/json")//
 				.withQueryParam("grant_type", "password") //
-				.withQueryParam("username", "${hybris.oauth.username}") //
-				.withQueryParam("password", "${hybris.oauth.password}") //
+				.withQueryParam("username", oAuthUsername) //
+				.withQueryParam("password", oAuthPassword) //
 
-				.doGet("${hybris.oauth.url}") //
+				.doGet(oAuthUrl) //
 
 				.assertResponseContentType(ContentType.JSON) //
 				.assertResponseHttpStatusCode(HttpStatus.SC_OK) //
@@ -59,10 +75,10 @@ public class OCCAuthenticationTest {
 				.withBasicAuth("trusted_client", "secret") //
 				.withHeader("Accept", "application/json")//
 				.withPostParam("grant_type", "password") //
-				.withQueryParam("username", "${hybris.oauth.username}") //
-				.withQueryParam("password", "${hybris.oauth.password}") //
+				.withQueryParam("username", oAuthUsername) //
+				.withQueryParam("password", oAuthPassword) //
 
-				.doGet("${hybris.oauth.url}") //
+				.doGet(oAuthUrl) //
 				
 				.assertResponseContentType(ContentType.JSON) //
 				.assertResponseHttpStatusCode(HttpStatus.SC_OK) //
@@ -86,10 +102,10 @@ public class OCCAuthenticationTest {
 				.withBasicAuth("trusted_client", "secret") //
 				.withHeader("Accept", "application/xml")//
 				.withQueryParam("grant_type", "password") //
-				.withQueryParam("username", "${hybris.oauth.username}") //
-				.withQueryParam("password", "${hybris.oauth.password}") //
+				.withQueryParam("username", oAuthUsername) //
+				.withQueryParam("password", oAuthPassword) //
 
-				.doGet("${hybris.oauth.url}") //
+				.doGet(oAuthUrl) //
 
 				.assertResponseContentType(ContentType.XML) //
 				.assertResponseHttpStatusCode(HttpStatus.SC_OK) //
@@ -112,10 +128,10 @@ public class OCCAuthenticationTest {
 				.withBasicAuth("trusted_client", "secret") //
 				.withHeader("Accept", "application/xml")//
 				.withPostParam("grant_type", "password") //
-				.withQueryParam("username", "${hybris.oauth.username}") //
-				.withQueryParam("password", "${hybris.oauth.password}") //
+				.withQueryParam("username", oAuthUsername) //
+				.withQueryParam("password", oAuthPassword) //
 
-				.doGet("${hybris.oauth.url}") //
+				.doGet(oAuthUrl) //
 
 				.assertResponseContentType(ContentType.XML) //
 				.assertResponseHttpStatusCode(HttpStatus.SC_OK) //
@@ -138,10 +154,10 @@ public class OCCAuthenticationTest {
 				.withBasicAuth("trusted_client", "wrong_password") //
 				.withHeader("Accept", "application/json")//
 				.withPostParam("grant_type", "password") //
-				.withQueryParam("username", "${hybris.oauth.username}") //
-				.withQueryParam("password", "${hybris.oauth.password}") //
+				.withQueryParam("username", oAuthUsername) //
+				.withQueryParam("password", oAuthPassword) //
 
-				.doGet("${hybris.oauth.url}") //
+				.doGet(oAuthUrl) //
 
 				.assertResponseContentType(ContentType.JSON) //
 				.assertResponseHttpStatusCode(HttpStatus.SC_UNAUTHORIZED) //
@@ -166,7 +182,7 @@ public class OCCAuthenticationTest {
 				.withQueryParam("username", "WRONGUSERNAME") //
 				.withQueryParam("password", "WRONGPASSWORD") //
 
-				.doGet("${hybris.oauth.url}") //
+				.doGet(oAuthUrl) //
 
 				.assertResponseContentType(ContentType.JSON) //
 				.assertResponseHttpStatusCode(HttpStatus.SC_BAD_REQUEST) //
