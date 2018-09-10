@@ -1,4 +1,4 @@
-package com.bbraun.hybris.occ;
+package com.bbraun.hybris.occ.catalog;
 
 import com.bbraun.bbmtest.conf.TestProperty;
 import com.bbraun.bbmtest.conf.TestPropertyRule;
