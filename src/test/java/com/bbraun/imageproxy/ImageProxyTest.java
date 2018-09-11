@@ -25,7 +25,7 @@ public class ImageProxyTest {
 		new BBMWebServiceTestBuilder<>() //
 				.withNewRequest() //
 				.doGet("http://images.bbraun.com/article/PRID00000772") //
-				.assertResponseHeaderEquals("Content-Type", "image/jpeg;charset=UTF-8") //
+				.assertResponseContentType("image/jpeg;charset=UTF-8") //
 				.assertResponseHeaderEquals("Content-Length", "17067");
 	}
 
@@ -37,7 +37,7 @@ public class ImageProxyTest {
 		new BBMWebServiceTestBuilder<>() //
 				.withNewRequest() //
 				.doGet("http://images.bbraun.com/01/article/PRID00000772") //
-				.assertResponseHeaderEquals("Content-Type", "image/jpeg;charset=UTF-8") //
+				.assertResponseContentType("image/jpeg;charset=UTF-8") //
 				.assertResponseHeaderEquals("Content-Length", "17067");
 	}
 
@@ -49,7 +49,7 @@ public class ImageProxyTest {
 		new BBMWebServiceTestBuilder<>() //
 				.withNewRequest() //
 				.doGet("http://images.bbraun.com/DE/article/PRID00000772") //
-				.assertResponseHeaderEquals("Content-Type", "image/jpeg;charset=UTF-8") //
+				.assertResponseContentType("image/jpeg;charset=UTF-8") //
 				.assertResponseHeaderEquals("Content-Length", "16290");
 	}
 
@@ -61,7 +61,7 @@ public class ImageProxyTest {
 		new BBMWebServiceTestBuilder<>() //
 				.withNewRequest() //
 				.doGet("http://images.bbraun.com/no/article/PRID00000772") //
-				.assertResponseHeaderEquals("Content-Type", "image/jpeg;charset=UTF-8") //
+				.assertResponseContentType("image/jpeg;charset=UTF-8") //
 				.assertResponseHeaderEquals("Content-Length", "20822");
 	}
 
@@ -73,7 +73,7 @@ public class ImageProxyTest {
 		new BBMWebServiceTestBuilder<>() //
 				.withNewRequest() //
 				.doGet("http://images.bbraun.com/es/article/PRID00000772") //
-				.assertResponseHeaderEquals("Content-Type", "image/jpeg;charset=UTF-8") //
+				.assertResponseContentType("image/jpeg;charset=UTF-8") //
 				.assertResponseHeaderEquals("Content-Length", "13298");
 	}
 }
