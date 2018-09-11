@@ -46,6 +46,7 @@ public class OCCDocumentRequestTest {
                 .doGet(documentWsEndpoint) //
 
                 .assertResponseHttpStatusCode(HttpStatus.SC_OK) //
+                .assertResponseContentType("application/pdf")
                 .assertResponseHeaderEquals("Content-Length", "825235") //
                 .assertResponseHeaderEquals("Content-Disposition", "form-data; name=\"inline\"; filename=\"C63401 11-11.pdf\"") //
         ;
