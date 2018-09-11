@@ -2,6 +2,7 @@ package com.bbraun.hybris.occ.xref;
 
 
 import com.bbraun.bbmtest.conf.RunOnStage;
+import com.bbraun.bbmtest.conf.RunOnStageRule;
 import com.bbraun.bbmtest.conf.TestProperty;
 import com.bbraun.bbmtest.conf.TestPropertyRule;
 import com.bbraun.bbmtest.ws.BBMWebServiceTestBuilder;
@@ -9,6 +10,7 @@ import io.qameta.allure.*;
 import io.restassured.http.ContentType;
 import org.apache.http.HttpStatus;
 import org.junit.ClassRule;
+import org.junit.Rule;
 import org.junit.Test;
 
 /**
@@ -20,6 +22,9 @@ import org.junit.Test;
 @Feature("OCC Materialtranscoding Endpoint Tests")
 @RunOnStage(stages = {"QAS"})
 public class OCCMaterialTranscodingRequestTest {
+
+    @Rule
+    public RunOnStageRule rule = new RunOnStageRule();
 
     @ClassRule
     public static TestPropertyRule testPropertiesRule = new TestPropertyRule();

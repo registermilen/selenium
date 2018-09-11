@@ -1,6 +1,5 @@
 package com.bbraun.hybris.occ.texts;
 
-import com.bbraun.bbmtest.conf.RunOnStageRule;
 import com.bbraun.bbmtest.conf.TestProperty;
 import com.bbraun.bbmtest.conf.TestPropertyRule;
 import com.bbraun.bbmtest.ws.BBMWebServiceTestBuilder;
@@ -8,15 +7,11 @@ import io.qameta.allure.*;
 import io.restassured.http.ContentType;
 import org.apache.http.HttpStatus;
 import org.junit.ClassRule;
-import org.junit.Rule;
 import org.junit.Test;
 
 @Epic("OCC Webservice Tests")
 @Feature("OCC material text Endpoint Tests")
 public class OCCMaterialTextsRequestTest {
-
-    @Rule
-    public RunOnStageRule rule = new RunOnStageRule();
 
     @ClassRule
     public static TestPropertyRule testPropertiesRule = new TestPropertyRule();
