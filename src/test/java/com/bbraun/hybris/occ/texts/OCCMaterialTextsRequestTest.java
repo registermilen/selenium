@@ -1,6 +1,5 @@
 package com.bbraun.hybris.occ.texts;
 
-import com.bbraun.bbmtest.conf.RunOnStage;
 import com.bbraun.bbmtest.conf.RunOnStageRule;
 import com.bbraun.bbmtest.conf.TestProperty;
 import com.bbraun.bbmtest.conf.TestPropertyRule;
@@ -14,7 +13,6 @@ import org.junit.Test;
 
 @Epic("OCC Webservice Tests")
 @Feature("OCC material text Endpoint Tests")
-@RunOnStage(stages = {"QAS"})
 public class OCCMaterialTextsRequestTest {
 
     @Rule

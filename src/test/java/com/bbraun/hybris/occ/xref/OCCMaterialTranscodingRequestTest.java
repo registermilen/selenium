@@ -1,6 +1,7 @@
 package com.bbraun.hybris.occ.xref;
 
 
+import com.bbraun.bbmtest.conf.RunOnStage;
 import com.bbraun.bbmtest.conf.TestProperty;
 import com.bbraun.bbmtest.conf.TestPropertyRule;
 import com.bbraun.bbmtest.ws.BBMWebServiceTestBuilder;
@@ -17,6 +18,7 @@ import org.junit.Test;
  */
 @Epic("OCC Webservice Tests")
 @Feature("OCC Materialtranscoding Endpoint Tests")
+@RunOnStage(stages = {"QAS"})
 public class OCCMaterialTranscodingRequestTest {
 
     @ClassRule
