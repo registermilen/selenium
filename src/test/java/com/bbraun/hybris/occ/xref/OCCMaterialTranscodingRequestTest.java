@@ -32,7 +32,7 @@ public class OCCMaterialTranscodingRequestTest {
     private static String oAuthUrl;
 
     @TestProperty("hybris.occ.materialtranscoding.url")
-    private static String materialTrabscodingWsUrl;
+    private static String materialTranscodingWsUrl;
 
     @Test
     @Severity(SeverityLevel.NORMAL)
@@ -53,7 +53,7 @@ public class OCCMaterialTranscodingRequestTest {
                 .withQueryParam("access_token", "${accessToken}") //
                 .withQueryParam("materialIds", "34-702-13-07") //
 
-                .doGet(materialTrabscodingWsUrl) //
+                .doGet(materialTranscodingWsUrl) //
 
                 .assertResponseHttpStatusCode(HttpStatus.SC_OK) //
                 .assertResponseContentType(ContentType.JSON) //
@@ -90,7 +90,7 @@ public class OCCMaterialTranscodingRequestTest {
                 .withQueryParam("access_token", "${accessToken}") //
                 .withQueryParam("materialIds", "BH110R") //
 
-                .doGet(materialTrabscodingWsUrl) //
+                .doGet(materialTranscodingWsUrl) //
 
                 .assertResponseHttpStatusCode(HttpStatus.SC_OK) //
                 .assertResponseContentType(ContentType.JSON) //
@@ -126,7 +126,7 @@ public class OCCMaterialTranscodingRequestTest {
                 .withQueryParam("access_token", "${accessToken}") //
                 .withQueryParam("materialIds", "BH110R,34-702-13-07") //
 
-                .doGet(materialTrabscodingWsUrl) //
+                .doGet(materialTranscodingWsUrl) //
 
                 .assertResponseHttpStatusCode(HttpStatus.SC_OK) //
                 .assertResponseContentType(ContentType.JSON) //
