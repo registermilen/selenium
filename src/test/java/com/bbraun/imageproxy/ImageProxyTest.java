@@ -1,9 +1,12 @@
 package com.bbraun.imageproxy;
 
+import com.bbraun.bbmtest.conf.RunOnStage;
+import com.bbraun.bbmtest.conf.RunOnStageRule;
 import io.qameta.allure.*;
 import io.restassured.RestAssured;
 import io.restassured.specification.ProxySpecification;
 import org.junit.Ignore;
+import org.junit.Rule;
 import org.junit.Test;
 
 import com.bbraun.bbmtest.ws.BBMWebServiceTestBuilder;
@@ -13,9 +16,14 @@ import com.bbraun.bbmtest.ws.BBMWebServiceTestBuilder;
  * 
  * @author stefans
  */
+@Ignore
 @Epic("Microservice Tests")
 @Feature("Image Proxy Tests")
+@RunOnStage(stages = {"PRD"})
 public class ImageProxyTest {
+
+	@Rule
+	public RunOnStageRule rule = new RunOnStageRule();
 
 	@Test
 	@Severity(SeverityLevel.CRITICAL)
