@@ -16,7 +16,6 @@ import com.bbraun.bbmtest.ws.BBMWebServiceTestBuilder;
  * 
  * @author stefans
  */
-@Ignore
 @Epic("Microservice Tests")
 @Feature("Image Proxy Tests")
 @RunOnStage(stages = {"PRD"})
