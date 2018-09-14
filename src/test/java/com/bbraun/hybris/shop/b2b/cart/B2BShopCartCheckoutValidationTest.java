@@ -77,8 +77,7 @@ public class B2BShopCartCheckoutValidationTest {
 
                     .doWaitUntil(visibilityOfElementLocated(By.name("productCodePost")))
                     .doType(By.name("productCodePost"), productWithMinimalQuantity)
-                    .doClick(By.className("code"))
-                    .doClick(By.id("instantAddToCartButton"))
+					.doSubmitForm(By.id("instantAddToCartForm")) //
                     .assertElementExists(By.className("cartItem")) // cart item row
 
                     .doClick(By.id("checkoutButtonTop"))

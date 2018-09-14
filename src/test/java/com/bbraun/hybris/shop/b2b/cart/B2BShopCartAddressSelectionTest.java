@@ -83,8 +83,7 @@ public class B2BShopCartAddressSelectionTest {
 
                     .doWaitUntil(visibilityOfElementLocated(By.name("productCodePost")))
                     .doType(By.name("productCodePost"), productWithMinimalQuantity)
-                    .doClick(By.className("code"))
-                    .doClick(By.id("instantAddToCartButton"))
+					.doSubmitForm(By.id("instantAddToCartForm")) //
                     .assertElementExists(By.className("cartItem")) // cart item row
 
                     .assertElementExists(By.id("summaryDeliveryAddress"))

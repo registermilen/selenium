@@ -82,8 +82,7 @@ public class B2BShopQuotationDetailsTest {
 
                     .doWaitUntil(visibilityOfElementLocated(By.name("productCodePost")))
                     .doType(By.name("productCodePost"), product)
-                    .doClick(By.className("code"))
-                    .doClick(By.id("instantAddToCartButton"))
+					.doSubmitForm(By.id("instantAddToCartForm"))
                     .assertElementExists(By.className("cartItem")) // cart item row
 
                     .doClick(By.id("checkoutPcrButtonTop"))
