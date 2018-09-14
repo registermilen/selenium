@@ -26,7 +26,7 @@ import io.qameta.allure.Story;
 
 @Epic("B2C E-Shop Tests")
 @Feature("Checkout Tests")
-@RunOnStage(stages = {"QAS" /*, "PRD" */})
+@RunOnStage(stages = {"QAS", "PRD" })
 public class B2CShopCartCheckoutTest {
 	
 	@Rule
