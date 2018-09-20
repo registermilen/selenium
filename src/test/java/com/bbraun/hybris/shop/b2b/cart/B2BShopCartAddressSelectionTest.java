@@ -90,10 +90,13 @@ public class B2BShopCartAddressSelectionTest {
                     .assertTextDisplayedOn(By.id("name1"), addressName1)
                     .assertTextDisplayedOn(By.id("line1"), addressLine1)
                     
-                    
                     .doClick(By.id("viewAddressBook"))
                     
                     .assertElementExists(By.className("addressList"))
+                    
+                    .assertElementExists(By.className("useThisAddress"))
+                    		
+                    .doScrollToElement(By.className("useThisAddress"))
                     
                     .doWaitUntil(visibilityOfElementLocated(By.className("useThisAddress")))
                     
