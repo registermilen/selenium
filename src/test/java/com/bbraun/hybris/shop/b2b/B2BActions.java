@@ -32,8 +32,8 @@ public class B2BActions {
         builder.doOpenUrl("https://shop.bbraun.com")
                 .doWaitUntil(ExpectedConditions.urlContains("/login"))
                 .assertUrl("https://shop.bbraun.com/login") //
-                .doType(By.id("j_username"), "shopdemo@bbraun.com") //
-                .doType(By.id("j_password"), "Way2the.Place1") //
+                .doType(By.id("j_username"), "shoptest@bbraun.com") //
+                .doType(By.id("j_password"), "Tech2TestIT") //
                 .doSubmitForm(By.className("positive"));
     }
 }
