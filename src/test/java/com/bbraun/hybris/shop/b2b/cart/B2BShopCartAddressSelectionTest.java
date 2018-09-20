@@ -67,7 +67,7 @@ public class B2BShopCartAddressSelectionTest {
 	@Description("Test Description: Make sure address is selectable on cart level.")
 	@Story("Introduce address selection component on cart position")
 	@Issue("PCAG-4707")
-	public void testProductCheckoutWithInvalidThenValidQuantity() {
+	public void testSelectAddressOnCartLevel() {
 		UiTest.go(builder -> {
             builder.doStartBrowser() //
                     .doMaximizeWindow() //
@@ -90,10 +90,15 @@ public class B2BShopCartAddressSelectionTest {
                     .assertTextDisplayedOn(By.id("name1"), addressName1)
                     .assertTextDisplayedOn(By.id("line1"), addressLine1)
                     
-                    
                     .doClick(By.id("viewAddressBook"))
                     
                     .assertElementExists(By.className("addressList"))
+                    
+                    .assertElementExists(By.className("useThisAddress"))
+                    		
+                    .doScrollToElement(By.className("useThisAddress"))
+                    
+                    .doWaitUntil(visibilityOfElementLocated(By.className("useThisAddress")))
                     
                     .doClick(By.className("useThisAddress"))
                     
