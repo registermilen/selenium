@@ -10,6 +10,7 @@ import io.qameta.allure.*;
 import io.restassured.http.ContentType;
 import org.apache.http.HttpStatus;
 import org.junit.ClassRule;
+import org.junit.Ignore;
 import org.junit.Rule;
 import org.junit.Test;
 
@@ -21,6 +22,7 @@ import org.junit.Test;
 @Epic("OCC Webservice Tests")
 @Feature("OCC Materialtranscoding Endpoint Tests")
 @RunOnStage(stages = {"QAS"})
+@Ignore("interface deactivated due to performance reasons")
 public class OCCMaterialTranscodingRequestTest {
 
     @Rule
