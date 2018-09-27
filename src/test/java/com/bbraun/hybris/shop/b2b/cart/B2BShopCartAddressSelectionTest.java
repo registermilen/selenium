@@ -86,7 +86,7 @@ public class B2BShopCartAddressSelectionTest {
 					.doSubmitForm(By.id("instantAddToCartForm")) //
                     .assertElementExists(By.className("cartItem")) // cart item row
 
-                    .assertElementExists(By.id("summaryDeliveryAddress"))
+                    .assertTextDisplayedOnPage("Lieferadresse")
                     .assertTextDisplayedOn(By.id("name1"), addressName1)
                     .assertTextDisplayedOn(By.id("line1"), addressLine1)
                     
