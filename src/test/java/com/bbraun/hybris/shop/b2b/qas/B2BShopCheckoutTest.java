@@ -60,10 +60,6 @@ public class B2BShopCheckoutTest {
                     .assertTextDisplayedOnPage("67,75")
 
                     .doClick(By.className("force-right")) // Weiter
-                    .doWaitUntil(urlContains("/checkout/multi/delivery-method/choose"))
-                    .assertTextDisplayedOnPage("Liefervereinbarung")
-
-                    .doClick(By.className("force-right")) // Weiter
                     .doWaitUntil(urlContains("/checkout/multi/summary/view"))
                     .assertTextDisplayedOnPage("Abschließende Prüfung")
 

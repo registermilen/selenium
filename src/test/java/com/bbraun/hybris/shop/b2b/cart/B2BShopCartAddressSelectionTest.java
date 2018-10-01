@@ -112,10 +112,6 @@ public class B2BShopCartAddressSelectionTest {
                     .doWaitUntil(ExpectedConditions.urlContains("/checkout"))
                     
                     .doClick(By.className("force-right")) // Weiter
-                    .doWaitUntil(urlContains("/checkout/multi/delivery-method/choose"))
-                    .assertTextDisplayedOnPage("Liefervereinbarung")
-
-                    .doClick(By.className("force-right")) // Weiter
                     .doWaitUntil(urlContains("/checkout/multi/summary/view"))
                     .assertTextDisplayedOnPage("Abschließende Prüfung")
                     
