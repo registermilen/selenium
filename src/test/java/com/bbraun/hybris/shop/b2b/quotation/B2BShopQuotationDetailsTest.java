@@ -94,11 +94,6 @@ public class B2BShopQuotationDetailsTest {
                     .doType(By.id("cartText"), "some text")
 
                     .doClick(By.className("force-right")) 
-                    .doWaitUntil(urlContains("/checkout/multi/delivery-method/choose"))
-                    
-                    .assertTextDisplayedOnPage("1,111") // VND / PC"
-                    
-                    .doClick(By.className("force-right")) 
                     .doWaitUntil(urlContains("/checkout/multi/summary/view"))
                     
                     .doClick(By.className("force-right")) //place quotation
