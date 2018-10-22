@@ -66,7 +66,7 @@ public class B2BShopQuotationDetailsTest {
 	@Description("Test Description: Place a PCR and make sure the details are propertly displayed.")
 	@Story("Create Order based on confirmed PCR")
 	@Issue("PCAG-4451")
-	public void testProductCheckoutWithInvalidThenValidQuantity() {
+	public void testCreatePCRAndCheckDetails() {
 		UiTest.go(builder -> {
             builder.doStartBrowser() //
                     .doMaximizeWindow() //
