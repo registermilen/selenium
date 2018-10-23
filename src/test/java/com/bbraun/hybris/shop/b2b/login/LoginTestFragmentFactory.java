@@ -22,8 +22,7 @@ public class LoginTestFragmentFactory {
 	                    .assertUrl(host+"/login") //
 	                    .doType(By.id("j_username"), username) //
 	                    .doType(By.id("j_password"), password) //
-	                    .doSubmitForm(By.className("positive"))
-	                    .assertUrl(initialURL);
+	                    .doSubmitForm(By.className("positive"));
 				break;
 			case QAS :
 				loginTestFragment = B2BActions::loginQAS;
