@@ -5,6 +5,7 @@ import static org.openqa.selenium.support.ui.ExpectedConditions.urlContains;
 import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElementLocated;
 
 import org.junit.ClassRule;
+import org.junit.Ignore;
 import org.junit.Rule;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -101,6 +102,7 @@ public class B2CShopCartCheckoutTest {
 	}
 
 
+	@Ignore
 	@Test
 	@Severity(SeverityLevel.NORMAL)
 	@Description("Test Description: Check that INC number is rendered on page.")

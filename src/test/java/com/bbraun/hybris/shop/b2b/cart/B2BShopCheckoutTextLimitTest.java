@@ -18,7 +18,7 @@ import static org.junit.Assert.assertThat;
 import static org.openqa.selenium.support.ui.ExpectedConditions.urlContains;
 import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElementLocated;
 
-@RunOnStage(stages = "QAS")
+@RunOnStage(stages = "DEV")
 @Epic("B2B E-Shop Tests")
 @Feature("Checkout Tests")
 public class B2BShopCheckoutTextLimitTest {
