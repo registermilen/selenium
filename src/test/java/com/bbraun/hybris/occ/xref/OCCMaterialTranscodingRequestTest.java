@@ -22,7 +22,6 @@ import org.junit.Test;
 @Epic("OCC Webservice Tests")
 @Feature("OCC Materialtranscoding Endpoint Tests")
 @RunOnStage(stages = {"QAS"})
-@Ignore("interface deactivated due to performance reasons")
 public class OCCMaterialTranscodingRequestTest {
 
     @Rule
