@@ -468,7 +468,7 @@
     "code": "PRID00001011",
     "description": "<p>Sicherheitsvenenverweilkanüle ohne Fixierflügel, zur Reduzierung von Nadelstichverletzungen und den damit verbundenen Infektionsrisiken</p>",
     "division": "MM",
-    "hasClassifications": true,
+    "hasClassifications": false,
     "localizedBkcTexts": [
         {
             "key": "de",
