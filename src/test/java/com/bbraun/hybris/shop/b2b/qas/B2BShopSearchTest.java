@@ -2,9 +2,13 @@ package com.bbraun.hybris.shop.b2b.qas;
 
 import com.bbraun.bbmtest.conf.RunOnStage;
 import com.bbraun.bbmtest.conf.RunOnStageRule;
+import com.bbraun.bbmtest.conf.TestProperty;
+import com.bbraun.bbmtest.conf.TestPropertyRule;
 import com.bbraun.bbmtest.ui.UiTest;
 import com.bbraun.hybris.shop.b2b.B2BActions;
 import io.qameta.allure.*;
+
+import org.junit.ClassRule;
 import org.junit.Rule;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -22,6 +26,12 @@ public class B2BShopSearchTest {
     @Rule
     public RunOnStageRule rule = new RunOnStageRule();
 
+    @ClassRule
+	public static TestPropertyRule testPropertiesRule = new TestPropertyRule();
+    
+    @TestProperty("hybris.shop.b2b.german.b2bunit")
+    private static String b2bUnit;
+    
     @Test
     @Severity(SeverityLevel.CRITICAL)
     @Description("Test Description: Perform Search from Homepage with results expected")
@@ -33,7 +43,7 @@ public class B2BShopSearchTest {
                     .execute(B2BActions::loginQAS) //
 
                     .assertUrl(containsString("/bob")) //
-                    .doClick(By.linkText("0020005585"))
+                    .doClick(By.linkText(b2bUnit))
                     .doWaitUntil(visibilityOfElementLocated(By.id("search")))
 
                     .doType(By.id("search"), "Introcan")
@@ -57,7 +67,7 @@ public class B2BShopSearchTest {
                     .execute(B2BActions::loginQAS) //
 
                     .assertUrl(containsString("/bob")) //
-                    .doClick(By.linkText("0020005585"))
+                    .doClick(By.linkText(b2bUnit))
                     .doWaitUntil(visibilityOfElementLocated(By.id("search")))
 
                     .doType(By.id("search"), "Blablabla")
@@ -82,7 +92,7 @@ public class B2BShopSearchTest {
                     .execute(B2BActions::loginQAS) //
 
                     .assertUrl(containsString("/bob")) //
-                    .doClick(By.linkText("0020005585"))
+                    .doClick(By.linkText(b2bUnit))
                     .doWaitUntil(visibilityOfElementLocated(By.id("search")))
 
                     .doType(By.id("search"), "Introcan")

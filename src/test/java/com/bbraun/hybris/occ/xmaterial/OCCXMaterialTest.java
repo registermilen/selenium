@@ -52,8 +52,7 @@ public class OCCXMaterialTest {
     @Severity(SeverityLevel.NORMAL)
     @Description("Test Description: Data for a competitor material.")
     @Story("Retrieve data for a competiror material with SAM user.")
-    public void testTranscodeSingleCompetitorMaterialWithSGDAUser() {
-    	RestAssured.useRelaxedHTTPSValidation();
+    public void testTranscodeSingleCompetitorMaterialWithSAMUser() {
         new BBMWebServiceTestBuilder<>() //
                 .withNewRequest() //
                 .withBasicAuth("trusted_client", "secret") //
@@ -63,7 +62,7 @@ public class OCCXMaterialTest {
                         oAuthPassword) //
                 .withNewRequest() //
                 .withQueryParam("applicationKey", "SAM")//
-                .withQueryParam("materialIds", "nonexisting,34-702-13-07")//
+                .withQueryParam("materialIds", "nonexisting,34-702-13-07,V317H")//
                 .withQueryParam("access_token", "${accessToken}") //
 
                 .doGet(xMaterialUrl) //

@@ -17,8 +17,8 @@ public class B2BActions {
         builder.doOpenUrl("https://qas-shop.bbraun.com")
                 .doWaitUntil(ExpectedConditions.urlContains("idp-dev.bbraun.com"))
                 .assertUrl("https://idp-dev.bbraun.com/idp/SSO.saml2") //
-                .doType(By.id("username"), "shopdemo@bbraun.com") //
-                .doType(By.id("password"), "demo") //
+                .doType(By.id("username"), "shoptest@bbraun.com") //
+                .doType(By.id("password"), "Passw0rd1") //
                 .doSubmitForm(By.className("button-primary"));
     }
 

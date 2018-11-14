@@ -54,7 +54,6 @@ public class B2BShopCartCheckoutValidationTest {
 	@TestProperty("hybris.shop.b2b.german.b2bunit")
 	private static String b2bUnit;
 	
-	
 	@Test
 	@Severity(SeverityLevel.CRITICAL)
 	@Description("Test Description: Try to checkout invalid quantity for a "

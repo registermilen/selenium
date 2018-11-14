@@ -2,9 +2,13 @@ package com.bbraun.hybris.shop.b2b.qas;
 
 import com.bbraun.bbmtest.conf.RunOnStage;
 import com.bbraun.bbmtest.conf.RunOnStageRule;
+import com.bbraun.bbmtest.conf.TestProperty;
+import com.bbraun.bbmtest.conf.TestPropertyRule;
 import com.bbraun.bbmtest.ui.UiTest;
 import com.bbraun.hybris.shop.b2b.B2BActions;
 import io.qameta.allure.*;
+
+import org.junit.ClassRule;
 import org.junit.Rule;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -18,6 +22,15 @@ public class B2BShopLoginTest {
     @Rule
     public RunOnStageRule rule = new RunOnStageRule();
 
+    @ClassRule
+	public static TestPropertyRule testPropertiesRule = new TestPropertyRule();
+    
+    @TestProperty("hybris.shop.b2b.vn.b2bunit")
+    private static String b2bUnit1;
+    
+    @TestProperty("hybris.shop.b2b.german.b2bunit")
+    private static String b2bUnit2;
+    
     @Test
     @Severity(SeverityLevel.BLOCKER)
     @Description("Test Description: Test of Login and Logout via IDP success.")
@@ -46,15 +59,15 @@ public class B2BShopLoginTest {
                     .execute(B2BActions::loginQAS) //
 
                     .assertUrl("https://qas-shop.bbraun.com/bob") //
-                    .doClick(By.linkText("0020344385"))
+                    .doClick(By.linkText(b2bUnit1))
                     .doWaitUntil(ExpectedConditions.urlContains("https://qas-shop.bbraun.com"))
-                    .assertTextDisplayedOnPage("0020344385")
+                    .assertTextDisplayedOnPage(b2bUnit1)
 
                     .doClick(By.linkText("Switch User"))
                     .assertUrl("https://qas-shop.bbraun.com/bob")
-                    .doClick(By.linkText("0020005585"))
+                    .doClick(By.linkText(b2bUnit2))
                     .doWaitUntil(ExpectedConditions.urlContains("https://qas-shop.bbraun.com"))
-                    .assertTextDisplayedOnPage("0020005585")
+                    .assertTextDisplayedOnPage(b2bUnit2)
             ;
         });
     }

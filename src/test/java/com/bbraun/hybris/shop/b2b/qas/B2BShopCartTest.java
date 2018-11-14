@@ -2,9 +2,13 @@ package com.bbraun.hybris.shop.b2b.qas;
 
 import com.bbraun.bbmtest.conf.RunOnStage;
 import com.bbraun.bbmtest.conf.RunOnStageRule;
+import com.bbraun.bbmtest.conf.TestProperty;
+import com.bbraun.bbmtest.conf.TestPropertyRule;
 import com.bbraun.bbmtest.ui.UiTest;
 import com.bbraun.hybris.shop.b2b.B2BActions;
 import io.qameta.allure.*;
+
+import org.junit.ClassRule;
 import org.junit.Rule;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -21,6 +25,15 @@ public class B2BShopCartTest {
     @Rule
     public RunOnStageRule rule = new RunOnStageRule();
 
+    @ClassRule
+	public static TestPropertyRule testPropertiesRule = new TestPropertyRule();
+    
+    @TestProperty("hybris.shop.b2b.german.b2bunit")
+    private static String b2bUnit;
+    
+    @TestProperty("hybris.shop.b2b.german.product.with.minimal.quantity")
+	private static String product;
+    
     @Test
     @Severity(SeverityLevel.CRITICAL)
     @Description("Test Description: Test access shopping cart")
@@ -32,7 +45,7 @@ public class B2BShopCartTest {
                     .execute(B2BActions::loginQAS) //
 
                     .assertUrl("https://qas-shop.bbraun.com/bob") //
-                    .doClick(By.linkText("0020005585"))
+                    .doClick(By.linkText(b2bUnit))
                     .doWaitUntil(visibilityOfElementLocated(By.className("miniCart")))
 
                     .doClick(By.className("miniCart"))
@@ -57,7 +70,7 @@ public class B2BShopCartTest {
                     .execute(B2BActions::loginQAS) //
 
                     .assertUrl("https://qas-shop.bbraun.com/bob") //
-                    .doClick(By.linkText("0020005585"))
+                    .doClick(By.linkText(b2bUnit))
                     .doWaitUntil(visibilityOfElementLocated(By.className("miniCart")))
                     .doClick(By.className("miniCart"))
 
@@ -66,7 +79,7 @@ public class B2BShopCartTest {
                     .doOpenUrl("https://qas-shop.bbraun.com/cart/remove") // clear cart
                     //.assertElementNotExists(By.className("cartItem")) // cart item row
 
-                    .doType(By.name("productCodePost"), "5391010")
+                    .doType(By.name("productCodePost"), product)
                     .doSubmitForm(By.id("instantAddToCartForm"))
                     .assertElementExists(By.className("cartItem")) // cart item row
                     .doClick(By.linkText("Warenkorb entfernen"))
