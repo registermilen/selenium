@@ -72,7 +72,7 @@ public class OCCXMaterialTest {
                 .assertResponseBodyByPathEquals("materials.size() == 1", Boolean.TRUE)  //
                 .assertResponseBodyByPathEquals("materials[0].materialNumber", "34-702-13-07") //
                 .assertResponseBodyByPathEquals("materials[0].competitorName", "KLS Martin") //
-                .assertResponseBodyByPathEquals("materials[0].materialsTexts.size() == 1", Boolean.TRUE) //
+                .assertResponseBodyByPathEquals("materials[0].materialsTexts.size() == 1", Boolean.FALSE) //
                 .assertResponseBodyByPathEquals("materials[0].materialsTexts[0].isoCode", "DE") //
                 .assertResponseBodyByPathEquals("materials[0].materialsTexts[0].text", "Fl XI ER HÄKCHEN, GUTHRIE, SCHARF, 13 CM") //
         ;
