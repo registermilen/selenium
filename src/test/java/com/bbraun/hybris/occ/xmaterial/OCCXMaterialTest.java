@@ -69,12 +69,12 @@ public class OCCXMaterialTest {
 
                 .assertResponseHttpStatusCode(HttpStatus.SC_OK) //
                 .assertResponseContentType(ContentType.JSON) //
-                .assertResponseBodyByPathEquals("materials.size() == 1", Boolean.TRUE)  //
-                .assertResponseBodyByPathEquals("materials[0].materialNumber", "34-702-13-07") //
-                .assertResponseBodyByPathEquals("materials[0].competitorName", "KLS Martin") //
+                .assertResponseBodyByPathEquals("materials.size() > 1", Boolean.TRUE)  //
+                .assertResponseBodyByPathEquals("materials[0].materialNumber", "V317H") //
+                .assertResponseBodyByPathEquals("materials[0].competitorName", "Ethicon Inc") //
                 .assertResponseBodyByPathEquals("materials[0].materialsTexts.size() == 1", Boolean.FALSE) //
-                .assertResponseBodyByPathEquals("materials[0].materialsTexts[0].isoCode", "DE") //
-                .assertResponseBodyByPathEquals("materials[0].materialsTexts[0].text", "Fl XI ER HÄKCHEN, GUTHRIE, SCHARF, 13 CM") //
+                .assertResponseBodyByPathEquals("materials[0].materialsTexts[1].isoCode", "DE") //
+                .assertResponseBodyByPathEquals("materials[0].materialsTexts[1].text", "VICRYL VIO GEFL 3/2-0 70CM SH PLUS") //
         ;
     }
 
