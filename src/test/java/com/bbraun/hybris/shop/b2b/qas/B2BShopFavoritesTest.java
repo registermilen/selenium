@@ -2,9 +2,13 @@ package com.bbraun.hybris.shop.b2b.qas;
 
 import com.bbraun.bbmtest.conf.RunOnStage;
 import com.bbraun.bbmtest.conf.RunOnStageRule;
+import com.bbraun.bbmtest.conf.TestProperty;
+import com.bbraun.bbmtest.conf.TestPropertyRule;
 import com.bbraun.bbmtest.ui.UiTest;
 import com.bbraun.hybris.shop.b2b.B2BActions;
 import io.qameta.allure.*;
+
+import org.junit.ClassRule;
 import org.junit.Rule;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -21,6 +25,12 @@ public class B2BShopFavoritesTest {
     @Rule
     public RunOnStageRule rule = new RunOnStageRule();
 
+    @ClassRule
+	public static TestPropertyRule testPropertiesRule = new TestPropertyRule();
+    
+    @TestProperty("hybris.shop.b2b.german.b2bunit")
+    private static String b2bUnit;
+    
     @Test
     @Severity(SeverityLevel.MINOR)
     @Description("Test Description: Add a product to favourites list from search.")
@@ -32,7 +42,7 @@ public class B2BShopFavoritesTest {
                     .execute(B2BActions::loginQAS) //
 
                     .assertUrl(containsString("/bob")) //
-                    .doClick(By.linkText("0020005585"))
+                    .doClick(By.linkText(b2bUnit))
                     .doWaitUntil(visibilityOfElementLocated(By.id("search")))
 
                     .doType(By.id("search"), "PRID00003923")
@@ -63,7 +73,7 @@ public class B2BShopFavoritesTest {
                     .execute(B2BActions::loginQAS)
 
                     .assertUrl(containsString("/bob")) //
-                    .doClick(By.linkText("0020005585"))
+                    .doClick(By.linkText(b2bUnit))
                     .doWaitUntil(visibilityOfElementLocated(By.id("search")))
 
                     .doOpenUrl("https://qas-shop.bbraun.com/p/PRID00003923")
@@ -93,7 +103,7 @@ public class B2BShopFavoritesTest {
                     .execute(B2BActions::loginQAS) //
 
                     .assertUrl(containsString("/bob")) //
-                    .doClick(By.linkText("0020005585"))
+                    .doClick(By.linkText(b2bUnit))
                     .doWaitUntil(visibilityOfElementLocated(By.id("search")))
 
                     .doOpenUrl("https://qas-shop.bbraun.com/p/000000000004251300")

@@ -105,7 +105,6 @@ public class B2BShopQuotationDetailsTest {
                     .assertTextDisplayedOnPage("Your Reference: testRefNumber")
                     .assertTextDisplayedOnPage("some text")
                     .assertTextDisplayedOnPage(deliveryAddressLabel)
-                    .assertTextDisplayedOnPage(deliveryMethodLabel) 
             ;
         });
 	}
