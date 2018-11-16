@@ -18,7 +18,6 @@ import io.qameta.allure.Feature;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
-import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 
 /**
@@ -27,7 +26,7 @@ import io.restassured.http.ContentType;
  */
 @Epic("OCC Webservice Tests")
 @Feature("OCC XMaterial Endpoint Tests")
-@RunOnStage(stages = {"LOCAL", "QAS"})
+@RunOnStage(stages = {"LOCAL", "QAS", "PRD"})
 public class OCCXMaterialTest {
 
     @Rule
