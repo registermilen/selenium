@@ -30,10 +30,10 @@ public class B2BActions {
     @Step("Login to Shop via Hybris Login form")
     public static void loginPRD(BBMUiTestBuilder<BBMUiTestBuilder<?>> builder) {
         builder.doOpenUrl("https://shop.bbraun.com")
-                .doWaitUntil(ExpectedConditions.urlContains("/login"))
-                .assertUrl("https://shop.bbraun.com/login") //
-                .doType(By.id("j_username"), "shoptest@bbraun.com") //
-                .doType(By.id("j_password"), "Tech2TestIT") //
-                .doSubmitForm(By.className("positive"));
+                .doWaitUntil(ExpectedConditions.urlContains("idp.bbraun.com"))
+                .assertUrl("https://idp.bbraun.com/idp/SSO.saml2") //
+                .doType(By.id("username"), "shoptest@bbraun.com") //
+                .doType(By.id("password"), "u!%Jb7z2") //
+                .doSubmitForm(By.className("button-primary"));
     }
 }
