@@ -37,6 +37,7 @@ public class B2BShopLoginTest {
 
                     .assertUrl("https://shop.bbraun.com/bob")
                     .doClick(By.linkText("Logout"))
+                    .doWaitUntil(ExpectedConditions.urlContains("https://idp.bbraun.com"))
                     .assertUrl("https://idp.bbraun.com/idp/SSO.saml2")
             ;
         });
