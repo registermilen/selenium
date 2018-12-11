@@ -54,7 +54,7 @@ public class B2BShopCheckoutTextLimitTest {
 
                     .doSelectOptionFromSelectByIndex(By.id("uom"), 1)
 
-                    .doClick(By.id("checkoutButtonTop"))
+                    .doClick(By.id("checkoutButtonBottom"))
                     .doWaitUntil(urlContains("/checkout/multi/common-information/add"))
                     .doType(By.cssSelector("textarea[data-entrynumber='']"), "HEADER" + TEXT_MORE_THAN_132_CHARACTERS)
                     .doClick(By.className("positionToggle"))

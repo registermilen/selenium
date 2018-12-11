@@ -73,7 +73,7 @@ public class B2CShopCartCheckoutTest {
                     .doWaitUntil(ExpectedConditions.urlContains("/cart"))
             		.doClick(By.className("fa-plus"))
             		.doClick(By.className("fa-plus")) //add two more items
-            		.doClick(By.id("checkoutButtonTop"))
+            		.doClick(By.id("checkoutButtonBottom"))
             		
             		.assertUrl(containsString("/checkout/multi/common-information/add"))
             		.assertTextDisplayedOnPage("3") //item count

@@ -57,7 +57,7 @@ public class B2BShopCheckoutTest {
 
                     .doSelectOptionFromSelectByIndex(By.id("uom"), 1)
 
-                    .doClick(By.id("checkoutButtonTop"))
+                    .doClick(By.id("checkoutButtonBottom"))
                     .doWaitUntil(urlContains("/checkout/multi/common-information/add"))
                     .assertTextDisplayedOnPage("Bestellübersicht")
                     .assertTextDisplayedOnPage("Gesamtnettopreis")
