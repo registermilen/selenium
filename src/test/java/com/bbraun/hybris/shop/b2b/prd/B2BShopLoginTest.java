@@ -59,6 +59,7 @@ public class B2BShopLoginTest {
                     .assertTextDisplayedOnPage("0020158045")
 
                     .doClick(By.linkText("Kundenwechsel"))
+                    .doWaitUntil(ExpectedConditions.urlContains("/bob"))
                     .assertUrl("https://shop.bbraun.com/bob")
                     .doClick(By.linkText("0020371505"))
                     .doWaitUntil(ExpectedConditions.urlContains("https://shop.bbraun.com"))

@@ -64,6 +64,7 @@ public class B2BShopLoginTest {
                     .assertTextDisplayedOnPage(b2bUnit1)
 
                     .doClick(By.linkText("Switch User"))
+                    .doWaitUntil(ExpectedConditions.urlContains("/bob"))
                     .assertUrl("https://qas-shop.bbraun.com/bob")
                     .doClick(By.linkText(b2bUnit2))
                     .doWaitUntil(ExpectedConditions.urlContains("https://qas-shop.bbraun.com"))
