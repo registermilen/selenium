@@ -107,7 +107,7 @@ public class B2BShopCartAddressSelectionTest {
                     .doType(By.name("quantity"), 200)
                     .doClick(By.className("_shopitems-item__update"))
                     
-                    .doClick(By.id("checkoutButtonBottom"))
+                    .doClick(By.id("checkoutButtonTop"))
                     
                     .doWaitUntil(ExpectedConditions.urlContains("/checkout"))
                     

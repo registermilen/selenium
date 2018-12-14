@@ -79,7 +79,7 @@ public class B2BShopCartCheckoutValidationTest {
 					.doSubmitForm(By.id("instantAddToCartForm")) //
                     .assertElementExists(By.className("cartItem")) // cart item row
 
-                    .doClick(By.id("checkoutButtonBottom"))
+                    .doClick(By.id("checkoutButtonTop"))
                     
                     .assertUrl(containsString("/cart"))//make sure we stay on the cart
                     .assertTextDisplayedOnPage("Fehler im Bestellvorgang") //cart level error message
@@ -90,7 +90,7 @@ public class B2BShopCartCheckoutValidationTest {
                     .doType(By.name("quantity"), 200)
                     .doClick(By.className("_shopitems-item__update"))
                     
-                    .doClick(By.id("checkoutButtonBottom"))
+                    .doClick(By.id("checkoutButtonTop"))
                     
                     .doWaitUntil(ExpectedConditions.urlContains("/checkout"))
                     // There is no real order executed here !!!

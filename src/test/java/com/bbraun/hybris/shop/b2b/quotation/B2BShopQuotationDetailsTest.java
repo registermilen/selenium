@@ -85,7 +85,7 @@ public class B2BShopQuotationDetailsTest {
 					.doSubmitForm(By.id("instantAddToCartForm"))
                     .assertElementExists(By.className("cartItem")) // cart item row
 
-                    .doClick(By.id("checkoutPcrButtonBottom"))
+                    .doClick(By.id("checkoutPcrButtonTop"))
                     
                     .assertUrl(containsString("/checkout/multi/common-information/add"))
                     
