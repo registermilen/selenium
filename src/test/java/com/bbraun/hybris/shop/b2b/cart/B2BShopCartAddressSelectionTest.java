@@ -100,7 +100,7 @@ public class B2BShopCartAddressSelectionTest {
                 driver = new FirefoxDriver();
                 break;
             case CHROME:
-            	capability = DesiredCapabilities.chrome();
+            	capability = DesiredCapabilities.firefox();
 			try {
 				driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), capability);
 			} catch (MalformedURLException e) {
