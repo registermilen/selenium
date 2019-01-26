@@ -1,5 +1,8 @@
 package com.bbraun.hybris.shop.b2b.cart;
 
+import java.net.MalformedURLException;
+import java.net.URL;
+
 import org.junit.Test;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.Dimension;
@@ -7,12 +10,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.phantomjs.PhantomJSDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import io.github.bonigarcia.wdm.BrowserManager;
-import io.github.bonigarcia.wdm.ChromeDriverManager;
 import io.github.bonigarcia.wdm.FirefoxDriverManager;
 import io.github.bonigarcia.wdm.PhantomJsDriverManager;
 import io.qameta.allure.Description;
@@ -83,7 +86,8 @@ public class B2BShopCartAddressSelectionTest {
     private void initLocalBrowser(TestBrowser browser) {
 
         logger.info("Use local browser. Browser: {},", browser);
-
+        DesiredCapabilities capability = null;
+        
         switch (browser) {
             case PHANTOMJS:
                 BrowserManager phantomBrowserManager = PhantomJsDriverManager.getInstance().forceCache();
@@ -96,8 +100,13 @@ public class B2BShopCartAddressSelectionTest {
                 driver = new FirefoxDriver();
                 break;
             case CHROME:
-                BrowserManager chromeBrowserManager = ChromeDriverManager.getInstance().forceCache();
-                chromeBrowserManager.setup();
+            	capability = DesiredCapabilities.chrome();
+			try {
+				driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), capability);
+			} catch (MalformedURLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
                 driver = new ChromeDriver();
                 break;
             default:
