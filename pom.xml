@@ -1,39 +1,22 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.bbraun.hybris.test</groupId>
-	<artifactId>hybris-test-poc</artifactId>
+	<groupId>com.deni.demo</groupId>
+	<artifactId>ui-tests</artifactId>
 	<version>1.0.0</version>
-	<name>Hybris Test Project</name>
-	<description>UI and API test for Hybris platform</description>
-
-	<parent>
-		<groupId>com.bbraun.company</groupId>
-		<artifactId>company-parent-pom</artifactId>
-		<version>5.3</version>
-	</parent>
-
-	<scm>
-		<url>https://bitbucket.org/bbmag/hybris-test-poc.git</url>
-		<connection>scm:git:https://bitbucket.org/bbmag/hybris-test-poc.git</connection>
-		<developerConnection>scm:git:https://bitbucket.org/bbmag/hybris-test-poc.git</developerConnection>
-	</scm>
+	<name>UI Test Project</name>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<bbmtest-framework.version>0.8.0</bbmtest-framework.version>
 		<allure.version>2.6.0</allure.version>
 		<surefire.version>2.20</surefire.version>
 		<aspectj.version>1.8.10</aspectj.version>
+		<selenium.version>3.4.0</selenium.version>
+		<ashot.version>1.5.2</ashot.version>
+		<webdrivermanager.version>2.0.1</webdrivermanager.version>
 	</properties>
 
 	<dependencies>
-		<dependency>
-			<groupId>com.bbraun.bbmtest</groupId>
-			<artifactId>bbmtest-framework</artifactId>
-			<version>${bbmtest-framework.version}</version>
-			<scope>test</scope>
-		</dependency>
 
 		<dependency>
 			<groupId>io.qameta.allure</groupId>
@@ -46,6 +29,30 @@
 			<groupId>org.aspectj</groupId>
 			<artifactId>aspectjweaver</artifactId>
 			<version>${aspectj.version}</version>
+		</dependency>
+		
+		<dependency>
+	        <groupId>org.seleniumhq.selenium</groupId>
+	        <artifactId>selenium-java</artifactId>
+	        <version>${selenium.version}</version>
+	    </dependency>
+	    
+	    <dependency>
+		    <groupId>ru.yandex.qatools.ashot</groupId>
+		    <artifactId>ashot</artifactId>
+		    <version>${ashot.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>io.github.bonigarcia</groupId>
+			<artifactId>webdrivermanager</artifactId>
+			<version>${webdrivermanager.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.slf4j</groupId>
+					<artifactId>slf4j-api</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 	</dependencies>
 

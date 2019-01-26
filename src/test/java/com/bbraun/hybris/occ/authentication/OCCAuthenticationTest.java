@@ -1,4 +1,4 @@
-package com.bbraun.hybris.occ.authentication;
+/*package com.bbraun.hybris.occ.authentication;
 
 import com.bbraun.bbmtest.conf.TestProperty;
 import com.bbraun.bbmtest.conf.TestPropertyRule;
@@ -11,12 +11,12 @@ import com.bbraun.bbmtest.ws.BBMWebServiceTestBuilder;
 
 import io.restassured.http.ContentType;
 
-/**
+*//**
  * Tests of the OAuth 2.0 authentication endpoint of Hybris OCC Webservices
  * 
  * @author stuestde
  *
- */
+ *//*
 @Epic("OCC Webservice Tests")
 @Feature("OCC Authentication Tests")
 public class OCCAuthenticationTest {
@@ -33,9 +33,9 @@ public class OCCAuthenticationTest {
 	@TestProperty("hybris.oauth.url")
 	private static String oAuthUrl;
 
-	/**
+	*//**
 	 * Tests OAuth authentication using GET request and JSON response
-	 */
+	 *//*
 	@Test
 	@Severity(SeverityLevel.CRITICAL)
 	@Description("Test Description: OAuth authentication with HTTP GET and expected JSON response.")
@@ -60,9 +60,9 @@ public class OCCAuthenticationTest {
 		;
 	}
 
-	/**
+	*//**
 	 * Tests OAuth authentication using POST request and JSON response
-	 */
+	 *//*
 	@Test
 	@Severity(SeverityLevel.CRITICAL)
 	@Description("Test Description: OAuth authentication with HTTP POST and expected JSON response.")
@@ -87,9 +87,9 @@ public class OCCAuthenticationTest {
 		;
 	}
 
-	/**
+	*//**
 	 * Tests OAuth authentication using GET request and XML response
-	 */
+	 *//*
 	@Test
 	@Severity(SeverityLevel.CRITICAL)
 	@Description("Test Description: OAuth authentication with HTTP GET and expected XML response.")
@@ -113,9 +113,9 @@ public class OCCAuthenticationTest {
 		;
 	}
 
-	/**
+	*//**
 	 * Tests OAuth authentication using POST request and XML response
-	 */
+	 *//*
 	@Test
 	@Severity(SeverityLevel.CRITICAL)
 	@Description("Test Description: OAuth authentication with HTTP POST and expected XML response.")
@@ -139,9 +139,9 @@ public class OCCAuthenticationTest {
 		;
 	}
 
-	/**
+	*//**
 	 * Tests OAuth authentication with wrong Basic auth credentials
-	 */
+	 *//*
 	@Test
 	@Severity(SeverityLevel.CRITICAL)
 	@Description("Test Description: OAuth authentication with wrong Basic Auth credentials")
@@ -164,9 +164,9 @@ public class OCCAuthenticationTest {
 				.assertResponseBodyByPathEquals("error_description", "Bad credentials");
 	}
 
-	/**
+	*//**
 	 * Tests OAuth authentication with wrong Hybris credentials
-	 */
+	 *//*
 	@Test
 	@Severity(SeverityLevel.CRITICAL)
 	@Description("Test Description: OAuth authentication with wrong webservice user credentials")
@@ -189,3 +189,4 @@ public class OCCAuthenticationTest {
 				.assertResponseBodyByPathEquals("error_description", "Bad credentials");
 	}
 }
+*/

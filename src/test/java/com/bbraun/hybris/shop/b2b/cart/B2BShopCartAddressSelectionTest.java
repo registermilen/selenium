@@ -1,128 +1,108 @@
 package com.bbraun.hybris.shop.b2b.cart;
 
-import static org.hamcrest.core.StringContains.containsString;
-import static org.openqa.selenium.support.ui.ExpectedConditions.urlContains;
-import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElementLocated;
-
-import org.junit.ClassRule;
-import org.junit.Rule;
 import org.junit.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.Capabilities;
+import org.openqa.selenium.Dimension;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.phantomjs.PhantomJSDriver;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-import com.bbraun.bbmtest.conf.RunOnStage;
-import com.bbraun.bbmtest.conf.RunOnStageRule;
-import com.bbraun.bbmtest.conf.TestProperty;
-import com.bbraun.bbmtest.conf.TestPropertyRule;
-import com.bbraun.bbmtest.ui.UiTest;
-import com.bbraun.hybris.shop.b2b.login.BobSelectorTestFragmentFactory;
-import com.bbraun.hybris.shop.b2b.login.LoginTestFragmentFactory;
-
+import io.github.bonigarcia.wdm.BrowserManager;
+import io.github.bonigarcia.wdm.ChromeDriverManager;
+import io.github.bonigarcia.wdm.FirefoxDriverManager;
+import io.github.bonigarcia.wdm.PhantomJsDriverManager;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Issue;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.Step;
 import io.qameta.allure.Story;
 
 @Epic("B2B E-Shop Tests")
 @Feature("Checkout Tests")
-@RunOnStage(stages = {"QAS", "PRD"})
 public class B2BShopCartAddressSelectionTest {
-	
-	@Rule
-    public RunOnStageRule rule = new RunOnStageRule();
-	
-	@ClassRule
-	public static TestPropertyRule testPropertiesRule = new TestPropertyRule();
-	
-	@TestProperty("hybris.shop.b2b.host")
-	private static String host;
-	
-	@TestProperty("hybris.shop.b2b.german.user.username")
-	private static String username;
-	
-	@TestProperty("hybris.shop.b2b.german.user.password")
-	private static String password;
-	
-	@TestProperty("hybris.shop.b2b.initial.url")
-	private static String initialURL;
-	
-	@TestProperty("hybris.shop.b2b.german.product.with.minimal.quantity")
-	private static String productWithMinimalQuantity;
-	
-	@TestProperty("hybris.shop.b2b.german.b2bunit")
-	private static String b2bUnit;
-	
-	@TestProperty("hybris.shop.b2b.german.address.name1")
-	private static String addressName1;
-	
-	@TestProperty("hybris.shop.b2b.german.address.line1")
-	private static String addressLine1;
-	
-	
+
+	private WebDriver driver;
+
+	/**
+	 * default dimensions for selenium browser size
+	 */
+	private static final int DEFAULT_HEIGHT = 860;
+	private static final int DEFAULT_WIDTH = 1500;
+
+	private static final Logger logger = LoggerFactory.getLogger(B2BShopCartAddressSelectionTest.class);
+
 	@Test
 	@Severity(SeverityLevel.CRITICAL)
 	@Description("Test Description: Make sure address is selectable on cart level.")
 	@Story("Introduce address selection component on cart position")
 	@Issue("PCAG-4707")
 	public void testSelectAddressOnCartLevel() {
-		UiTest.go(builder -> {
-            builder.doStartBrowser() //
-                    .doMaximizeWindow() //
-                    .execute(LoginTestFragmentFactory.getLoginTestFragmentBasedOnStage(initialURL, host, username, password)) //
-                    .execute(BobSelectorTestFragmentFactory.getBoBSelectorBasedOnStage(b2bUnit))
-                    
-                    .doWaitUntil(visibilityOfElementLocated(By.className("miniCart")))
-                    .doClick(By.className("miniCart"))
-                    .doWaitUntil(ExpectedConditions.urlContains("/cart"))
-
-                    .assertUrl(containsString("/cart"))
-                    .doOpenUrl(host+"/cart/remove") // clear cart
-
-                    .doWaitUntil(visibilityOfElementLocated(By.name("productCodePost")))
-                    .doType(By.name("productCodePost"), productWithMinimalQuantity)
-					.doSubmitForm(By.id("instantAddToCartForm")) //
-                    .assertElementExists(By.className("cartItem")) // cart item row
-
-                    .assertTextDisplayedOnPage("Lieferadresse")
-                    .assertTextDisplayedOn(By.id("name1"), addressName1)
-                    .assertTextDisplayedOn(By.id("line1"), addressLine1)
-                    
-                    .doClick(By.id("viewAddressBook"))
-                    
-                    .assertElementExists(By.className("addressList"))
-                    
-                    .assertElementExists(By.className("useThisAddress"))
-                    		
-                    .doScrollToElement(By.className("useThisAddress"))
-                    
-                    .doWaitUntil(visibilityOfElementLocated(By.className("useThisAddress")))
-                    
-                    .doClick(By.className("useThisAddress"))
-                    
-                    .assertUrl(containsString("/cart"))//make sure we stay on the cart
-                                        
-                    .doType(By.name("quantity"), 200)
-                    .doClick(By.className("_shopitems-item__update"))
-                    
-                    .doClick(By.id("checkoutButtonTop"))
-                    
-                    .doWaitUntil(ExpectedConditions.urlContains("/checkout"))
-                    
-                    .doClick(By.className("force-right")) // Weiter
-                    .doWaitUntil(urlContains("/checkout/multi/summary/view"))
-                    .assertTextDisplayedOnPage("Abschließende Prüfung")
-                    
-                    .assertTextDisplayedOnPage(addressName1)
-                    .assertTextDisplayedOnPage(addressLine1)
-                    
-
-                    // There is no real order executed here !!!
-                    .doOpenUrl(host+"/cart/remove") // clear cart
-//                    .doOpenUrl("https://shop.bbraun.com/cart/remove") // clear cart
-            ;
-        });
+		initLocalBrowser(TestBrowser.CHROME);
+		doStartBrowser();
+		doOpenUrl("https://google.com");
 	}
+
+	/**
+	 * Starts the browser. MUST be the initial action of each test!
+	 *
+	 * @return this builder instance
+	 */
+	@Step("Start browser")
+	public void doStartBrowser() {
+		driver.manage().window().setSize(new Dimension(DEFAULT_WIDTH, DEFAULT_HEIGHT));
+
+		Capabilities cap = ((RemoteWebDriver) driver).getCapabilities();
+		String browserName = cap.getBrowserName().toLowerCase();
+
+		logger.info("Start browser '{}'.", browserName);
+	}
+
+	@Step("Open browser URL '{0}'")
+	public void doOpenUrl(String url) {
+		logger.info("Type browser URL '{}' ", url);
+		driver.get(url);
+		captureScreenshot();
+	}
+
+	private void captureScreenshot() {
+		ScreenshotHelper.capturePageScreenshotForReport(driver);
+	}
+	
+	/**
+     * Setup local Selenium Driver manager
+     *
+     * @param browser browser instance to use
+     */
+    private void initLocalBrowser(TestBrowser browser) {
+
+        logger.info("Use local browser. Browser: {},", browser);
+
+        switch (browser) {
+            case PHANTOMJS:
+                BrowserManager phantomBrowserManager = PhantomJsDriverManager.getInstance().forceCache();
+                phantomBrowserManager.setup();
+                driver = new PhantomJSDriver();
+                break;
+            case FIREFOX:
+                BrowserManager firefoxBrowserManager = FirefoxDriverManager.getInstance().forceCache();
+                firefoxBrowserManager.setup();
+                driver = new FirefoxDriver();
+                break;
+            case CHROME:
+                BrowserManager chromeBrowserManager = ChromeDriverManager.getInstance().forceCache();
+                chromeBrowserManager.setup();
+                driver = new ChromeDriver();
+                break;
+            default:
+                logger.warn("No browser settings found in test configuration!");
+                break;
+        }
+    }
 }

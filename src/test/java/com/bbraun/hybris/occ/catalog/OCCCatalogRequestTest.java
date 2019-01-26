@@ -1,4 +1,4 @@
-package com.bbraun.hybris.occ.catalog;
+/*package com.bbraun.hybris.occ.catalog;
 
 import com.bbraun.bbmtest.conf.TestProperty;
 import com.bbraun.bbmtest.conf.TestPropertyRule;
@@ -11,13 +11,13 @@ import com.bbraun.bbmtest.ws.BBMWebServiceTestBuilder.GrantType;
 
 import io.restassured.http.ContentType;
 
-/**
+*//**
  * Tests of Hybris OCC {@code /catalogs} webservice operation.
  * 
  * @see https://collaboration.bbraun.com/display/HYBRIS/OCC+Webservice+Documentation#OCCWebserviceDocumentation-RequestCatalogStructure
  * 
  * @author stuestde
- */
+ *//*
 @Epic("OCC Webservice Tests")
 @Feature("OCC Catalog endpoint Tests")
 public class OCCCatalogRequestTest {
@@ -86,4 +86,4 @@ public class OCCCatalogRequestTest {
 				.assertResponseBodyByPathNotNull("categories[0].supercategories[0].additionalName") //
 		;
 	}
-}
+}*/

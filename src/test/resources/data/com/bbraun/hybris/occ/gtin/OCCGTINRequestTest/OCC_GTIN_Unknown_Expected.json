@@ -1,8 +1,0 @@
-{
-    "errors": [
-        {
-            "message": "No Product found for given GTIN",
-            "type": "UnknownIdentifierError"
-        }
-    ]
-}
