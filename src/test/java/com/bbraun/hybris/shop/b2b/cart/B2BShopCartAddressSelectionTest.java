@@ -47,7 +47,7 @@ public class B2BShopCartAddressSelectionTest {
 	@Story("Introduce address selection component on cart position")
 	@Issue("PCAG-4707")
 	public void testSelectAddressOnCartLevel() {
-		initLocalBrowser(TestBrowser.CHROME);
+		initLocalBrowser(TestBrowser.PHANTOMJS);
 		doStartBrowser();
 		doOpenUrl("https://google.com");
 	}
@@ -100,7 +100,7 @@ public class B2BShopCartAddressSelectionTest {
                 driver = new FirefoxDriver();
                 break;
             case CHROME:
-            	capability = DesiredCapabilities.firefox();
+            	capability = DesiredCapabilities.phantomjs();
 			try {
 				driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), capability);
 			} catch (MalformedURLException e) {
