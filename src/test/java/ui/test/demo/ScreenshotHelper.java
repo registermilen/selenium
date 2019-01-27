@@ -1,4 +1,4 @@
-package com.bbraun.hybris.shop.b2b.cart;
+package ui.test.demo;
 
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayOutputStream;

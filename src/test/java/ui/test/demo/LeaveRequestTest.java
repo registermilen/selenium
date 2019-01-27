@@ -1,4 +1,4 @@
-package com.bbraun.hybris.shop.b2b.cart;
+package ui.test.demo;
 
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
@@ -41,7 +41,7 @@ import java.text.SimpleDateFormat;
 
 @Epic("B2B E-Shop Tests")
 @Feature("Checkout Tests")
-public class B2BShopCartAddressSelectionTest {
+public class LeaveRequestTest {
 
 	private WebDriver driver;
 
@@ -51,7 +51,7 @@ public class B2BShopCartAddressSelectionTest {
 	private static final int DEFAULT_HEIGHT = 860;
 	private static final int DEFAULT_WIDTH = 1500;
 
-	private static final Logger logger = LoggerFactory.getLogger(B2BShopCartAddressSelectionTest.class);
+	private static final Logger logger = LoggerFactory.getLogger(LeaveRequestTest.class);
 
 	@Test
 	@Severity(SeverityLevel.CRITICAL)

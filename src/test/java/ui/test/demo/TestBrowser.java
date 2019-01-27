@@ -1,4 +1,4 @@
-package com.bbraun.hybris.shop.b2b.cart;
+package ui.test.demo;
 
 /**
  * Enumeration of supprted browsers for UI driven tests.
