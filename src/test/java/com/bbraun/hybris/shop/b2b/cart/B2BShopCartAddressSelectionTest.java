@@ -76,7 +76,7 @@ public class B2BShopCartAddressSelectionTest {
 		System.out.println(fromDate);
 		System.out.println(toDate);
 		   
-		initLocalBrowser(TestBrowser.PHANTOMJS);
+		initLocalBrowser(TestBrowser.CHROME);
 		doStartBrowser();
 		doOpenUrl("https://test.easyleave.de/");
 		doLoginAs("denitsa@westernacher.com","denitsa","https://test.easyleave.de/");
@@ -105,6 +105,7 @@ public class B2BShopCartAddressSelectionTest {
 	public void doOpenUrl(String url) {
 		logger.info("Type browser URL '{}' ", url);
 		driver.get(url);
+		captureScreenshot();
 	}
 
 
