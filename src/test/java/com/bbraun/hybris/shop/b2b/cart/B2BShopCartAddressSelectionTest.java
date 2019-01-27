@@ -15,6 +15,7 @@ import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.phantomjs.PhantomJSDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -231,9 +232,11 @@ public class B2BShopCartAddressSelectionTest {
 //				}
 //                driver = new ChromeDriver();
 //                break;
+            	ChromeOptions options = new ChromeOptions();
+            	options.setBinary("/opt/google/chrome/chrome");
             	BrowserManager chromeBrowserManager = ChromeDriverManager.getInstance().forceCache();
             	chromeBrowserManager.setup();
-                driver = new ChromeDriver();
+                driver = new ChromeDriver(options);
                 break;
             default:
                 logger.warn("No browser settings found in test configuration!");
