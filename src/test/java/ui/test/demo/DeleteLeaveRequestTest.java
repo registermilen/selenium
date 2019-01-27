@@ -35,7 +35,7 @@ import io.qameta.allure.Step;
 import io.qameta.allure.Story; 
 
 @Feature("Create leave request")
-public class LeaveRequestTest {
+public class DeleteLeaveRequestTest {
 
 	private WebDriver driver;
 
@@ -45,7 +45,7 @@ public class LeaveRequestTest {
 	private static final int DEFAULT_HEIGHT = 860;
 	private static final int DEFAULT_WIDTH = 1500;
 
-	private static final Logger logger = LoggerFactory.getLogger(LeaveRequestTest.class);
+	private static final Logger logger = LoggerFactory.getLogger(DeleteLeaveRequestTest.class);
 
 	@Test
 	@Severity(SeverityLevel.CRITICAL)

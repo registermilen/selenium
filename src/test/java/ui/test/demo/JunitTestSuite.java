@@ -7,7 +7,8 @@ import io.qameta.allure.Epic;
 @RunWith(Suite.class)
 
 @Suite.SuiteClasses({
-   LeaveRequestTest.class
+   CreateLeaveRequestTest.class,
+   DeleteLeaveRequestTest.class
 })
 
 @Epic("Leave requests Tests")
