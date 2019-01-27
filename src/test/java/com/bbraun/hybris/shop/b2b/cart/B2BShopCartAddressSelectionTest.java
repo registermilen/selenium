@@ -233,7 +233,7 @@ public class B2BShopCartAddressSelectionTest {
 //                driver = new ChromeDriver();
 //                break;
             	ChromeOptions options = new ChromeOptions();
-            	options.setBinary("/opt/google/chrome/chrome");
+            	options.setBinary("/opt/google/chrome");
             	BrowserManager chromeBrowserManager = ChromeDriverManager.getInstance().forceCache();
             	chromeBrowserManager.setup();
                 driver = new ChromeDriver(options);
