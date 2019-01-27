@@ -1,18 +1,17 @@
 package ui.test.demo;
 
-import static org.junit.Assert.assertArrayEquals;
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
-import java.net.MalformedURLException;
-import java.net.URL;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.concurrent.TimeUnit;
 
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.Dimension;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -28,19 +27,14 @@ import io.github.bonigarcia.wdm.ChromeDriverManager;
 import io.github.bonigarcia.wdm.FirefoxDriverManager;
 import io.github.bonigarcia.wdm.PhantomJsDriverManager;
 import io.qameta.allure.Description;
-import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Issue;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Step;
-import io.qameta.allure.Story;
-import org.openqa.selenium.Keys;
-import java.util.Calendar; 
-import java.text.SimpleDateFormat; 
+import io.qameta.allure.Story; 
 
-@Epic("B2B E-Shop Tests")
-@Feature("Checkout Tests")
+@Feature("Create leave request")
 public class LeaveRequestTest {
 
 	private WebDriver driver;
